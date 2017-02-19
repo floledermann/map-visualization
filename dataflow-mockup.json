@@ -1,0 +1,69 @@
+{
+    "type": "operation",
+    "label": "*",
+    "inputs": [{
+        "type": "operation",
+        "label": "+",
+        "inputs": [{
+            "type": "operation",
+            "label": "/",
+            "inputs":[{
+                "type": "operation",
+                "label": "*",
+                "inputs":[{
+                    "type": "literal",
+                    "value": 16.4,
+                    "label": "16.4",
+                    "context": "..."
+                },
+                {
+                    "type": "operation",
+                    "label": "*",
+                    "inputs":[{
+                        "type": "literal",
+                        "value": "3.14159…",
+                        "label": "π"
+                    },
+                    {
+                        "type": "literal",
+                        "value": 180,
+                        "label": "180.0"
+                    }]
+                }]
+            },
+            {
+                "type": "operation",
+                "label": "*",
+                "inputs":[{
+                    "type": "literal",
+                    "value": 2,
+                    "label": "2"
+                },
+                {
+                    "type": "literal",
+                    "value": "3.14159…",
+                    "label": "π"
+                }]
+            }]
+        },
+        {
+            "type": "literal",
+            "value": 0.5,
+            "label": "0.5"
+        }]
+    },
+    {   "type": "conversion",
+        "subtype": "string-to-number",
+        "label": "String -> Number",
+        "inputs": [{
+            "type": "attribute",
+            "attribute": "width",
+            "value": "\"512\"",
+            "label": "width",
+            "inputs": [{
+                "type": "DOM-node",
+                "label": "<canvas id=\"map\" width=\"512\" height=\"512\">"
+            }]
+        }]
+    }]
+}
