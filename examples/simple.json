@@ -1,0 +1,796 @@
+[
+  {
+    "type": "binary",
+    "op": "*",
+    "inputs": [
+      {
+        "type": "binary",
+        "op": "+",
+        "inputs": [
+          {
+            "type": "binary",
+            "op": "/",
+            "inputs": [
+              {
+                "type": "binary",
+                "op": "/",
+                "inputs": [
+                  {
+                    "type": "binary",
+                    "op": "*",
+                    "inputs": [
+                      {
+                        "type": "property",
+                        "op": "a[b]",
+                        "inputs": [
+                          {
+                            "type": "literal",
+                            "val": 16.37,
+                            "valuetype": "number",
+                            "stack": []
+                          },
+                          {
+                            "type": "literal",
+                            "val": 1,
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projectMercator",
+                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                "loc": [
+                                  7,
+                                  1,
+                                  14,
+                                  2
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "val": 16.37,
+                        "valuetype": "object",
+                        "stack": [
+                          {
+                            "name": "projectMercator",
+                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                            "loc": [
+                              7,
+                              1,
+                              14,
+                              2
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "binary",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "type": "math",
+                            "val": 3.141592653589793,
+                            "valuetype": "undefined"
+                          },
+                          {
+                            "type": "literal",
+                            "val": 180,
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projectMercator",
+                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                "loc": [
+                                  7,
+                                  1,
+                                  14,
+                                  2
+                                ]
+                              },
+                              {
+                                "name": "degRad",
+                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                "loc": [
+                                  2,
+                                  1,
+                                  4,
+                                  2
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "val": 0.017453292519943295,
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projectMercator",
+                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                            "loc": [
+                              7,
+                              1,
+                              14,
+                              2
+                            ]
+                          },
+                          {
+                            "name": "degRad",
+                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                            "loc": [
+                              2,
+                              1,
+                              4,
+                              2
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "val": 0.2857103985514718,
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projectMercator",
+                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                        "loc": [
+                          7,
+                          1,
+                          14,
+                          2
+                        ]
+                      },
+                      {
+                        "name": "degRad",
+                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                        "loc": [
+                          2,
+                          1,
+                          4,
+                          2
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "literal",
+                    "val": 2,
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projectMercator",
+                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                        "loc": [
+                          7,
+                          1,
+                          14,
+                          2
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "val": 0.1428551992757359,
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "projectMercator",
+                    "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                    "loc": [
+                      7,
+                      1,
+                      14,
+                      2
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "math",
+                "val": 3.141592653589793,
+                "valuetype": "undefined"
+              }
+            ],
+            "val": 0.04547222222222223,
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projectMercator",
+                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                "loc": [
+                  7,
+                  1,
+                  14,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "type": "literal",
+            "val": 0.5,
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projectMercator",
+                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                "loc": [
+                  7,
+                  1,
+                  14,
+                  2
+                ]
+              }
+            ]
+          }
+        ],
+        "val": 0.5454722222222222,
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "projectMercator",
+            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+            "loc": [
+              7,
+              1,
+              14,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "literal",
+        "val": 1000,
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "",
+            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+            "loc": [
+              21,
+              20,
+              21,
+              47
+            ]
+          }
+        ]
+      }
+    ],
+    "val": 545.4722222222223,
+    "valuetype": "number",
+    "stack": [
+      {
+        "name": "",
+        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+        "loc": [
+          21,
+          20,
+          21,
+          47
+        ]
+      }
+    ]
+  },
+  {
+    "type": "binary",
+    "op": "*",
+    "inputs": [
+      {
+        "type": "binary",
+        "op": "+",
+        "inputs": [
+          {
+            "type": "binary",
+            "op": "/",
+            "inputs": [
+              {
+                "type": "binary",
+                "op": "/",
+                "inputs": [
+                  {
+                    "type": "math",
+                    "op": "log",
+                    "inputs": [
+                      {
+                        "type": "binary",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "type": "binary",
+                            "op": "+",
+                            "inputs": [
+                              {
+                                "type": "math",
+                                "op": "sin",
+                                "inputs": [
+                                  {
+                                    "type": "binary",
+                                    "op": "*",
+                                    "inputs": [
+                                      {
+                                        "type": "property",
+                                        "op": "a[b]",
+                                        "inputs": [
+                                          {
+                                            "type": "literal",
+                                            "val": 48.21,
+                                            "valuetype": "number",
+                                            "stack": []
+                                          },
+                                          {
+                                            "type": "literal",
+                                            "val": 0,
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projectMercator",
+                                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                                "loc": [
+                                                  7,
+                                                  1,
+                                                  14,
+                                                  2
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "val": 48.21,
+                                        "valuetype": "object",
+                                        "stack": [
+                                          {
+                                            "name": "projectMercator",
+                                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                            "loc": [
+                                              7,
+                                              1,
+                                              14,
+                                              2
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "binary",
+                                        "op": "/",
+                                        "inputs": [
+                                          {
+                                            "type": "math",
+                                            "val": 3.141592653589793,
+                                            "valuetype": "undefined"
+                                          },
+                                          {
+                                            "type": "literal",
+                                            "val": 180,
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projectMercator",
+                                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                                "loc": [
+                                                  7,
+                                                  1,
+                                                  14,
+                                                  2
+                                                ]
+                                              },
+                                              {
+                                                "name": "degRad",
+                                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                                "loc": [
+                                                  2,
+                                                  1,
+                                                  4,
+                                                  2
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "val": 0.017453292519943295,
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projectMercator",
+                                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                            "loc": [
+                                              7,
+                                              1,
+                                              14,
+                                              2
+                                            ]
+                                          },
+                                          {
+                                            "name": "degRad",
+                                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                            "loc": [
+                                              2,
+                                              1,
+                                              4,
+                                              2
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "val": 0.8414232323864663,
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projectMercator",
+                                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                        "loc": [
+                                          7,
+                                          1,
+                                          14,
+                                          2
+                                        ]
+                                      },
+                                      {
+                                        "name": "degRad",
+                                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                        "loc": [
+                                          2,
+                                          1,
+                                          4,
+                                          2
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "val": 0.7455923201897959,
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projectMercator",
+                                    "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                    "loc": [
+                                      7,
+                                      1,
+                                      14,
+                                      2
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "literal",
+                                "val": 1,
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projectMercator",
+                                    "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                    "loc": [
+                                      7,
+                                      1,
+                                      14,
+                                      2
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "val": 1.7455923201897958,
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projectMercator",
+                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                "loc": [
+                                  7,
+                                  1,
+                                  14,
+                                  2
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "math",
+                            "op": "cos",
+                            "inputs": [
+                              {
+                                "type": "binary",
+                                "op": "*",
+                                "inputs": [
+                                  {
+                                    "type": "property",
+                                    "op": "a[b]",
+                                    "inputs": [
+                                      {
+                                        "type": "literal",
+                                        "val": 48.21,
+                                        "valuetype": "number",
+                                        "stack": []
+                                      },
+                                      {
+                                        "type": "literal",
+                                        "val": 0,
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projectMercator",
+                                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                            "loc": [
+                                              7,
+                                              1,
+                                              14,
+                                              2
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "val": 48.21,
+                                    "valuetype": "object",
+                                    "stack": [
+                                      {
+                                        "name": "projectMercator",
+                                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                        "loc": [
+                                          7,
+                                          1,
+                                          14,
+                                          2
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "binary",
+                                    "op": "/",
+                                    "inputs": [
+                                      {
+                                        "type": "math",
+                                        "val": 3.141592653589793,
+                                        "valuetype": "undefined"
+                                      },
+                                      {
+                                        "type": "literal",
+                                        "val": 180,
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projectMercator",
+                                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                            "loc": [
+                                              7,
+                                              1,
+                                              14,
+                                              2
+                                            ]
+                                          },
+                                          {
+                                            "name": "degRad",
+                                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                            "loc": [
+                                              2,
+                                              1,
+                                              4,
+                                              2
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "val": 0.017453292519943295,
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projectMercator",
+                                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                        "loc": [
+                                          7,
+                                          1,
+                                          14,
+                                          2
+                                        ]
+                                      },
+                                      {
+                                        "name": "degRad",
+                                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                        "loc": [
+                                          2,
+                                          1,
+                                          4,
+                                          2
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "val": 0.8414232323864663,
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projectMercator",
+                                    "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                    "loc": [
+                                      7,
+                                      1,
+                                      14,
+                                      2
+                                    ]
+                                  },
+                                  {
+                                    "name": "degRad",
+                                    "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                    "loc": [
+                                      2,
+                                      1,
+                                      4,
+                                      2
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "val": 0.6664023499913524,
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projectMercator",
+                                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                                "loc": [
+                                  7,
+                                  1,
+                                  14,
+                                  2
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "val": 2.6194270176454926,
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projectMercator",
+                            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                            "loc": [
+                              7,
+                              1,
+                              14,
+                              2
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "val": 0.9629555983004899,
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projectMercator",
+                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                        "loc": [
+                          7,
+                          1,
+                          14,
+                          2
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "literal",
+                    "val": 2,
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projectMercator",
+                        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                        "loc": [
+                          7,
+                          1,
+                          14,
+                          2
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "val": 0.48147779915024497,
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "projectMercator",
+                    "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                    "loc": [
+                      7,
+                      1,
+                      14,
+                      2
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "math",
+                "val": 3.141592653589793,
+                "valuetype": "undefined"
+              }
+            ],
+            "val": 0.1532591434475365,
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projectMercator",
+                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                "loc": [
+                  7,
+                  1,
+                  14,
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "type": "literal",
+            "val": 0.5,
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projectMercator",
+                "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+                "loc": [
+                  7,
+                  1,
+                  14,
+                  2
+                ]
+              }
+            ]
+          }
+        ],
+        "val": 0.6532591434475365,
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "projectMercator",
+            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+            "loc": [
+              7,
+              1,
+              14,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "type": "literal",
+        "val": 1000,
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "",
+            "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+            "loc": [
+              21,
+              20,
+              21,
+              47
+            ]
+          }
+        ]
+      }
+    ],
+    "val": 653.2591434475365,
+    "valuetype": "number",
+    "stack": [
+      {
+        "name": "",
+        "file": "C:\\flo\\experiments\\05_sandbox\\testcases\\mercator.js",
+        "loc": [
+          21,
+          20,
+          21,
+          47
+        ]
+      }
+    ]
+  }
+]
