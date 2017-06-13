@@ -7,14 +7,16 @@
 }
 
 .node text {
-  font: 12px sans-serif;
+  font-family: sans-serif;
 }
 
-.node--internal circle {
-  fill: #555;
+.node-internal circle {
+  fill: #fff;
+  stroke: #555;
+  stroke-width: 1;
 }
 
-.node--internal text {
+.node-internal text {
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
@@ -25,61 +27,109 @@
   stroke-width: 1.5px;
 }
 
+.snippet {
+    font-family: monospace;
+    white-space: pre;
+}
 </style>
-<svg width="800" height="400"></svg>
+
+<svg width="1200" height="1200"></svg>
 <script src="//d3js.org/d3.v4.js"></script>
 <script>
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
-    height = +svg.attr("height"),
+    height = 400, //+svg.attr("height"),
     g = svg.append("g").attr("transform", "translate(60,0)");
 
-var tree = d3.tree()
-    .size([height, 1]);
+// ATTENTION width and height are swapped because we have a horizontal tree layout!
+//var tree = d3.cluster().size([height, 1]);
+var tree = d3.tree().nodeSize([30,0.1]); //.size([height, 1]);
 
 function x(x0) {
-    return (1-x0) * (width - 160)
+    return (1-x0) * (width - 180)
 }
 /*
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 */
-d3.json("dataflow-mockup.json", function(error, treeData) {
+d3.json("examples/simple.json", function(error, treeData) {
   if (error) throw error;
 
-  var root = d3.hierarchy(treeData, node => node.inputs);
-  tree(root);
+  var yOffset = 200;
+  
+  g.selectAll(".tree")
+    .data(treeData)
+    .enter()
+    .append("g")
+    .attr("class", "tree")
+    .each(function(d,i) {
+    
+        var g = d3.select(this);
+        
+        g.attr("transform","translate(0," + yOffset + ")");
+        
+        var root = d3.hierarchy(d, node => node.inputs);
+        tree(root);
 
-  var link = g.selectAll(".link")
-      .data(root.descendants().slice(1))
-    .enter().append("path")
-      .attr("class", "link")
-      .attr("d", function(d) {
-        return "M" + x(d.y) + "," + d.x
-            + "C" + (x(d.parent.y) - 50) + "," + d.x
-            + " " + (x(d.parent.y) - 50) + "," + d.parent.x
-            + " " + x(d.parent.y) + "," + d.parent.x;
-      });
+        yOffset += 200;
+        
+        var link = g.selectAll(".link")
+          .data(root.descendants().slice(1))
+        .enter().append("path")
+          .attr("class", "link")
+          .attr("d", function(d) {
+            return "M" + x(d.y) + "," + d.x
+                + "C" + (x(d.parent.y) - 50) + "," + d.x
+                + " " + (x(d.parent.y) - 50) + "," + d.parent.x
+                + " " + x(d.parent.y) + "," + d.parent.x;
+          });
+          
+        function round(val, digits) {
+            if (typeof val == "number") {
+                let base = Math.pow(10, digits);
+                val = Math.round(val*base)/base;
+            }
+            return val;
+        }
 
-  var node = g.selectAll(".node")
-      .data(root.descendants())
-    .enter().append("g")
-      .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
-      .attr("transform", function(d) { 
-        return "translate(" + x(d.y) + "," + d.x + ")"; 
-      })
+        var node = g.selectAll(".node")
+          .data(root.descendants())
+        .enter().append("g")
+          .attr("class", function(d) { return "node" + (d.children ? " node-internal" : " node-leaf"); })
+          .attr("transform", function(d) { 
+            return "translate(" + x(d.y) + "," + d.x + ")"; 
+          })
 
-  node.append("circle")
-      .attr("r", 2.5);
+        node.append("circle")
+          .attr("r", d => d.data.op ? 8 : 5);
 
-  node.append("text")
-      .attr("dy", 3)
-      .attr("x", function(d) { return d.children ? 8 : -8; })
-      .style("text-anchor", function(d) { return d.children ? "start" : "end"; })
-      .text(function(d) { 
-        return d.data.label;
-      });
+        node.append("text")
+          .attr("dy", 4)
+          .attr("x", d => d.height ? 15 : -9)
+          .attr("font-size", 12)
+          .attr("text-anchor", d => d.height ? "start" : "end")
+          .text(d => d.data.valuetype == "string" ? '"'+d.data.val+'"' : round(d.data.val,4));
+          
+        node.append("text")
+          .attr("dy", 4)
+          .attr("x", 0)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 12)
+          .text(d => d.data.op || "");
+          
+        node.append("text")
+          .attr("dy", 16)
+          .attr("x", 0)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 10)
+          .text(d => {
+                if (d.data.stack && d.data.stack.length > 0) {
+                    return d.data.stack[d.data.stack.length-1].name || "";
+                }
+                return "";
+          });
+    });
 });
 
 </script>
