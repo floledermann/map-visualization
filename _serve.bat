@@ -1,4 +1,9 @@
-@http-server . -p 8081
+@SET HTDOCS=testcases
+@SET PORT=8081
+
+@title SERVING %~dp0%HTDOCS% on %PORT%
+
+@http-server . -p %PORT%
 @if %ERRORLEVEL% NEQ 0 (
   @echo.
   echo ####################################################################
