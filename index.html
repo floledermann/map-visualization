@@ -31,9 +31,20 @@
     font-family: monospace;
     white-space: pre;
 }
+
+svg path.function {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2px;
+    stroke-dasharray: 5 5;
+}
 </style>
 
-<svg width="1200" height="1200"></svg>
+<svg width="1200" height="1200">
+<path class="function" d="M 200 100 c 10 0, 20 10, 20 20 s -10 20, -20 20 c -50 0, -50 20, -100 20"/>
+<path class="function" d="M 250 150 l 20 20"/>
+</svg>
+
 <script src="//d3js.org/d3.v4.js"></script>
 <script>
 
@@ -43,8 +54,10 @@ var svg = d3.select("svg"),
     g = svg.append("g").attr("transform", "translate(60,0)");
 
 // ATTENTION width and height are swapped because we have a horizontal tree layout!
-//var tree = d3.cluster().size([height, 1]);
-var tree = d3.tree().nodeSize([30,0.1]); //.size([height, 1]);
+// var tree = d3.cluster().size([height, 1]);
+var NODE_HEIGHT = 50;
+
+var tree = d3.tree().nodeSize([NODE_HEIGHT,0.1]); //.size([height, 1]);
 
 function x(x0) {
     return (1-x0) * (width - 180)
@@ -56,7 +69,7 @@ var stratify = d3.stratify()
 d3.json("examples/simple.json", function(error, treeData) {
   if (error) throw error;
 
-  var yOffset = 200;
+  var yOffset = 300;
   
   g.selectAll(".tree")
     .data(treeData)
@@ -72,7 +85,7 @@ d3.json("examples/simple.json", function(error, treeData) {
         var root = d3.hierarchy(d, node => node.inputs);
         tree(root);
 
-        yOffset += 200;
+        yOffset += 400;
         
         var link = g.selectAll(".link")
           .data(root.descendants().slice(1))
@@ -117,6 +130,7 @@ d3.json("examples/simple.json", function(error, treeData) {
           .attr("text-anchor", "middle")
           .attr("font-size", 12)
           .text(d => d.data.op || "");
+
           
         node.append("text")
           .attr("dy", 16)
@@ -128,7 +142,30 @@ d3.json("examples/simple.json", function(error, treeData) {
                     return d.data.stack[d.data.stack.length-1].name || "";
                 }
                 return "";
-          });
+          })
+        ;
+        
+        function walkTree(node, stack) {
+            stack = stack || [];
+            if (node.data.stack && node.data.stack.length > stack.length) {
+                // start function context
+                var path = g.append("path")
+                    .attr("class","function")
+                    .attr("d", "M " + x(node.y) + " " + (node.x-NODE_HEIGHT/2) + " c " + (NODE_HEIGHT/4) + " 0, " + (NODE_HEIGHT/2) + " " + (NODE_HEIGHT/4) + ", " + (NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " s " + (-NODE_HEIGHT/4) + " " + (NODE_HEIGHT/2) + ", " + (-NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " ");
+            }
+            if ((node.data.stack && node.data.stack.length < stack.length) || (!node.children && stack.length > 0)) {
+                // end function context
+                var path = g.append("path")
+                    .attr("class","function")
+                    .attr("d", "M " + x(node.y) + " " + (node.x-NODE_HEIGHT/2) + " c " + (-NODE_HEIGHT/4) + " 0, " + (-NODE_HEIGHT/2) + " " + (NODE_HEIGHT/4) + ", " + (-NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " s " + (NODE_HEIGHT/4) + " " + (NODE_HEIGHT/2) + ", " + (NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " ");
+            }
+            if (node.children) {
+                node.children.forEach(n => walkTree(n, node.data.stack));
+            }
+        }
+        
+        walkTree(root);
+
     });
 });
 
