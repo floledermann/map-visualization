@@ -42,7 +42,6 @@ svg path.function {
 </style>
 
 <svg width="1200" height="1200">
-<path class="function" d="M 200 100 c 10 0, 20 10, 20 20 s -10 20, -20 20 c -50 0, -50 20, -100 20"/>
 </svg>
 
 <script src="//d3js.org/d3.v4.js"></script>
@@ -208,6 +207,14 @@ d3.json("examples/tests_treeviz.json", function(error, treeData) {
                         0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
                         x(current.node.y), current.node.x-NODE_HEIGHT/2 // dest x, y
                     ]);
+                    // special case: only 1 node
+                    if (next == current) {
+                        path.push("A" + [                   // circular arc
+                            NODE_HEIGHT/2, NODE_HEIGHT/2,   // radius-x, radius-y
+                            0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
+                            x(current.node.y), current.node.x+NODE_HEIGHT/2 // dest x, y
+                        ]);
+                    }
                 }
                 else {
                     if (current.inside) {
