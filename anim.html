@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+
+<style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    background-color: #999999;
+    transition: background-color 1s;
+}
+
+html:hover {
+    background-color: #ffffff;
+}
+
+main {
+    position: relative;
+    height: 100%;
+    perspective: 1600px;
+    perspective-origin: 80% 30%;
+}
+
+.map {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    background-color: #f9f9f9;
+    border: 1px solid #bbbbbb;
+    width: 600px;
+    height: 600px;
+    
+    backface-visibility: visible;
+    transform-origin: 70% 50%;
+    
+    transition: transform 1s;
+}
+
+.map:hover {
+    background-color: #f0f0f0;
+}
+
+.map:hover {
+    transform: translate(-40px) rotateY(120deg);
+}
+
+svg path {
+    stroke: #000000;
+    fill: none;
+}
+
+</style>
+
+<script src="//d3js.org/d3.v4.js"></script>
+<script>
+</script>
+
+</head>
+<body>
+<main>
+
+<svg class="map" width="600" height="600">
+<path d="M 100 100 L 500 500"/>
+</svg>
+
+</main>
+
+
+</body>
