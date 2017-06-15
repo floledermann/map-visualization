@@ -34,9 +34,9 @@
 
 svg path.function {
     fill: #000000;
-    fill-opacity: 0.05;
+    fill-opacity: 0.03;
     stroke: #000000;
-    stroke-width: 2px;
+    stroke-width: 1.3px;
     stroke-dasharray: 5 5;
 }
 </style>
@@ -66,7 +66,7 @@ function x(x0) {
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 */
-d3.json("examples/simple.json", function(error, treeData) {
+d3.json("examples/tests_treeviz.json", function(error, treeData) {
   if (error) throw error;
 
   var yOffset = 300;
@@ -145,21 +145,148 @@ d3.json("examples/simple.json", function(error, treeData) {
           })
         ;
         
-        function walkTree(node, stack) {
-            stack = stack || [];
-            if (node.data.stack && node.data.stack.length > stack.length) {
+        function hasHead(head, array, comparator) {
+            return head.reduce(function(acc, el, i) {
+                return acc && array.length > i && comparator(el, array[i]); 
+            }, true);
+        }
+        
+        function hasStackHead(head, stack) {
+            return hasHead(head, stack, function(el1, el2) {
+                return (el1.file == el2.file) && (el1.loc == el2.loc);
+            });
+        }
+        
+        function getEdgeNodes(node, stack, edgeNodes) {
+            if (node.children) {
+                let lastInNode = null,
+                    lastOutNode = null;
+                node.children.forEach(function(n) {
+                    if (hasStackHead(stack, n.data.stack)) {
+                        if (lastOutNode) {
+                            edgeNodes.push({node: lastOutNode, inside: false});
+                        }
+                        if (!lastInNode) {
+                            edgeNodes.push({node: n, inside: true});
+                        }
+                        getEdgeNodes(n, stack, edgeNodes);
+                        lastInNode = n;
+                        lastOutNode = null;
+                    }
+                    else {
+                        if (lastInNode) {
+                            lastOutNode = n;
+                        }
+                    }    
+                });
+                edgeNodes.push({node: lastInNode, inside: true});
+            }            
+        }
+        
+        var edgeNodes = [{node: root, inside: true}];
+        getEdgeNodes(root, root.data.stack, edgeNodes);
+        edgeNodes.push({node: root, inside: true});
+        
+        //console.log(edgeNodes.map(n => n.node.data.loc + ":" + n.node.data.stack[0].name + ":" + n.inside));
+        
+        function drawOutline(edgeNodes) {
+            var path = [];
+            var previous, current, next;
+            var root = edgeNodes[0];
+            
+            for (var i=0; i<edgeNodes.length; i++) {
+                previous = edgeNodes[i-1] || null;
+                current = edgeNodes[i];
+                next = edgeNodes[i+1] || root;
+                
+                // draw smooth connection from PREVIOUS to CURRENT node in every iteration, providing correct tangent for NEXT
+                if (!previous) {
+                    // root node
+                    path.push("M" + [x(current.node.y),current.node.x+NODE_HEIGHT/2])
+                    path.push("A" + [                   // circular arc
+                        NODE_HEIGHT/2, NODE_HEIGHT/2,   // radius-x, radius-y
+                        0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
+                        x(current.node.y), current.node.x-NODE_HEIGHT/2 // dest x, y
+                    ]);
+                }
+                else {
+                    if (current.inside) {
+                        if (previous.node.depth < current.node.depth) {
+                            path.push("C" + [                                                       // bezier curve 
+                                x(previous.node.y)-NODE_HEIGHT, previous.node.x-NODE_HEIGHT/2,      // cp1 x, y
+                                x(current.node.y)+NODE_HEIGHT, current.node.x-NODE_HEIGHT/2,        // cp2 x, y
+                                x(current.node.y), current.node.x-NODE_HEIGHT/2                     // dest x, y
+                            ]);
+                            if (current.node.depth == next.node.depth) {
+                                if (next.inside) {
+                                    path.push("A" + [                   // circular arc
+                                        NODE_HEIGHT/2, NODE_HEIGHT/2,   // radius-x, radius-y
+                                        0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
+                                        x(current.node.y)-NODE_HEIGHT/2, current.node.x // dest x, y
+                                    ]);
+                                }
+                                else {
+                                    path.push("A" + [                   // circular arc
+                                        NODE_HEIGHT/2, NODE_HEIGHT/2,   // radius-x, radius-y
+                                        0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
+                                        x(current.node.y), current.node.x+NODE_HEIGHT/2 // dest x, y
+                                    ]);
+                                }
+                            }
+                        }
+                        else if (previous.node.depth == current.node.depth) {
+                            if (next.node.depth > current.node.depth) {
+                                path.push("L" + [x(current.node.y), current.node.x-NODE_HEIGHT/2]);
+                            }
+                            else {
+                                path.push("L" + [x(current.node.y)-NODE_HEIGHT/2, current.node.x]);
+                            }
+                            if (current.node.depth > next.node.depth || !next.inside) {
+                                path.push("A" + [                   // circular arc
+                                    NODE_HEIGHT/2, NODE_HEIGHT/2,   // radius-x, radius-y
+                                    0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
+                                    x(current.node.y), current.node.x+NODE_HEIGHT/2 // dest x, y
+                                ]);
+                            }
+                        }
+                        else if (previous.node.depth > current.node.depth) {
+                            path.push("C" + [                                                       // bezier curve 
+                                x(previous.node.y)+NODE_HEIGHT, previous.node.x+NODE_HEIGHT/2,      // cp1 x, y
+                                x(current.node.y)-NODE_HEIGHT, current.node.x+NODE_HEIGHT/2,        // cp2 x, y
+                                x(current.node.y), current.node.x+NODE_HEIGHT/2                     // dest x, y
+                            ]);
+                        }
+                    }
+                }
+            }
+            
+            var d = path.join(" ");
+            var path = g.append("path")
+                .attr("class","function")
+                .attr("d", d)
+            ;
+        }
+        
+        drawOutline(edgeNodes);
+        
+        function walkTree(node, lastStack) {
+        
+            lastStack = lastStack || [];
+            currentStack = node.data.stack || [];
+            
+            if (!hasStackHead(currentStack, lastStack)) {
                 // start function context
                 var path = g.append("path")
                     .attr("class","function")
                     .attr("d", "M " + x(node.y) + " " + (node.x-NODE_HEIGHT/2) + " c " + (NODE_HEIGHT/4) + " 0, " + (NODE_HEIGHT/2) + " " + (NODE_HEIGHT/4) + ", " + (NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " s " + (-NODE_HEIGHT/4) + " " + (NODE_HEIGHT/2) + ", " + (-NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " ");
             }
-            if ((node.data.stack && node.data.stack.length < stack.length)) {
+            if (currentStack.length < lastStack.length) {
                 // previous function context ended before current node
                 var path = g.append("path")
                     .attr("class","function")
                     .attr("d", "M " + (x(node.y)+NODE_HEIGHT) + " " + (node.x-NODE_HEIGHT/2) + " c " + (-NODE_HEIGHT/4) + " 0, " + (-NODE_HEIGHT/2) + " " + (NODE_HEIGHT/4) + ", " + (-NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " s " + (NODE_HEIGHT/4) + " " + (NODE_HEIGHT/2) + ", " + (NODE_HEIGHT/2) + " " + (NODE_HEIGHT/2) + " ");
             }
-            if (!node.children && node.data.stack && node.data.stack.length > 0) {
+            if (!node.children && currentStack.length > 0) {
                 // end function context - leaf node
                 var path = g.append("path")
                     .attr("class","function")
@@ -170,7 +297,7 @@ d3.json("examples/simple.json", function(error, treeData) {
             }
         }
         
-        walkTree(root);
+        //walkTree(root);
 
     });
 });
