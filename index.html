@@ -301,21 +301,27 @@ d3.json("examples/mercator.json", function(error, treeData) {
           })
 
         node.append("circle")
-          .attr("r", d => d.data.op ? 8 : 5);
+          .attr("r", d => d.data.op ? 9 : 5);
 
         node.append("text")
-          .attr("dy", 4)
-          .attr("x", d => d.height ? 15 : -9)
-          .attr("font-size", 12)
-          .attr("text-anchor", d => d.height ? "start" : "end")
-          .text(d => d.data.valuetype == "string" ? '"'+d.data.val+'"' : round(d.data.val,4));
+            .attr("dy", 4)
+            .attr("x", d => d.height ? 15 : -9)
+            .attr("font-size", 10)
+            .attr("text-anchor", d => d.height ? "start" : "end")
+            .text(d => {
+                if (d.height == 0 && d.data.label) return d.data.label;
+                var val = d.data.val;
+                if (d.data.valuetype == "string") return '"'+val+'"';
+                if (d.height == 0 && Math.abs(val-Math.PI)<0.0000000001) return "π";
+                return round(d.data.val,4);
+            });
           
         node.append("text")
           .attr("dy", 4)
           .attr("x", 0)
           .attr("text-anchor", "middle")
           .attr("font-size", 12)
-          .text(d => d.data.op || "");
+          .text(d => d.data.label || d.data.op || "");
 
 /*          
         node.append("text")
