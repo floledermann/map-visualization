@@ -285,7 +285,7 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
             lastStack = lastStack || [];
             currentStack = node.data.stack || [];
             
-            // TODO: this is incorrect, we need to get *all* contexts that are nw, not just the last one!
+            // TODO: this is incorrect, we need to get *all* contexts that are new, not just the last one!
             if (!hasStackHead(currentStack, lastStack)) {
                 var edgeNodes = [{node: node, inside: true}];
                 getEdgeNodes(node, currentStack, edgeNodes);
