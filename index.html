@@ -307,8 +307,8 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
           .attr("class", "link")
           .attr("d", function(d) {
             return "M" + x(d.y) + "," + d.x
-                + "C" + (x(d.parent.y) - 50) + "," + d.x
-                + " " + (x(d.parent.y) - 50) + "," + d.parent.x
+                + "C" + (x(d.y) + NODE_HEIGHT) + "," + d.x
+                + " " + (x(d.parent.y) - NODE_HEIGHT) + "," + d.parent.x
                 + " " + x(d.parent.y) + "," + d.parent.x;
           });
           
