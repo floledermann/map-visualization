@@ -1,0 +1,299 @@
+[
+  {
+    "valuetype": "string",
+    "stack": [],
+    "loc": "14:13:14:30",
+    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+    "type": "binary",
+    "label": "+",
+    "op": "+",
+    "inputs": [
+      {
+        "valuetype": "string",
+        "stack": [],
+        "loc": "14:13:14:26",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+        "type": "literal",
+        "val": "Answer is: "
+      },
+      {
+        "valuetype": "number",
+        "stack": [],
+        "loc": "12:6:12:7",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+        "type": "binary",
+        "label": "+",
+        "op": "+",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": "10:9:10:14",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+            "type": "binary",
+            "label": "+",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": "7:9:7:10",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                "type": "literal",
+                "val": 1
+              },
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": "8:9:8:10",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                "type": "literal",
+                "val": 1
+              }
+            ],
+            "val": 2
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": "12:6:12:7",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+            "type": "literal",
+            "val": 1
+          }
+        ],
+        "val": 3
+      }
+    ],
+    "val": "Answer is: 3"
+  },
+  {
+    "valuetype": "string",
+    "stack": [],
+    "loc": "29:13:29:30",
+    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+    "type": "binary",
+    "label": "+",
+    "op": "+",
+    "inputs": [
+      {
+        "valuetype": "string",
+        "stack": [],
+        "loc": "29:13:29:26",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+        "type": "literal",
+        "val": "Answer is: "
+      },
+      {
+        "valuetype": "string",
+        "stack": [],
+        "loc": "26:5:26:11",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+        "type": "property",
+        "op": "[]",
+        "label": "[4]",
+        "inputs": [
+          {
+            "valuetype": "string",
+            "stack": [],
+            "loc": "22:28:22:31",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+            "type": "literal",
+            "val": "E"
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": "20:9:20:28",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+            "type": "binary",
+            "label": "+",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "add",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "loc": "16:1:18:2"
+                  }
+                ],
+                "loc": "17:12:17:17",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                "type": "binary",
+                "label": "+",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "7:9:7:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "8:9:8:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  }
+                ],
+                "val": 2
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "add",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "loc": "16:1:18:2"
+                  }
+                ],
+                "loc": "17:12:17:17",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                "type": "binary",
+                "label": "+",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "7:9:7:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "8:9:8:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  }
+                ],
+                "val": 2
+              }
+            ],
+            "val": 4
+          }
+        ],
+        "val": "E"
+      }
+    ],
+    "val": "Answer is: E"
+  },
+  {
+    "valuetype": "number",
+    "stack": [],
+    "type": "math",
+    "op": "sin",
+    "inputs": [
+      {
+        "valuetype": "string",
+        "stack": [],
+        "loc": "26:5:26:11",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+        "type": "property",
+        "op": "[]",
+        "label": "[4]",
+        "inputs": [
+          {
+            "valuetype": "string",
+            "stack": [],
+            "loc": "22:28:22:31",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+            "type": "literal",
+            "val": "E"
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": "20:9:20:28",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+            "type": "binary",
+            "label": "+",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "add",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "loc": "16:1:18:2"
+                  }
+                ],
+                "loc": "17:12:17:17",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                "type": "binary",
+                "label": "+",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "7:9:7:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "8:9:8:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  }
+                ],
+                "val": 2
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "add",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "loc": "16:1:18:2"
+                  }
+                ],
+                "loc": "17:12:17:17",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                "type": "binary",
+                "label": "+",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "7:9:7:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "8:9:8:10",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_tests.js",
+                    "type": "literal",
+                    "val": 1
+                  }
+                ],
+                "val": 2
+              }
+            ],
+            "val": 4
+          }
+        ],
+        "val": "E"
+      }
+    ],
+    "val": null
+  }
+]
