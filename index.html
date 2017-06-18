@@ -10,6 +10,7 @@ svg text {
     font-family: sans-serif;
     cursor: default;
     pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
 .node-internal circle {
@@ -72,11 +73,12 @@ var svg = d3.select("svg"),
 
 // ATTENTION width and height are swapped because we have a horizontal tree layout!
 // var tree = d3.cluster().size([height, 1]);
-var NODE_HEIGHT = 40,
-    TREE_HEIGHT = 3600,
+var INPUT_FILE = "examples/d3_mercator.json",
+    NODE_HEIGHT = 50,
+    TREE_HEIGHT = 2000,
     MAX_DEPTH = 20,
-    INITIAL_Y_OFFSET = TREE_HEIGHT / 2,
-    FUNCTION_MARGIN = 3;
+    INITIAL_Y_OFFSET = 1800,
+    FUNCTION_MARGIN = 4;
 
 var tree = d3.tree().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
 
@@ -87,7 +89,7 @@ function x(x0) {
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 */
-d3.json("examples/d3_simple.json", function(error, treeData) {
+d3.json(INPUT_FILE, function(error, treeData) {
   if (error) throw error;
 
   var yOffset = INITIAL_Y_OFFSET;
@@ -268,15 +270,15 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
                 .attr("d", d)
             ;
             
-            var funcName = root.node.data.stack[root.node.data.stack.length-1].name;
+            var funcName = root.node.data.stack[level-1].name;
             if (funcName.startsWith("<function")) funcName = "";
             
             g.append("text")
                 .datum(root.node)
                 .attr("class", "funcName")
-                .attr("transform", d => "translate(" + x(d.y) + "," + d.x + ")")
-                .attr("dy", 17)
-                .attr("x", 10)
+                .attr("transform", d => "translate(" + (x(d.y)+radius) + "," + (d.x+radius) + ")")
+                .attr("dy", 2)
+                .attr("x", 0)
                 .attr("text-anchor", "end")
                 .attr("font-size", 10)
                 .attr("font-weight", "bold")
