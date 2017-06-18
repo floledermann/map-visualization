@@ -160,6 +160,7 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
             level = level || 1;
             var margin = (level-1) * FUNCTION_MARGIN + 2;
             
+            var cpDistance = NODE_HEIGHT / 2;
             var radius = NODE_HEIGHT / 2 - margin;
             
             for (var i=0; i<edgeNodes.length; i++) {
@@ -190,8 +191,8 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
                     if (current.inside) {
                         if (previous.node.depth < current.node.depth) {
                             path.push("C" + [                                                       // bezier curve 
-                                x(previous.node.y)-2*radius, previous.node.x-radius,      // cp1 x, y
-                                x(current.node.y)+2*radius, current.node.x-radius,        // cp2 x, y
+                                x(previous.node.y)-2*cpDistance, previous.node.x-radius,      // cp1 x, y
+                                x(current.node.y)+2*cpDistance, current.node.x-radius,        // cp2 x, y
                                 x(current.node.y), current.node.x-radius                     // dest x, y
                             ]);
                             if (next == null || current.node.depth == next.node.depth) {
@@ -235,20 +236,20 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
                         else if (previous.node.depth > current.node.depth) {
                             if (next && current.node.depth == next.node.depth) {
                                 path.push("C" + [                                                       // bezier curve 
-                                    x(previous.node.y)+2*radius, previous.node.x+radius,      // cp1 x, y
-                                    x(current.node.y)-radius, current.node.x+radius,        // cp2 x, y
+                                    x(previous.node.y)+2*cpDistance, previous.node.x+radius,      // cp1 x, y
+                                    x(current.node.y)-cpDistance, current.node.x+radius,        // cp2 x, y
                                     x(current.node.y)-radius, current.node.x+radius                     // dest x, y
                                 ]);
                                 path.push("C" + [                                                       // bezier curve 
-                                    x(current.node.y)-radius, current.node.x+radius,                    // cp1 x, y
-                                    x(current.node.y)-radius, current.node.x+radius,        // cp2 x, y
+                                    x(current.node.y)-cpDistance, current.node.x+radius,                    // cp1 x, y
+                                    x(current.node.y)-cpDistance, current.node.x+radius,        // cp2 x, y
                                     x(current.node.y)-radius, current.node.x+radius*1.5                     // dest x, y
                                 ]);
                             }
                             else {
                                 path.push("C" + [                                                       // bezier curve 
-                                    x(previous.node.y)+2*radius, previous.node.x+radius,      // cp1 x, y
-                                    x(current.node.y)-2*radius-margin, current.node.x+radius,        // cp2 x, y
+                                    x(previous.node.y)+2*cpDistance, previous.node.x+radius,      // cp1 x, y
+                                    x(current.node.y)-2*cpDistance, current.node.x+radius,        // cp2 x, y
                                     x(current.node.y), current.node.x+radius                     // dest x, y
                                 ]);
                             }
