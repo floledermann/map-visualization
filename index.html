@@ -125,6 +125,7 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
             if (node.children) {
                 let lastInNode = null,
                     lastOutNode = null;
+                    
                 node.children.forEach(function(n) {
                     if (hasStackHead(stack, n.data.stack)) {
                         if (lastOutNode) {
@@ -283,21 +284,48 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
 
         }
         
+        function getStacks(current, context) {
+            // make a copy of our stacks;
+            current = current.slice(0);
+            context = context.slice(0);
+            
+            var common = [];
+            var extension = [];
+            var stacks = [];
+            
+            function compare(el1, el2) {
+                return (el1.file == el2.file) && (el1.loc == el2.loc);
+            }
+            
+            // save & skip common heads
+            for (var i=0; i<current.length; i++) {
+                if (i>=context.length) break;
+                if (!compare(current[i], context[i])) break;
+                common.push(current[i]);
+            }
+            for (; i<current.length; i++) {
+                extension.push(current[i]);
+                stacks.push(common.concat(extension));
+            }
+            return stacks;
+            
+        }
         
         function walkTree(node, lastStack) {
         
             lastStack = lastStack || [];
-            currentStack = node.data.stack || [];
+            var currentStack = node.data.stack || [];
             
-            // TODO: this is incorrect, we need to get *all* contexts that are new, not just the last one!
-            if (!hasStackHead(currentStack, lastStack)) {
+            var newStack = getStacks(currentStack, lastStack);
+            
+            newStack.forEach(function(stack) {
                 var edgeNodes = [{node: node, inside: true}];
-                getEdgeNodes(node, currentStack, edgeNodes);
+                getEdgeNodes(node, stack, edgeNodes);
                 edgeNodes.push({node: node, inside: true});
                 
-                drawOutline(edgeNodes, currentStack.length);
-            }
-
+                drawOutline(edgeNodes, stack.length);
+            });
+            
             if (node.children) {
                 node.children.forEach(n => walkTree(n, node.data.stack));
             }
