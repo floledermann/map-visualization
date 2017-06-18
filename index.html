@@ -352,20 +352,6 @@ d3.json("examples/d3_simple.json", function(error, treeData) {
           .attr("font-size", 12)
           .text(d => d.data.label || d.data.op || "");
 
-/*          
-        node.append("text")
-          .attr("dy", 16)
-          .attr("x", 0)
-          .attr("text-anchor", "middle")
-          .attr("font-size", 10)
-          .text(d => {
-                if (d.data.stack && d.data.stack.length > 0) {
-                    return d.data.stack[d.data.stack.length-1].name || "";
-                }
-                return "";
-          })
-        ;
-*/        
     });
 });
 
