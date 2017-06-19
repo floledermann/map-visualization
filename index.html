@@ -220,13 +220,16 @@ d3.json(INPUT_FILE, function(error, treeData) {
                         }
                         else if (previous.node.depth == current.node.depth) {
                             if (next && next.node.depth > current.node.depth) {
-                                path.push("L" + [x(current.node.y)-radius, current.node.x-radius]); // -NODE_HEIGHT*3/4
-                                /*
                                 path.push("C" + [                                                       // bezier curve 
-                                    x(current.node.y), current.node.x-radius,        // cp1 x, y
-                                    x(current.node.y), current.node.x-radius,        // cp2 x, y
-                                    x(current.node.y)-radius/2, current.node.x-radius                     // dest x, y
-                                ]);*/
+                                    x(previous.node.y)+cpDistance, previous.node.x+radius,        // cp1 x, y
+                                    x(previous.node.y)+cpDistance+margin, (previous.node.x+current.node.x)/2-cpDistance,        // cp2 x, y
+                                    x(previous.node.y)+cpDistance+margin, (previous.node.x+current.node.x)/2                     // dest x, y
+                                ]);
+                                path.push("C" + [                                                       // bezier curve 
+                                    x(current.node.y)+cpDistance+margin, (previous.node.x+current.node.x)/2+cpDistance,        // cp1 x, y
+                                    x(current.node.y)+cpDistance, current.node.x-radius,        // cp2 x, y
+                                    x(current.node.y), current.node.x-radius                     // dest x, y
+                                ]);
                             }
                             else {
                                 path.push("L" + [x(current.node.y)-radius, current.node.x]);
@@ -240,25 +243,13 @@ d3.json(INPUT_FILE, function(error, treeData) {
                             }
                         }
                         else if (previous.node.depth > current.node.depth) {
-                            if (next && current.node.depth == next.node.depth) {
-                                path.push("C" + [                                                       // bezier curve 
-                                    x(previous.node.y)+2*cpDistance, previous.node.x+radius,      // cp1 x, y
-                                    x(current.node.y)-cpDistance, current.node.x+radius,        // cp2 x, y
-                                    x(current.node.y)-radius, current.node.x+radius                     // dest x, y
-                                ]);
-                                path.push("C" + [                                                       // bezier curve 
-                                    x(current.node.y)-cpDistance, current.node.x+radius,                    // cp1 x, y
-                                    x(current.node.y)-cpDistance, current.node.x+radius,        // cp2 x, y
-                                    x(current.node.y)-radius, current.node.x+radius*1.5                     // dest x, y
-                                ]);
-                            }
-                            else {
-                                path.push("C" + [                                                       // bezier curve 
-                                    x(previous.node.y)+2*cpDistance, previous.node.x+radius,      // cp1 x, y
-                                    x(current.node.y)-2*cpDistance, current.node.x+radius,        // cp2 x, y
-                                    x(current.node.y), current.node.x+radius                     // dest x, y
-                                ]);
-                            }
+                            path.push("C" + [                                                       // bezier curve 
+                                x(previous.node.y)+2*cpDistance, previous.node.x+radius,      // cp1 x, y
+                                x(current.node.y)-2*cpDistance, current.node.x+radius,        // cp2 x, y
+                                x(current.node.y), current.node.x+radius                     // dest x, y
+                            ]);
+                            
+                            //}
                         }
                     }
                 }
