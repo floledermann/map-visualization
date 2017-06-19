@@ -1,0 +1,2976 @@
+[
+  {
+    "valuetype": "number",
+    "stack": [
+      {
+        "name": "projection",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+        "loc": "1663:3:1666:4"
+      }
+    ],
+    "loc": "1665:13:1665:30",
+    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+    "type": "binary",
+    "label": "+",
+    "op": "+",
+    "inputs": [
+      {
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "projection",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "loc": "1663:3:1666:4"
+          }
+        ],
+        "loc": "1665:13:1665:25",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+        "type": "binary",
+        "label": "×",
+        "op": "*",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projection",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1663:3:1666:4"
+              }
+            ],
+            "loc": "1665:13:1665:21",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[0]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "projection",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1663:3:1666:4"
+                  },
+                  {
+                    "name": "compose",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "208:3:210:4"
+                  },
+                  {
+                    "name": "<function 55297>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1738:10:1746:4"
+                  }
+                ],
+                "loc": "1743:7:1743:22",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "binary",
+                "label": "×",
+                "op": "*",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projection",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1663:3:1666:4"
+                      },
+                      {
+                        "name": "compose",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "208:3:210:4"
+                      },
+                      {
+                        "name": "<function 55297>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1738:10:1746:4"
+                      }
+                    ],
+                    "loc": "1743:7:1743:13",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "×",
+                    "op": "*",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projection",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1663:3:1666:4"
+                          },
+                          {
+                            "name": "compose",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "208:3:210:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          },
+                          {
+                            "name": "<function 55881>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1762:42:1764:2"
+                          }
+                        ],
+                        "type": "math",
+                        "op": "sqrt",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              },
+                              {
+                                "name": "compose",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "208:3:210:4"
+                              },
+                              {
+                                "name": "<function 55297>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1738:10:1746:4"
+                              },
+                              {
+                                "name": "<function 55881>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1762:42:1764:2"
+                              }
+                            ],
+                            "loc": "1763:15:1763:29",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "binary",
+                            "label": "/",
+                            "op": "/",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  },
+                                  {
+                                    "name": "compose",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "208:3:210:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  },
+                                  {
+                                    "name": "<function 55881>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1762:42:1764:2"
+                                  }
+                                ],
+                                "loc": "1763:15:1763:16",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "literal",
+                                "val": 2
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  },
+                                  {
+                                    "name": "compose",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "208:3:210:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  },
+                                  {
+                                    "name": "<function 55881>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1762:42:1764:2"
+                                  }
+                                ],
+                                "loc": "1763:20:1763:28",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "+",
+                                "op": "+",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      },
+                                      {
+                                        "name": "compose",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "208:3:210:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      },
+                                      {
+                                        "name": "<function 55881>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1762:42:1764:2"
+                                      }
+                                    ],
+                                    "loc": "1763:20:1763:21",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 1
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      },
+                                      {
+                                        "name": "compose",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "208:3:210:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      }
+                                    ],
+                                    "loc": "1741:19:1741:26",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "binary",
+                                    "label": "×",
+                                    "op": "*",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projection",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1663:3:1666:4"
+                                          },
+                                          {
+                                            "name": "compose",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "208:3:210:4"
+                                          },
+                                          {
+                                            "name": "<function 55297>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1738:10:1746:4"
+                                          }
+                                        ],
+                                        "type": "math",
+                                        "op": "cos",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1663:3:1666:4"
+                                              },
+                                              {
+                                                "name": "compose",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "208:3:210:4"
+                                              }
+                                            ],
+                                            "loc": "209:27:209:31",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "property",
+                                            "op": "[]",
+                                            "label": "[0]",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1663:3:1666:4"
+                                                  }
+                                                ],
+                                                "loc": "1664:27:1664:45",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "binary",
+                                                "label": "×",
+                                                "op": "*",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "projection",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "loc": "1663:3:1666:4"
+                                                      }
+                                                    ],
+                                                    "loc": "1664:27:1664:35",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "property",
+                                                    "op": "[]",
+                                                    "label": "[0]",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "loc": "1790:16:1790:21",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 16.37
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "projection",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                            "loc": "1663:3:1666:4"
+                                                          }
+                                                        ],
+                                                        "loc": "1664:33:1664:34",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 0
+                                                      }
+                                                    ],
+                                                    "val": 16.37
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "loc": "52:15:52:23",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "binary",
+                                                    "label": "/",
+                                                    "op": "/",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "type": "math",
+                                                        "val": 3.141592653589793
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "loc": "52:20:52:23",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 180
+                                                      }
+                                                    ],
+                                                    "val": 0.017453292519943295
+                                                  }
+                                                ],
+                                                "val": 0.2857103985514718
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1663:3:1666:4"
+                                                  },
+                                                  {
+                                                    "name": "compose",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "208:3:210:4"
+                                                  }
+                                                ],
+                                                "loc": "209:29:209:30",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "literal",
+                                                "val": 0
+                                              }
+                                            ],
+                                            "val": 0.2857103985514718
+                                          }
+                                        ],
+                                        "val": 0.9594616766737227
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projection",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1663:3:1666:4"
+                                          },
+                                          {
+                                            "name": "compose",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "208:3:210:4"
+                                          },
+                                          {
+                                            "name": "<function 55297>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1738:10:1746:4"
+                                          }
+                                        ],
+                                        "type": "math",
+                                        "op": "cos",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1663:3:1666:4"
+                                              },
+                                              {
+                                                "name": "compose",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "208:3:210:4"
+                                              }
+                                            ],
+                                            "loc": "209:33:209:37",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "property",
+                                            "op": "[]",
+                                            "label": "[1]",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1663:3:1666:4"
+                                                  }
+                                                ],
+                                                "loc": "1664:47:1664:65",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "binary",
+                                                "label": "×",
+                                                "op": "*",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "projection",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "loc": "1663:3:1666:4"
+                                                      }
+                                                    ],
+                                                    "loc": "1664:47:1664:55",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "property",
+                                                    "op": "[]",
+                                                    "label": "[1]",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "loc": "1790:23:1790:28",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 48.21
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "projection",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                            "loc": "1663:3:1666:4"
+                                                          }
+                                                        ],
+                                                        "loc": "1664:53:1664:54",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 1
+                                                      }
+                                                    ],
+                                                    "val": 48.21
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "loc": "52:15:52:23",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "binary",
+                                                    "label": "/",
+                                                    "op": "/",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "type": "math",
+                                                        "val": 3.141592653589793
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "loc": "52:20:52:23",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 180
+                                                      }
+                                                    ],
+                                                    "val": 0.017453292519943295
+                                                  }
+                                                ],
+                                                "val": 0.8414232323864663
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1663:3:1666:4"
+                                                  },
+                                                  {
+                                                    "name": "compose",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "208:3:210:4"
+                                                  }
+                                                ],
+                                                "loc": "209:35:209:36",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "literal",
+                                                "val": 1
+                                              }
+                                            ],
+                                            "val": 0.8414232323864663
+                                          }
+                                        ],
+                                        "val": 0.6664023499913524
+                                      }
+                                    ],
+                                    "val": 0.6393875160620119
+                                  }
+                                ],
+                                "val": 1.639387516062012
+                              }
+                            ],
+                            "val": 1.2199678113959405
+                          }
+                        ],
+                        "val": 1.1045215305262004
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projection",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1663:3:1666:4"
+                          },
+                          {
+                            "name": "compose",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "208:3:210:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          }
+                        ],
+                        "type": "math",
+                        "op": "cos",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              },
+                              {
+                                "name": "compose",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "208:3:210:4"
+                              }
+                            ],
+                            "loc": "209:33:209:37",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "property",
+                            "op": "[]",
+                            "label": "[1]",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  }
+                                ],
+                                "loc": "1664:47:1664:65",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "×",
+                                "op": "*",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      }
+                                    ],
+                                    "loc": "1664:47:1664:55",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "property",
+                                    "op": "[]",
+                                    "label": "[1]",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [],
+                                        "loc": "1790:23:1790:28",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "literal",
+                                        "val": 48.21
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projection",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1663:3:1666:4"
+                                          }
+                                        ],
+                                        "loc": "1664:53:1664:54",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "literal",
+                                        "val": 1
+                                      }
+                                    ],
+                                    "val": 48.21
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "loc": "52:15:52:23",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "binary",
+                                    "label": "/",
+                                    "op": "/",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [],
+                                        "type": "math",
+                                        "val": 3.141592653589793
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [],
+                                        "loc": "52:20:52:23",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "literal",
+                                        "val": 180
+                                      }
+                                    ],
+                                    "val": 0.017453292519943295
+                                  }
+                                ],
+                                "val": 0.8414232323864663
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  },
+                                  {
+                                    "name": "compose",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "208:3:210:4"
+                                  }
+                                ],
+                                "loc": "209:35:209:36",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "literal",
+                                "val": 1
+                              }
+                            ],
+                            "val": 0.8414232323864663
+                          }
+                        ],
+                        "val": 0.6664023499913524
+                      }
+                    ],
+                    "val": 0.7360557435587052
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projection",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1663:3:1666:4"
+                      },
+                      {
+                        "name": "compose",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "208:3:210:4"
+                      },
+                      {
+                        "name": "<function 55297>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1738:10:1746:4"
+                      }
+                    ],
+                    "type": "math",
+                    "op": "sin",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projection",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1663:3:1666:4"
+                          },
+                          {
+                            "name": "compose",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "208:3:210:4"
+                          }
+                        ],
+                        "loc": "209:27:209:31",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "property",
+                        "op": "[]",
+                        "label": "[0]",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              }
+                            ],
+                            "loc": "1664:27:1664:45",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "binary",
+                            "label": "×",
+                            "op": "*",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  }
+                                ],
+                                "loc": "1664:27:1664:35",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "property",
+                                "op": "[]",
+                                "label": "[0]",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "loc": "1790:16:1790:21",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 16.37
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      }
+                                    ],
+                                    "loc": "1664:33:1664:34",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 0
+                                  }
+                                ],
+                                "val": 16.37
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [],
+                                "loc": "52:15:52:23",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "/",
+                                "op": "/",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "type": "math",
+                                    "val": 3.141592653589793
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "loc": "52:20:52:23",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 180
+                                  }
+                                ],
+                                "val": 0.017453292519943295
+                              }
+                            ],
+                            "val": 0.2857103985514718
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              },
+                              {
+                                "name": "compose",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "208:3:210:4"
+                              }
+                            ],
+                            "loc": "209:29:209:30",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 0
+                          }
+                        ],
+                        "val": 0.2857103985514718
+                      }
+                    ],
+                    "val": 0.28183912254058835
+                  }
+                ],
+                "val": 0.20744930490554578
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "projection",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1663:3:1666:4"
+                  }
+                ],
+                "loc": "1665:19:1665:20",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "literal",
+                "val": 0
+              }
+            ],
+            "val": 0.20744930490554578
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "<function 52929>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1689:22:1691:4"
+              }
+            ],
+            "loc": "1690:36:1690:38",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": "1786:42:1786:60",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "binary",
+                "label": "/",
+                "op": "/",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "1786:42:1786:50",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "/",
+                    "op": "/",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "1786:42:1786:46",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "literal",
+                        "val": 1000
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "1786:49:1786:50",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "literal",
+                        "val": 2
+                      }
+                    ],
+                    "val": 500
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "type": "math",
+                    "val": 3.141592653589793
+                  }
+                ],
+                "val": 159.15494309189535
+              }
+            ],
+            "val": 159.15494309189535
+          }
+        ],
+        "val": 33.016582316695384
+      },
+      {
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "<function 53137>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "loc": "1693:26:1695:4"
+          },
+          {
+            "name": "recenter",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "loc": "1717:3:1723:4"
+          }
+        ],
+        "loc": "1720:10:1720:27",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+        "type": "binary",
+        "label": "-",
+        "op": "-",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "<function 53137>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1693:26:1695:4"
+              }
+            ],
+            "loc": "1694:36:1694:41",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 53137>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1693:26:1695:4"
+                  }
+                ],
+                "loc": "1694:37:1694:41",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[0]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "1786:73:1786:76",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "literal",
+                    "val": 500
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1693:26:1695:4"
+                      }
+                    ],
+                    "loc": "1694:39:1694:40",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "literal",
+                    "val": 0
+                  }
+                ],
+                "val": 500
+              }
+            ],
+            "val": 500
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "<function 53137>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1693:26:1695:4"
+              },
+              {
+                "name": "recenter",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1717:3:1723:4"
+              }
+            ],
+            "loc": "1720:14:1720:27",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "binary",
+            "label": "×",
+            "op": "*",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 53137>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1693:26:1695:4"
+                  },
+                  {
+                    "name": "recenter",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1717:3:1723:4"
+                  }
+                ],
+                "loc": "1720:14:1720:23",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[0]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1693:26:1695:4"
+                      },
+                      {
+                        "name": "recenter",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1717:3:1723:4"
+                      },
+                      {
+                        "name": "<function 55297>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1738:10:1746:4"
+                      }
+                    ],
+                    "loc": "1743:7:1743:22",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "×",
+                    "op": "*",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "<function 53137>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1693:26:1695:4"
+                          },
+                          {
+                            "name": "recenter",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1717:3:1723:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          }
+                        ],
+                        "loc": "1743:7:1743:13",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "binary",
+                        "label": "×",
+                        "op": "*",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "<function 53137>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1693:26:1695:4"
+                              },
+                              {
+                                "name": "recenter",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1717:3:1723:4"
+                              },
+                              {
+                                "name": "<function 55297>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1738:10:1746:4"
+                              },
+                              {
+                                "name": "<function 55881>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1762:42:1764:2"
+                              }
+                            ],
+                            "type": "math",
+                            "op": "sqrt",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "<function 53137>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1693:26:1695:4"
+                                  },
+                                  {
+                                    "name": "recenter",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1717:3:1723:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  },
+                                  {
+                                    "name": "<function 55881>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1762:42:1764:2"
+                                  }
+                                ],
+                                "loc": "1763:15:1763:29",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "/",
+                                "op": "/",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "<function 53137>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1693:26:1695:4"
+                                      },
+                                      {
+                                        "name": "recenter",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1717:3:1723:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      },
+                                      {
+                                        "name": "<function 55881>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1762:42:1764:2"
+                                      }
+                                    ],
+                                    "loc": "1763:15:1763:16",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 2
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "<function 53137>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1693:26:1695:4"
+                                      },
+                                      {
+                                        "name": "recenter",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1717:3:1723:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      },
+                                      {
+                                        "name": "<function 55881>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1762:42:1764:2"
+                                      }
+                                    ],
+                                    "loc": "1763:20:1763:28",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "binary",
+                                    "label": "+",
+                                    "op": "+",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "<function 53137>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1693:26:1695:4"
+                                          },
+                                          {
+                                            "name": "recenter",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1717:3:1723:4"
+                                          },
+                                          {
+                                            "name": "<function 55297>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1738:10:1746:4"
+                                          },
+                                          {
+                                            "name": "<function 55881>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1762:42:1764:2"
+                                          }
+                                        ],
+                                        "loc": "1763:20:1763:21",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "literal",
+                                        "val": 1
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "<function 53137>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1693:26:1695:4"
+                                          },
+                                          {
+                                            "name": "recenter",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1717:3:1723:4"
+                                          },
+                                          {
+                                            "name": "<function 55297>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1738:10:1746:4"
+                                          }
+                                        ],
+                                        "loc": "1741:19:1741:26",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "binary",
+                                        "label": "×",
+                                        "op": "*",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "<function 53137>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1693:26:1695:4"
+                                              },
+                                              {
+                                                "name": "recenter",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1717:3:1723:4"
+                                              },
+                                              {
+                                                "name": "<function 55297>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1738:10:1746:4"
+                                              }
+                                            ],
+                                            "type": "math",
+                                            "op": "cos",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "<function 56145>",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1770:29:1774:2"
+                                                  },
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1647:1:1649:2"
+                                                  },
+                                                  {
+                                                    "name": "projectionMutator",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1651:1:1735:2"
+                                                  }
+                                                ],
+                                                "loc": "1655:24:1655:25",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "literal",
+                                                "val": 0
+                                              }
+                                            ],
+                                            "val": 1
+                                          },
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "<function 53137>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1693:26:1695:4"
+                                              },
+                                              {
+                                                "name": "recenter",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1717:3:1723:4"
+                                              },
+                                              {
+                                                "name": "<function 55297>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1738:10:1746:4"
+                                              }
+                                            ],
+                                            "type": "math",
+                                            "op": "cos",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "<function 56145>",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1770:29:1774:2"
+                                                  },
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1647:1:1649:2"
+                                                  },
+                                                  {
+                                                    "name": "projectionMutator",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1651:1:1735:2"
+                                                  }
+                                                ],
+                                                "loc": "1655:33:1655:34",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "literal",
+                                                "val": 0
+                                              }
+                                            ],
+                                            "val": 1
+                                          }
+                                        ],
+                                        "val": 1
+                                      }
+                                    ],
+                                    "val": 2
+                                  }
+                                ],
+                                "val": 1
+                              }
+                            ],
+                            "val": 1
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "<function 53137>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1693:26:1695:4"
+                              },
+                              {
+                                "name": "recenter",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1717:3:1723:4"
+                              },
+                              {
+                                "name": "<function 55297>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1738:10:1746:4"
+                              }
+                            ],
+                            "type": "math",
+                            "op": "cos",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "<function 56145>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1770:29:1774:2"
+                                  },
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1647:1:1649:2"
+                                  },
+                                  {
+                                    "name": "projectionMutator",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1651:1:1735:2"
+                                  }
+                                ],
+                                "loc": "1655:33:1655:34",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "literal",
+                                "val": 0
+                              }
+                            ],
+                            "val": 1
+                          }
+                        ],
+                        "val": 1
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "<function 53137>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1693:26:1695:4"
+                          },
+                          {
+                            "name": "recenter",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1717:3:1723:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          }
+                        ],
+                        "type": "math",
+                        "op": "sin",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "<function 56145>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1770:29:1774:2"
+                              },
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1647:1:1649:2"
+                              },
+                              {
+                                "name": "projectionMutator",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1651:1:1735:2"
+                              }
+                            ],
+                            "loc": "1655:24:1655:25",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 0
+                          }
+                        ],
+                        "val": 0
+                      }
+                    ],
+                    "val": 0
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1693:26:1695:4"
+                      },
+                      {
+                        "name": "recenter",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1717:3:1723:4"
+                      }
+                    ],
+                    "loc": "1720:21:1720:22",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "literal",
+                    "val": 0
+                  }
+                ],
+                "val": 0
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 52929>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1689:22:1691:4"
+                  }
+                ],
+                "loc": "1690:36:1690:38",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "unary",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "1786:42:1786:60",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "/",
+                    "op": "/",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "1786:42:1786:50",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "binary",
+                        "label": "/",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [],
+                            "loc": "1786:42:1786:46",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 1000
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [],
+                            "loc": "1786:49:1786:50",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 2
+                          }
+                        ],
+                        "val": 500
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "type": "math",
+                        "val": 3.141592653589793
+                      }
+                    ],
+                    "val": 159.15494309189535
+                  }
+                ],
+                "val": 159.15494309189535
+              }
+            ],
+            "val": 0
+          }
+        ],
+        "val": 500
+      }
+    ],
+    "val": 533.0165823166953
+  },
+  {
+    "valuetype": "number",
+    "stack": [
+      {
+        "name": "projection",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+        "loc": "1663:3:1666:4"
+      }
+    ],
+    "loc": "1665:32:1665:49",
+    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+    "type": "binary",
+    "label": "-",
+    "op": "-",
+    "inputs": [
+      {
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "<function 53137>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "loc": "1693:26:1695:4"
+          },
+          {
+            "name": "recenter",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "loc": "1717:3:1723:4"
+          }
+        ],
+        "loc": "1721:10:1721:27",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+        "type": "binary",
+        "label": "+",
+        "op": "+",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "<function 53137>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1693:26:1695:4"
+              }
+            ],
+            "loc": "1694:47:1694:52",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 53137>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1693:26:1695:4"
+                  }
+                ],
+                "loc": "1694:48:1694:52",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[1]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "1786:77:1786:80",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "literal",
+                    "val": 500
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1693:26:1695:4"
+                      }
+                    ],
+                    "loc": "1694:50:1694:51",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "literal",
+                    "val": 1
+                  }
+                ],
+                "val": 500
+              }
+            ],
+            "val": 500
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "<function 53137>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1693:26:1695:4"
+              },
+              {
+                "name": "recenter",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1717:3:1723:4"
+              }
+            ],
+            "loc": "1721:14:1721:27",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "binary",
+            "label": "×",
+            "op": "*",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 53137>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1693:26:1695:4"
+                  },
+                  {
+                    "name": "recenter",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1717:3:1723:4"
+                  }
+                ],
+                "loc": "1721:14:1721:23",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[1]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1693:26:1695:4"
+                      },
+                      {
+                        "name": "recenter",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1717:3:1723:4"
+                      },
+                      {
+                        "name": "<function 55297>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1738:10:1746:4"
+                      }
+                    ],
+                    "loc": "1744:7:1744:17",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "×",
+                    "op": "*",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "<function 53137>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1693:26:1695:4"
+                          },
+                          {
+                            "name": "recenter",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1717:3:1723:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          },
+                          {
+                            "name": "<function 55881>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1762:42:1764:2"
+                          }
+                        ],
+                        "type": "math",
+                        "op": "sqrt",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "<function 53137>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1693:26:1695:4"
+                              },
+                              {
+                                "name": "recenter",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1717:3:1723:4"
+                              },
+                              {
+                                "name": "<function 55297>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1738:10:1746:4"
+                              },
+                              {
+                                "name": "<function 55881>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1762:42:1764:2"
+                              }
+                            ],
+                            "loc": "1763:15:1763:29",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "binary",
+                            "label": "/",
+                            "op": "/",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "<function 53137>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1693:26:1695:4"
+                                  },
+                                  {
+                                    "name": "recenter",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1717:3:1723:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  },
+                                  {
+                                    "name": "<function 55881>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1762:42:1764:2"
+                                  }
+                                ],
+                                "loc": "1763:15:1763:16",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "literal",
+                                "val": 2
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "<function 53137>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1693:26:1695:4"
+                                  },
+                                  {
+                                    "name": "recenter",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1717:3:1723:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  },
+                                  {
+                                    "name": "<function 55881>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1762:42:1764:2"
+                                  }
+                                ],
+                                "loc": "1763:20:1763:28",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "+",
+                                "op": "+",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "<function 53137>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1693:26:1695:4"
+                                      },
+                                      {
+                                        "name": "recenter",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1717:3:1723:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      },
+                                      {
+                                        "name": "<function 55881>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1762:42:1764:2"
+                                      }
+                                    ],
+                                    "loc": "1763:20:1763:21",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 1
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "<function 53137>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1693:26:1695:4"
+                                      },
+                                      {
+                                        "name": "recenter",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1717:3:1723:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      }
+                                    ],
+                                    "loc": "1741:19:1741:26",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "binary",
+                                    "label": "×",
+                                    "op": "*",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "<function 53137>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1693:26:1695:4"
+                                          },
+                                          {
+                                            "name": "recenter",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1717:3:1723:4"
+                                          },
+                                          {
+                                            "name": "<function 55297>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1738:10:1746:4"
+                                          }
+                                        ],
+                                        "type": "math",
+                                        "op": "cos",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "<function 56145>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1770:29:1774:2"
+                                              },
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1647:1:1649:2"
+                                              },
+                                              {
+                                                "name": "projectionMutator",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1651:1:1735:2"
+                                              }
+                                            ],
+                                            "loc": "1655:24:1655:25",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "literal",
+                                            "val": 0
+                                          }
+                                        ],
+                                        "val": 1
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "<function 53137>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1693:26:1695:4"
+                                          },
+                                          {
+                                            "name": "recenter",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1717:3:1723:4"
+                                          },
+                                          {
+                                            "name": "<function 55297>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1738:10:1746:4"
+                                          }
+                                        ],
+                                        "type": "math",
+                                        "op": "cos",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "<function 56145>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1770:29:1774:2"
+                                              },
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1647:1:1649:2"
+                                              },
+                                              {
+                                                "name": "projectionMutator",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1651:1:1735:2"
+                                              }
+                                            ],
+                                            "loc": "1655:33:1655:34",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "literal",
+                                            "val": 0
+                                          }
+                                        ],
+                                        "val": 1
+                                      }
+                                    ],
+                                    "val": 1
+                                  }
+                                ],
+                                "val": 2
+                              }
+                            ],
+                            "val": 1
+                          }
+                        ],
+                        "val": 1
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "<function 53137>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1693:26:1695:4"
+                          },
+                          {
+                            "name": "recenter",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1717:3:1723:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          }
+                        ],
+                        "type": "math",
+                        "op": "sin",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "<function 56145>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1770:29:1774:2"
+                              },
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1647:1:1649:2"
+                              },
+                              {
+                                "name": "projectionMutator",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1651:1:1735:2"
+                              }
+                            ],
+                            "loc": "1655:33:1655:34",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 0
+                          }
+                        ],
+                        "val": 0
+                      }
+                    ],
+                    "val": 0
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1693:26:1695:4"
+                      },
+                      {
+                        "name": "recenter",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1717:3:1723:4"
+                      }
+                    ],
+                    "loc": "1721:21:1721:22",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "literal",
+                    "val": 1
+                  }
+                ],
+                "val": 0
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 52929>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1689:22:1691:4"
+                  }
+                ],
+                "loc": "1690:36:1690:38",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "unary",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "1786:42:1786:60",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "/",
+                    "op": "/",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "1786:42:1786:50",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "binary",
+                        "label": "/",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [],
+                            "loc": "1786:42:1786:46",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 1000
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [],
+                            "loc": "1786:49:1786:50",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 2
+                          }
+                        ],
+                        "val": 500
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "type": "math",
+                        "val": 3.141592653589793
+                      }
+                    ],
+                    "val": 159.15494309189535
+                  }
+                ],
+                "val": 159.15494309189535
+              }
+            ],
+            "val": 0
+          }
+        ],
+        "val": 500
+      },
+      {
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "projection",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "loc": "1663:3:1666:4"
+          }
+        ],
+        "loc": "1665:37:1665:49",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+        "type": "binary",
+        "label": "×",
+        "op": "*",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projection",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1663:3:1666:4"
+              }
+            ],
+            "loc": "1665:37:1665:45",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[1]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "projection",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1663:3:1666:4"
+                  },
+                  {
+                    "name": "compose",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "208:3:210:4"
+                  },
+                  {
+                    "name": "<function 55297>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1738:10:1746:4"
+                  }
+                ],
+                "loc": "1744:7:1744:17",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "binary",
+                "label": "×",
+                "op": "*",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projection",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1663:3:1666:4"
+                      },
+                      {
+                        "name": "compose",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "208:3:210:4"
+                      },
+                      {
+                        "name": "<function 55297>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1738:10:1746:4"
+                      },
+                      {
+                        "name": "<function 55881>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1762:42:1764:2"
+                      }
+                    ],
+                    "type": "math",
+                    "op": "sqrt",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projection",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1663:3:1666:4"
+                          },
+                          {
+                            "name": "compose",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "208:3:210:4"
+                          },
+                          {
+                            "name": "<function 55297>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1738:10:1746:4"
+                          },
+                          {
+                            "name": "<function 55881>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1762:42:1764:2"
+                          }
+                        ],
+                        "loc": "1763:15:1763:29",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "binary",
+                        "label": "/",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              },
+                              {
+                                "name": "compose",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "208:3:210:4"
+                              },
+                              {
+                                "name": "<function 55297>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1738:10:1746:4"
+                              },
+                              {
+                                "name": "<function 55881>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1762:42:1764:2"
+                              }
+                            ],
+                            "loc": "1763:15:1763:16",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 2
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              },
+                              {
+                                "name": "compose",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "208:3:210:4"
+                              },
+                              {
+                                "name": "<function 55297>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1738:10:1746:4"
+                              },
+                              {
+                                "name": "<function 55881>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1762:42:1764:2"
+                              }
+                            ],
+                            "loc": "1763:20:1763:28",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "binary",
+                            "label": "+",
+                            "op": "+",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  },
+                                  {
+                                    "name": "compose",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "208:3:210:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  },
+                                  {
+                                    "name": "<function 55881>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1762:42:1764:2"
+                                  }
+                                ],
+                                "loc": "1763:20:1763:21",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "literal",
+                                "val": 1
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  },
+                                  {
+                                    "name": "compose",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "208:3:210:4"
+                                  },
+                                  {
+                                    "name": "<function 55297>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1738:10:1746:4"
+                                  }
+                                ],
+                                "loc": "1741:19:1741:26",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "×",
+                                "op": "*",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      },
+                                      {
+                                        "name": "compose",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "208:3:210:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      }
+                                    ],
+                                    "type": "math",
+                                    "op": "cos",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projection",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1663:3:1666:4"
+                                          },
+                                          {
+                                            "name": "compose",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "208:3:210:4"
+                                          }
+                                        ],
+                                        "loc": "209:27:209:31",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "property",
+                                        "op": "[]",
+                                        "label": "[0]",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1663:3:1666:4"
+                                              }
+                                            ],
+                                            "loc": "1664:27:1664:45",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "binary",
+                                            "label": "×",
+                                            "op": "*",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1663:3:1666:4"
+                                                  }
+                                                ],
+                                                "loc": "1664:27:1664:35",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "property",
+                                                "op": "[]",
+                                                "label": "[0]",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "loc": "1790:16:1790:21",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 16.37
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "projection",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "loc": "1663:3:1666:4"
+                                                      }
+                                                    ],
+                                                    "loc": "1664:33:1664:34",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 0
+                                                  }
+                                                ],
+                                                "val": 16.37
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [],
+                                                "loc": "52:15:52:23",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "binary",
+                                                "label": "/",
+                                                "op": "/",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "type": "math",
+                                                    "val": 3.141592653589793
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "loc": "52:20:52:23",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 180
+                                                  }
+                                                ],
+                                                "val": 0.017453292519943295
+                                              }
+                                            ],
+                                            "val": 0.2857103985514718
+                                          },
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1663:3:1666:4"
+                                              },
+                                              {
+                                                "name": "compose",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "208:3:210:4"
+                                              }
+                                            ],
+                                            "loc": "209:29:209:30",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "literal",
+                                            "val": 0
+                                          }
+                                        ],
+                                        "val": 0.2857103985514718
+                                      }
+                                    ],
+                                    "val": 0.9594616766737227
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      },
+                                      {
+                                        "name": "compose",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "208:3:210:4"
+                                      },
+                                      {
+                                        "name": "<function 55297>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1738:10:1746:4"
+                                      }
+                                    ],
+                                    "type": "math",
+                                    "op": "cos",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "projection",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "1663:3:1666:4"
+                                          },
+                                          {
+                                            "name": "compose",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "loc": "208:3:210:4"
+                                          }
+                                        ],
+                                        "loc": "209:33:209:37",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "type": "property",
+                                        "op": "[]",
+                                        "label": "[1]",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1663:3:1666:4"
+                                              }
+                                            ],
+                                            "loc": "1664:47:1664:65",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "binary",
+                                            "label": "×",
+                                            "op": "*",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "projection",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "loc": "1663:3:1666:4"
+                                                  }
+                                                ],
+                                                "loc": "1664:47:1664:55",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "property",
+                                                "op": "[]",
+                                                "label": "[1]",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "loc": "1790:23:1790:28",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 48.21
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "projection",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                        "loc": "1663:3:1666:4"
+                                                      }
+                                                    ],
+                                                    "loc": "1664:53:1664:54",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 1
+                                                  }
+                                                ],
+                                                "val": 48.21
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [],
+                                                "loc": "52:15:52:23",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "type": "binary",
+                                                "label": "/",
+                                                "op": "/",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "type": "math",
+                                                    "val": 3.141592653589793
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [],
+                                                    "loc": "52:20:52:23",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 180
+                                                  }
+                                                ],
+                                                "val": 0.017453292519943295
+                                              }
+                                            ],
+                                            "val": 0.8414232323864663
+                                          },
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "projection",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "1663:3:1666:4"
+                                              },
+                                              {
+                                                "name": "compose",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                                "loc": "208:3:210:4"
+                                              }
+                                            ],
+                                            "loc": "209:35:209:36",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                            "type": "literal",
+                                            "val": 1
+                                          }
+                                        ],
+                                        "val": 0.8414232323864663
+                                      }
+                                    ],
+                                    "val": 0.6664023499913524
+                                  }
+                                ],
+                                "val": 0.6393875160620119
+                              }
+                            ],
+                            "val": 1.639387516062012
+                          }
+                        ],
+                        "val": 1.2199678113959405
+                      }
+                    ],
+                    "val": 1.1045215305262004
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "projection",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1663:3:1666:4"
+                      },
+                      {
+                        "name": "compose",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "208:3:210:4"
+                      },
+                      {
+                        "name": "<function 55297>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "loc": "1738:10:1746:4"
+                      }
+                    ],
+                    "type": "math",
+                    "op": "sin",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "projection",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "1663:3:1666:4"
+                          },
+                          {
+                            "name": "compose",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "loc": "208:3:210:4"
+                          }
+                        ],
+                        "loc": "209:33:209:37",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "property",
+                        "op": "[]",
+                        "label": "[1]",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              }
+                            ],
+                            "loc": "1664:47:1664:65",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "binary",
+                            "label": "×",
+                            "op": "*",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "projection",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "loc": "1663:3:1666:4"
+                                  }
+                                ],
+                                "loc": "1664:47:1664:55",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "property",
+                                "op": "[]",
+                                "label": "[1]",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "loc": "1790:23:1790:28",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 48.21
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "projection",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                        "loc": "1663:3:1666:4"
+                                      }
+                                    ],
+                                    "loc": "1664:53:1664:54",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 1
+                                  }
+                                ],
+                                "val": 48.21
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [],
+                                "loc": "52:15:52:23",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "type": "binary",
+                                "label": "/",
+                                "op": "/",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "type": "math",
+                                    "val": 3.141592653589793
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [],
+                                    "loc": "52:20:52:23",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                    "type": "literal",
+                                    "val": 180
+                                  }
+                                ],
+                                "val": 0.017453292519943295
+                              }
+                            ],
+                            "val": 0.8414232323864663
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "projection",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "1663:3:1666:4"
+                              },
+                              {
+                                "name": "compose",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                                "loc": "208:3:210:4"
+                              }
+                            ],
+                            "loc": "209:35:209:36",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                            "type": "literal",
+                            "val": 1
+                          }
+                        ],
+                        "val": 0.8414232323864663
+                      }
+                    ],
+                    "val": 0.7455923201897959
+                  }
+                ],
+                "val": 0.8235227706446142
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "projection",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "loc": "1663:3:1666:4"
+                  }
+                ],
+                "loc": "1665:43:1665:44",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "literal",
+                "val": 1
+              }
+            ],
+            "val": 0.8235227706446142
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "<function 52929>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "loc": "1689:22:1691:4"
+              }
+            ],
+            "loc": "1690:36:1690:38",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": "1786:42:1786:60",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                "type": "binary",
+                "label": "/",
+                "op": "/",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "1786:42:1786:50",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                    "type": "binary",
+                    "label": "/",
+                    "op": "/",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "1786:42:1786:46",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "literal",
+                        "val": 1000
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "1786:49:1786:50",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_azimuthal_bundle.js",
+                        "type": "literal",
+                        "val": 2
+                      }
+                    ],
+                    "val": 500
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "type": "math",
+                    "val": 3.141592653589793
+                  }
+                ],
+                "val": 159.15494309189535
+              }
+            ],
+            "val": 159.15494309189535
+          }
+        ],
+        "val": 131.06771969682356
+      }
+    ],
+    "val": 368.9322803031764
+  }
+]
