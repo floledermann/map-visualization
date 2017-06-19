@@ -73,8 +73,8 @@ var svg = d3.select("svg"),
 
 // ATTENTION width and height are swapped because we have a horizontal tree layout!
 // var tree = d3.cluster().size([height, 1]);
-var INPUT_FILE = "examples/d3_mercator.json",
-    NODE_HEIGHT = 50,
+var INPUT_FILE = "examples/" + ((window.location.search && window.location.search.substring(1)) || "d3_mercator.json"),
+    NODE_HEIGHT = 45,
     TREE_HEIGHT = 2000,
     MAX_DEPTH = 20,
     INITIAL_Y_OFFSET = 1800,
