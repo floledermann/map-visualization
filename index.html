@@ -71,15 +71,15 @@ var svg = d3.select("svg"),
     height = +svg.attr("height"),
     g = svg.append("g").attr("transform", "translate(60,0)");
 
-// ATTENTION width and height are swapped because we have a horizontal tree layout!
-// var tree = d3.cluster().size([height, 1]);
 var INPUT_FILE = "examples/" + ((window.location.search && window.location.search.substring(1)) || "d3_mercator.json"),
     NODE_HEIGHT = 45,
-    TREE_HEIGHT = 2000,
+    TREE_HEIGHT = 1100,
     MAX_DEPTH = 20,
-    INITIAL_Y_OFFSET = 1800,
+    INITIAL_Y_OFFSET = 1100,
     FUNCTION_MARGIN = 4;
 
+// ATTENTION width and height are swapped because we have a horizontal tree layout!
+//var tree = d3.cluster().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
 var tree = d3.tree().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
 
 function x(x0) {
