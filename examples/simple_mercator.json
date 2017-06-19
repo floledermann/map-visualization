@@ -5,10 +5,10 @@
       {
         "name": "<function 569>",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-        "loc": "21:20:21:47"
+        "loc": "20:20:20:47"
       }
     ],
-    "loc": "21:40:21:46",
+    "loc": "20:40:20:46",
     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
     "type": "binary",
     "label": "×",
@@ -20,7 +20,7 @@
           {
             "name": "projectMercator",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-            "loc": "7:1:14:2"
+            "loc": "7:1:13:2"
           }
         ],
         "loc": "10:11:10:36",
@@ -35,7 +35,7 @@
               {
                 "name": "projectMercator",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                "loc": "7:1:14:2"
+                "loc": "7:1:13:2"
               }
             ],
             "loc": "10:11:10:30",
@@ -50,7 +50,7 @@
                   {
                     "name": "projectMercator",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                    "loc": "7:1:14:2"
+                    "loc": "7:1:13:2"
                   }
                 ],
                 "loc": "10:11:10:20",
@@ -65,7 +65,7 @@
                       {
                         "name": "projectMercator",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                        "loc": "7:1:14:2"
+                        "loc": "7:1:13:2"
                       },
                       {
                         "name": "degRad",
@@ -85,7 +85,7 @@
                           {
                             "name": "projectMercator",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                            "loc": "7:1:14:2"
+                            "loc": "7:1:13:2"
                           }
                         ],
                         "loc": "9:20:9:29",
@@ -97,7 +97,7 @@
                           {
                             "valuetype": "number",
                             "stack": [],
-                            "loc": "17:34:17:39",
+                            "loc": "16:34:16:39",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                             "type": "literal",
                             "val": 16.37
@@ -108,7 +108,7 @@
                               {
                                 "name": "projectMercator",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                "loc": "7:1:14:2"
+                                "loc": "7:1:13:2"
                               }
                             ],
                             "loc": "9:27:9:28",
@@ -125,7 +125,7 @@
                           {
                             "name": "projectMercator",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                            "loc": "7:1:14:2"
+                            "loc": "7:1:13:2"
                           },
                           {
                             "name": "degRad",
@@ -145,7 +145,7 @@
                               {
                                 "name": "projectMercator",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                "loc": "7:1:14:2"
+                                "loc": "7:1:13:2"
                               },
                               {
                                 "name": "degRad",
@@ -162,7 +162,7 @@
                               {
                                 "name": "projectMercator",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                "loc": "7:1:14:2"
+                                "loc": "7:1:13:2"
                               },
                               {
                                 "name": "degRad",
@@ -187,7 +187,7 @@
                       {
                         "name": "projectMercator",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                        "loc": "7:1:14:2"
+                        "loc": "7:1:13:2"
                       }
                     ],
                     "loc": "10:17:10:20",
@@ -204,7 +204,7 @@
                   {
                     "name": "projectMercator",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                    "loc": "7:1:14:2"
+                    "loc": "7:1:13:2"
                   }
                 ],
                 "type": "math",
@@ -219,7 +219,7 @@
               {
                 "name": "projectMercator",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                "loc": "7:1:14:2"
+                "loc": "7:1:13:2"
               }
             ],
             "loc": "10:33:10:36",
@@ -236,10 +236,10 @@
           {
             "name": "<function 569>",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-            "loc": "21:20:21:47"
+            "loc": "20:20:20:47"
           }
         ],
-        "loc": "21:42:21:46",
+        "loc": "20:42:20:46",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
         "type": "literal",
         "val": 1000
@@ -253,10 +253,10 @@
       {
         "name": "<function 569>",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-        "loc": "21:20:21:47"
+        "loc": "20:20:20:47"
       }
     ],
-    "loc": "21:40:21:46",
+    "loc": "20:40:20:46",
     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
     "type": "binary",
     "label": "×",
@@ -268,14 +268,14 @@
           {
             "name": "projectMercator",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-            "loc": "7:1:14:2"
+            "loc": "7:1:13:2"
           }
         ],
-        "loc": "11:11:12:47",
+        "loc": "11:11:11:80",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
         "type": "binary",
-        "label": "+",
-        "op": "+",
+        "label": "-",
+        "op": "-",
         "inputs": [
           {
             "valuetype": "number",
@@ -283,10 +283,24 @@
               {
                 "name": "projectMercator",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                "loc": "7:1:14:2"
+                "loc": "7:1:13:2"
               }
             ],
-            "loc": "11:11:12:41",
+            "loc": "11:11:11:14",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
+            "type": "literal",
+            "val": 0.5
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "projectMercator",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
+                "loc": "7:1:13:2"
+              }
+            ],
+            "loc": "11:17:11:80",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
             "type": "binary",
             "label": "/",
@@ -298,10 +312,10 @@
                   {
                     "name": "projectMercator",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                    "loc": "7:1:14:2"
+                    "loc": "7:1:13:2"
                   }
                 ],
-                "loc": "11:11:12:31",
+                "loc": "11:17:11:70",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                 "type": "binary",
                 "label": "/",
@@ -313,7 +327,7 @@
                       {
                         "name": "projectMercator",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                        "loc": "7:1:14:2"
+                        "loc": "7:1:13:2"
                       }
                     ],
                     "type": "math",
@@ -325,10 +339,10 @@
                           {
                             "name": "projectMercator",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                            "loc": "7:1:14:2"
+                            "loc": "7:1:13:2"
                           }
                         ],
-                        "loc": "11:20:12:24",
+                        "loc": "11:26:11:63",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                         "type": "binary",
                         "label": "/",
@@ -340,10 +354,10 @@
                               {
                                 "name": "projectMercator",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                "loc": "7:1:14:2"
+                                "loc": "7:1:13:2"
                               }
                             ],
-                            "loc": "11:21:11:40",
+                            "loc": "11:27:11:46",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                             "type": "binary",
                             "label": "+",
@@ -355,7 +369,7 @@
                                   {
                                     "name": "projectMercator",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                    "loc": "7:1:14:2"
+                                    "loc": "7:1:13:2"
                                   }
                                 ],
                                 "type": "math",
@@ -367,7 +381,7 @@
                                       {
                                         "name": "projectMercator",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                        "loc": "7:1:14:2"
+                                        "loc": "7:1:13:2"
                                       },
                                       {
                                         "name": "degRad",
@@ -387,7 +401,7 @@
                                           {
                                             "name": "projectMercator",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                            "loc": "7:1:14:2"
+                                            "loc": "7:1:13:2"
                                           }
                                         ],
                                         "loc": "8:20:8:29",
@@ -399,7 +413,7 @@
                                           {
                                             "valuetype": "number",
                                             "stack": [],
-                                            "loc": "17:27:17:32",
+                                            "loc": "16:27:16:32",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                                             "type": "literal",
                                             "val": 48.21
@@ -410,7 +424,7 @@
                                               {
                                                 "name": "projectMercator",
                                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                                "loc": "7:1:14:2"
+                                                "loc": "7:1:13:2"
                                               }
                                             ],
                                             "loc": "8:27:8:28",
@@ -427,7 +441,7 @@
                                           {
                                             "name": "projectMercator",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                            "loc": "7:1:14:2"
+                                            "loc": "7:1:13:2"
                                           },
                                           {
                                             "name": "degRad",
@@ -447,7 +461,7 @@
                                               {
                                                 "name": "projectMercator",
                                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                                "loc": "7:1:14:2"
+                                                "loc": "7:1:13:2"
                                               },
                                               {
                                                 "name": "degRad",
@@ -464,7 +478,7 @@
                                               {
                                                 "name": "projectMercator",
                                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                                "loc": "7:1:14:2"
+                                                "loc": "7:1:13:2"
                                               },
                                               {
                                                 "name": "degRad",
@@ -492,10 +506,10 @@
                                   {
                                     "name": "projectMercator",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                    "loc": "7:1:14:2"
+                                    "loc": "7:1:13:2"
                                   }
                                 ],
-                                "loc": "11:37:11:40",
+                                "loc": "11:43:11:46",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                                 "type": "literal",
                                 "val": 1
@@ -509,7 +523,7 @@
                               {
                                 "name": "projectMercator",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                "loc": "7:1:14:2"
+                                "loc": "7:1:13:2"
                               }
                             ],
                             "type": "math",
@@ -521,7 +535,7 @@
                                   {
                                     "name": "projectMercator",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                    "loc": "7:1:14:2"
+                                    "loc": "7:1:13:2"
                                   },
                                   {
                                     "name": "degRad",
@@ -541,7 +555,7 @@
                                       {
                                         "name": "projectMercator",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                        "loc": "7:1:14:2"
+                                        "loc": "7:1:13:2"
                                       }
                                     ],
                                     "loc": "8:20:8:29",
@@ -553,7 +567,7 @@
                                       {
                                         "valuetype": "number",
                                         "stack": [],
-                                        "loc": "17:27:17:32",
+                                        "loc": "16:27:16:32",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                                         "type": "literal",
                                         "val": 48.21
@@ -564,7 +578,7 @@
                                           {
                                             "name": "projectMercator",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                            "loc": "7:1:14:2"
+                                            "loc": "7:1:13:2"
                                           }
                                         ],
                                         "loc": "8:27:8:28",
@@ -581,7 +595,7 @@
                                       {
                                         "name": "projectMercator",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                        "loc": "7:1:14:2"
+                                        "loc": "7:1:13:2"
                                       },
                                       {
                                         "name": "degRad",
@@ -601,7 +615,7 @@
                                           {
                                             "name": "projectMercator",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                            "loc": "7:1:14:2"
+                                            "loc": "7:1:13:2"
                                           },
                                           {
                                             "name": "degRad",
@@ -618,7 +632,7 @@
                                           {
                                             "name": "projectMercator",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                                            "loc": "7:1:14:2"
+                                            "loc": "7:1:13:2"
                                           },
                                           {
                                             "name": "degRad",
@@ -652,10 +666,10 @@
                       {
                         "name": "projectMercator",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                        "loc": "7:1:14:2"
+                        "loc": "7:1:13:2"
                       }
                     ],
-                    "loc": "12:28:12:31",
+                    "loc": "11:67:11:70",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
                     "type": "literal",
                     "val": 2
@@ -669,7 +683,7 @@
                   {
                     "name": "projectMercator",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                    "loc": "7:1:14:2"
+                    "loc": "7:1:13:2"
                   }
                 ],
                 "type": "math",
@@ -677,23 +691,9 @@
               }
             ],
             "val": 0.1532591434475365
-          },
-          {
-            "valuetype": "number",
-            "stack": [
-              {
-                "name": "projectMercator",
-                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-                "loc": "7:1:14:2"
-              }
-            ],
-            "loc": "12:44:12:47",
-            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-            "type": "literal",
-            "val": 0.5
           }
         ],
-        "val": 0.6532591434475365
+        "val": 0.3467408565524635
       },
       {
         "valuetype": "number",
@@ -701,15 +701,15 @@
           {
             "name": "<function 569>",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
-            "loc": "21:20:21:47"
+            "loc": "20:20:20:47"
           }
         ],
-        "loc": "21:42:21:46",
+        "loc": "20:42:20:46",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\simple_mercator.js",
         "type": "literal",
         "val": 1000
       }
     ],
-    "val": 653.2591434475365
+    "val": 346.7408565524635
   }
 ]
