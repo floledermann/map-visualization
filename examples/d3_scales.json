@@ -1,0 +1,989 @@
+[
+  {
+    "valuetype": "string",
+    "stack": [
+      {
+        "name": "scale",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "loc": "1146:3:1148:4"
+      },
+      {
+        "name": "<function 35321>",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "loc": "1095:10:1095:43"
+      },
+      {
+        "name": "<function 28433>",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "loc": "886:12:892:6"
+      }
+    ],
+    "loc": "891:14:891:24",
+    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+    "type": "binary",
+    "label": "+",
+    "op": "+",
+    "inputs": [
+      {
+        "valuetype": "string",
+        "stack": [
+          {
+            "name": "scale",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1146:3:1148:4"
+          },
+          {
+            "name": "<function 35321>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1095:10:1095:43"
+          },
+          {
+            "name": "<function 28433>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "886:12:892:6"
+          },
+          {
+            "name": "<function 15937>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "579:13:586:4"
+          }
+        ],
+        "loc": "581:12:585:43",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "type": "binary",
+        "label": "+",
+        "op": "+",
+        "inputs": [
+          {
+            "valuetype": "string",
+            "stack": [
+              {
+                "name": "scale",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1146:3:1148:4"
+              },
+              {
+                "name": "<function 35321>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1095:10:1095:43"
+              },
+              {
+                "name": "<function 28433>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "886:12:892:6"
+              },
+              {
+                "name": "<function 15937>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "579:13:586:4"
+              }
+            ],
+            "loc": "581:12:584:62",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "type": "binary",
+            "label": "+",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "string",
+                "stack": [
+                  {
+                    "name": "scale",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1146:3:1148:4"
+                  },
+                  {
+                    "name": "<function 35321>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1095:10:1095:43"
+                  },
+                  {
+                    "name": "<function 28433>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "886:12:892:6"
+                  },
+                  {
+                    "name": "<function 15937>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "579:13:586:4"
+                  }
+                ],
+                "loc": "581:12:583:69",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "type": "binary",
+                "label": "+",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "string",
+                    "stack": [
+                      {
+                        "name": "scale",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1146:3:1148:4"
+                      },
+                      {
+                        "name": "<function 35321>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1095:10:1095:43"
+                      },
+                      {
+                        "name": "<function 28433>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "886:12:892:6"
+                      },
+                      {
+                        "name": "<function 15937>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "579:13:586:4"
+                      }
+                    ],
+                    "loc": "581:12:583:62",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "binary",
+                    "label": "+",
+                    "op": "+",
+                    "inputs": [
+                      {
+                        "valuetype": "string",
+                        "stack": [
+                          {
+                            "name": "scale",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1146:3:1148:4"
+                          },
+                          {
+                            "name": "<function 35321>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1095:10:1095:43"
+                          },
+                          {
+                            "name": "<function 28433>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "886:12:892:6"
+                          },
+                          {
+                            "name": "<function 15937>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "579:13:586:4"
+                          }
+                        ],
+                        "loc": "581:12:582:69",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "type": "binary",
+                        "label": "+",
+                        "op": "+",
+                        "inputs": [
+                          {
+                            "valuetype": "string",
+                            "stack": [
+                              {
+                                "name": "scale",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1146:3:1148:4"
+                              },
+                              {
+                                "name": "<function 35321>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1095:10:1095:43"
+                              },
+                              {
+                                "name": "<function 28433>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "886:12:892:6"
+                              },
+                              {
+                                "name": "<function 15937>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "579:13:586:4"
+                              }
+                            ],
+                            "loc": "581:12:582:62",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "type": "binary",
+                            "label": "+",
+                            "op": "+",
+                            "inputs": [
+                              {
+                                "valuetype": "string",
+                                "stack": [
+                                  {
+                                    "name": "scale",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1146:3:1148:4"
+                                  },
+                                  {
+                                    "name": "<function 35321>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1095:10:1095:43"
+                                  },
+                                  {
+                                    "name": "<function 28433>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "886:12:892:6"
+                                  },
+                                  {
+                                    "name": "<function 15937>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "579:13:586:4"
+                                  }
+                                ],
+                                "loc": "581:23:581:29",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "type": "literal",
+                                "val": "rgb("
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "scale",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1146:3:1148:4"
+                                  },
+                                  {
+                                    "name": "<function 35321>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1095:10:1095:43"
+                                  },
+                                  {
+                                    "name": "<function 28433>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "886:12:892:6"
+                                  },
+                                  {
+                                    "name": "<function 15937>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "579:13:586:4"
+                                  }
+                                ],
+                                "type": "math",
+                                "op": "max",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "scale",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "1146:3:1148:4"
+                                      },
+                                      {
+                                        "name": "<function 35321>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "1095:10:1095:43"
+                                      },
+                                      {
+                                        "name": "<function 28433>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "886:12:892:6"
+                                      },
+                                      {
+                                        "name": "<function 15937>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "579:13:586:4"
+                                      }
+                                    ],
+                                    "loc": "582:20:582:21",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "type": "literal",
+                                    "val": 0
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "scale",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "1146:3:1148:4"
+                                      },
+                                      {
+                                        "name": "<function 35321>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "1095:10:1095:43"
+                                      },
+                                      {
+                                        "name": "<function 28433>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "886:12:892:6"
+                                      },
+                                      {
+                                        "name": "<function 15937>",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "loc": "579:13:586:4"
+                                      }
+                                    ],
+                                    "type": "math",
+                                    "op": "min",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "scale",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "1146:3:1148:4"
+                                          },
+                                          {
+                                            "name": "<function 35321>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "1095:10:1095:43"
+                                          },
+                                          {
+                                            "name": "<function 28433>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "886:12:892:6"
+                                          },
+                                          {
+                                            "name": "<function 15937>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "579:13:586:4"
+                                          }
+                                        ],
+                                        "loc": "582:32:582:35",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "type": "literal",
+                                        "val": 255
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "scale",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "1146:3:1148:4"
+                                          },
+                                          {
+                                            "name": "<function 35321>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "1095:10:1095:43"
+                                          },
+                                          {
+                                            "name": "<function 28433>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "886:12:892:6"
+                                          },
+                                          {
+                                            "name": "<function 15937>",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "loc": "579:13:586:4"
+                                          }
+                                        ],
+                                        "loc": "582:59:582:60",
+                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                        "type": "literal",
+                                        "val": 0
+                                      }
+                                    ],
+                                    "val": 0
+                                  }
+                                ],
+                                "val": 0
+                              }
+                            ],
+                            "val": "rgb(0"
+                          },
+                          {
+                            "valuetype": "string",
+                            "stack": [
+                              {
+                                "name": "scale",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1146:3:1148:4"
+                              },
+                              {
+                                "name": "<function 35321>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1095:10:1095:43"
+                              },
+                              {
+                                "name": "<function 28433>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "886:12:892:6"
+                              },
+                              {
+                                "name": "<function 15937>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "579:13:586:4"
+                              }
+                            ],
+                            "loc": "582:65:582:69",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "type": "literal",
+                            "val": ", "
+                          }
+                        ],
+                        "val": "rgb(0, "
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "scale",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1146:3:1148:4"
+                          },
+                          {
+                            "name": "<function 35321>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1095:10:1095:43"
+                          },
+                          {
+                            "name": "<function 28433>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "886:12:892:6"
+                          },
+                          {
+                            "name": "<function 15937>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "579:13:586:4"
+                          }
+                        ],
+                        "type": "math",
+                        "op": "max",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "scale",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1146:3:1148:4"
+                              },
+                              {
+                                "name": "<function 35321>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1095:10:1095:43"
+                              },
+                              {
+                                "name": "<function 28433>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "886:12:892:6"
+                              },
+                              {
+                                "name": "<function 15937>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "579:13:586:4"
+                              }
+                            ],
+                            "loc": "583:20:583:21",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "type": "literal",
+                            "val": 0
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "scale",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1146:3:1148:4"
+                              },
+                              {
+                                "name": "<function 35321>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "1095:10:1095:43"
+                              },
+                              {
+                                "name": "<function 28433>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "886:12:892:6"
+                              },
+                              {
+                                "name": "<function 15937>",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "loc": "579:13:586:4"
+                              }
+                            ],
+                            "type": "math",
+                            "op": "min",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "scale",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1146:3:1148:4"
+                                  },
+                                  {
+                                    "name": "<function 35321>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1095:10:1095:43"
+                                  },
+                                  {
+                                    "name": "<function 28433>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "886:12:892:6"
+                                  },
+                                  {
+                                    "name": "<function 15937>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "579:13:586:4"
+                                  }
+                                ],
+                                "loc": "583:32:583:35",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "type": "literal",
+                                "val": 255
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "scale",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1146:3:1148:4"
+                                  },
+                                  {
+                                    "name": "<function 35321>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "1095:10:1095:43"
+                                  },
+                                  {
+                                    "name": "<function 28433>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "886:12:892:6"
+                                  },
+                                  {
+                                    "name": "<function 15937>",
+                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                    "loc": "579:13:586:4"
+                                  }
+                                ],
+                                "loc": "583:59:583:60",
+                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                "type": "literal",
+                                "val": 0
+                              }
+                            ],
+                            "val": 0
+                          }
+                        ],
+                        "val": 0
+                      }
+                    ],
+                    "val": "rgb(0, 0"
+                  },
+                  {
+                    "valuetype": "string",
+                    "stack": [
+                      {
+                        "name": "scale",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1146:3:1148:4"
+                      },
+                      {
+                        "name": "<function 35321>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1095:10:1095:43"
+                      },
+                      {
+                        "name": "<function 28433>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "886:12:892:6"
+                      },
+                      {
+                        "name": "<function 15937>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "579:13:586:4"
+                      }
+                    ],
+                    "loc": "583:65:583:69",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "literal",
+                    "val": ", "
+                  }
+                ],
+                "val": "rgb(0, 0, "
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "scale",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1146:3:1148:4"
+                  },
+                  {
+                    "name": "<function 35321>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1095:10:1095:43"
+                  },
+                  {
+                    "name": "<function 28433>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "886:12:892:6"
+                  },
+                  {
+                    "name": "<function 15937>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "579:13:586:4"
+                  }
+                ],
+                "type": "math",
+                "op": "max",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "scale",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1146:3:1148:4"
+                      },
+                      {
+                        "name": "<function 35321>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1095:10:1095:43"
+                      },
+                      {
+                        "name": "<function 28433>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "886:12:892:6"
+                      },
+                      {
+                        "name": "<function 15937>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "579:13:586:4"
+                      }
+                    ],
+                    "loc": "584:20:584:21",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "literal",
+                    "val": 0
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "scale",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1146:3:1148:4"
+                      },
+                      {
+                        "name": "<function 35321>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1095:10:1095:43"
+                      },
+                      {
+                        "name": "<function 28433>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "886:12:892:6"
+                      },
+                      {
+                        "name": "<function 15937>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "579:13:586:4"
+                      }
+                    ],
+                    "type": "math",
+                    "op": "min",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "scale",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1146:3:1148:4"
+                          },
+                          {
+                            "name": "<function 35321>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1095:10:1095:43"
+                          },
+                          {
+                            "name": "<function 28433>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "886:12:892:6"
+                          },
+                          {
+                            "name": "<function 15937>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "579:13:586:4"
+                          }
+                        ],
+                        "loc": "584:32:584:35",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "type": "literal",
+                        "val": 255
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "scale",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1146:3:1148:4"
+                          },
+                          {
+                            "name": "<function 35321>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1095:10:1095:43"
+                          },
+                          {
+                            "name": "<function 28433>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "886:12:892:6"
+                          },
+                          {
+                            "name": "<function 15937>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "579:13:586:4"
+                          }
+                        ],
+                        "loc": "584:59:584:60",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "type": "literal",
+                        "val": 0
+                      }
+                    ],
+                    "val": 0
+                  }
+                ],
+                "val": 0
+              }
+            ],
+            "val": "rgb(0, 0, 0"
+          },
+          {
+            "valuetype": "string",
+            "stack": [
+              {
+                "name": "scale",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1146:3:1148:4"
+              },
+              {
+                "name": "<function 35321>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1095:10:1095:43"
+              },
+              {
+                "name": "<function 28433>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "886:12:892:6"
+              },
+              {
+                "name": "<function 15937>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "579:13:586:4"
+              }
+            ],
+            "loc": "585:22:585:25",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "type": "literal",
+            "val": ")"
+          }
+        ],
+        "val": "rgb(0, 0, 0)"
+      },
+      {
+        "valuetype": "string",
+        "stack": [
+          {
+            "name": "scale",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1146:3:1148:4"
+          },
+          {
+            "name": "<function 35321>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1095:10:1095:43"
+          },
+          {
+            "name": "<function 28433>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "886:12:892:6"
+          }
+        ],
+        "loc": "891:22:891:24",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "type": "literal",
+        "val": ""
+      }
+    ],
+    "val": "rgb(0, 0, 0)"
+  },
+  {
+    "valuetype": "string",
+    "stack": [
+      {
+        "name": "scale",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "loc": "1621:3:1623:4"
+      }
+    ],
+    "loc": "1622:24:1622:62",
+    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+    "type": "property",
+    "op": "[]",
+    "label": "[1]",
+    "inputs": [
+      {
+        "valuetype": "string",
+        "stack": [],
+        "loc": "2527:63:2527:72",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "type": "literal",
+        "val": "#99ff99"
+      },
+      {
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "scale",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1621:3:1623:4"
+          },
+          {
+            "name": "<function 865>",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "20:12:29:6"
+          }
+        ],
+        "loc": "26:19:26:26",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "type": "binary",
+        "label": "+",
+        "op": "+",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "scale",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1621:3:1623:4"
+              },
+              {
+                "name": "<function 865>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "20:12:29:6"
+              }
+            ],
+            "loc": "24:19:24:32",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "type": "binary",
+            "label": ">>>",
+            "op": ">>>",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "scale",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1621:3:1623:4"
+                  },
+                  {
+                    "name": "<function 865>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "20:12:29:6"
+                  }
+                ],
+                "loc": "24:19:24:26",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "type": "binary",
+                "label": "+",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "scale",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1621:3:1623:4"
+                      }
+                    ],
+                    "loc": "1622:56:1622:57",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "literal",
+                    "val": 0
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 53465>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1636:17:1638:4"
+                      }
+                    ],
+                    "loc": "1637:36:1637:75",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "binary",
+                    "label": "-",
+                    "op": "-",
+                    "inputs": [
+                      2,
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "<function 53465>",
+                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                            "loc": "1636:17:1638:4"
+                          }
+                        ],
+                        "loc": "1637:74:1637:75",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "type": "literal",
+                        "val": 1
+                      }
+                    ],
+                    "val": 1
+                  }
+                ],
+                "val": 1
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "scale",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1621:3:1623:4"
+                  },
+                  {
+                    "name": "<function 865>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "20:12:29:6"
+                  }
+                ],
+                "loc": "24:31:24:32",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "type": "literal",
+                "val": 1
+              }
+            ],
+            "val": 0
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "scale",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1621:3:1623:4"
+              },
+              {
+                "name": "<function 865>",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "20:12:29:6"
+              }
+            ],
+            "loc": "26:25:26:26",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "type": "literal",
+            "val": 1
+          }
+        ],
+        "val": 1
+      }
+    ],
+    "val": "#99ff99"
+  }
+]
