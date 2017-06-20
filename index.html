@@ -129,6 +129,7 @@ d3.json(INPUT_FILE, function(error, treeData) {
                     lastOutNode = null;
                     
                 node.children.forEach(function(n) {
+                    if (!n.data.stack) return; // hack
                     if (hasStackHead(stack, n.data.stack)) {
                         if (lastOutNode) {
                             edgeNodes.push({node: lastOutNode, inside: false});
