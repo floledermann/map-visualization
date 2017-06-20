@@ -263,7 +263,7 @@ d3.json(INPUT_FILE, function(error, treeData) {
             ;
             
             var funcName = root.node.data.stack[level-1].name;
-            if (funcName.startsWith("<function")) funcName = "";
+            if (funcName.startsWith("<function")) funcName = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
             
             g.append("text")
                 .datum(root.node)
