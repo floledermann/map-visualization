@@ -600,7 +600,189 @@
                                                             "label": ">>",
                                                             "op": ">>",
                                                             "inputs": [
-                                                              16750848,
+                                                              {
+                                                                "valuetype": "number",
+                                                                "stack": [
+                                                                  {
+                                                                    "name": "scale",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1146:3:1148:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "bimap",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1091:1:1096:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "<function 32705>",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1014:24:1024:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgb$$1",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "881:3:893:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgb",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "550:1:552:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgbConvert",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "543:1:548:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "color",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "518:1:532:2"
+                                                                  }
+                                                                ],
+                                                                "loc": "522:42:522:60",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "val": 16750848,
+                                                                "op": "parseInt",
+                                                                "label": "parseInt",
+                                                                "inputs": [
+                                                                  {
+                                                                    "valuetype": "string",
+                                                                    "stack": [
+                                                                      {
+                                                                        "name": "scale",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1146:3:1148:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "bimap",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1091:1:1096:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "<function 32705>",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1014:24:1024:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb$$1",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "881:3:893:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "550:1:552:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgbConvert",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "543:1:548:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "color",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "518:1:532:2"
+                                                                      }
+                                                                    ],
+                                                                    "loc": "522:51:522:55",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "type": "property",
+                                                                    "op": "[]",
+                                                                    "label": "[1]",
+                                                                    "inputs": [
+                                                                      {
+                                                                        "valuetype": "number",
+                                                                        "stack": [
+                                                                          {
+                                                                            "name": "scale",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1146:3:1148:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "bimap",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1091:1:1096:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "<function 32705>",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1014:24:1024:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgb$$1",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "881:3:893:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgb",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "550:1:552:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgbConvert",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "543:1:548:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "color",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "518:1:532:2"
+                                                                          }
+                                                                        ],
+                                                                        "loc": "522:53:522:54",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "type": "literal",
+                                                                        "val": 1
+                                                                      }
+                                                                    ],
+                                                                    "val": "ff9900"
+                                                                  },
+                                                                  {
+                                                                    "valuetype": "number",
+                                                                    "stack": [
+                                                                      {
+                                                                        "name": "scale",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1146:3:1148:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "bimap",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1091:1:1096:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "<function 32705>",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1014:24:1024:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb$$1",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "881:3:893:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "550:1:552:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgbConvert",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "543:1:548:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "color",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "518:1:532:2"
+                                                                      }
+                                                                    ],
+                                                                    "loc": "522:57:522:59",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "type": "literal",
+                                                                    "val": 16
+                                                                  }
+                                                                ]
+                                                              },
                                                               {
                                                                 "valuetype": "number",
                                                                 "stack": [
@@ -1308,7 +1490,129 @@
                                                                     "label": ">>",
                                                                     "op": ">>",
                                                                     "inputs": [
-                                                                      10092441,
+                                                                      {
+                                                                        "valuetype": "number",
+                                                                        "stack": [
+                                                                          {
+                                                                            "name": "scale",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1146:3:1148:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "bimap",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1091:1:1096:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "<function 32705>",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1014:24:1024:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "color",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "518:1:532:2"
+                                                                          }
+                                                                        ],
+                                                                        "loc": "522:42:522:60",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "val": 10092441,
+                                                                        "op": "parseInt",
+                                                                        "label": "parseInt",
+                                                                        "inputs": [
+                                                                          {
+                                                                            "valuetype": "string",
+                                                                            "stack": [
+                                                                              {
+                                                                                "name": "scale",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1146:3:1148:4"
+                                                                              },
+                                                                              {
+                                                                                "name": "bimap",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1091:1:1096:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "<function 32705>",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1014:24:1024:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "color",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "518:1:532:2"
+                                                                              }
+                                                                            ],
+                                                                            "loc": "522:51:522:55",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "type": "property",
+                                                                            "op": "[]",
+                                                                            "label": "[1]",
+                                                                            "inputs": [
+                                                                              {
+                                                                                "valuetype": "number",
+                                                                                "stack": [
+                                                                                  {
+                                                                                    "name": "scale",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "1146:3:1148:4"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "bimap",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "1091:1:1096:2"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "<function 32705>",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "1014:24:1024:2"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "color",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "518:1:532:2"
+                                                                                  }
+                                                                                ],
+                                                                                "loc": "522:53:522:54",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "type": "literal",
+                                                                                "val": 1
+                                                                              }
+                                                                            ],
+                                                                            "val": "99ff99"
+                                                                          },
+                                                                          {
+                                                                            "valuetype": "number",
+                                                                            "stack": [
+                                                                              {
+                                                                                "name": "scale",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1146:3:1148:4"
+                                                                              },
+                                                                              {
+                                                                                "name": "bimap",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1091:1:1096:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "<function 32705>",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1014:24:1024:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "color",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "518:1:532:2"
+                                                                              }
+                                                                            ],
+                                                                            "loc": "522:57:522:59",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "type": "literal",
+                                                                            "val": 16
+                                                                          }
+                                                                        ]
+                                                                      },
                                                                       {
                                                                         "valuetype": "number",
                                                                         "stack": [
@@ -1587,7 +1891,189 @@
                                                                     "label": ">>",
                                                                     "op": ">>",
                                                                     "inputs": [
-                                                                      16750848,
+                                                                      {
+                                                                        "valuetype": "number",
+                                                                        "stack": [
+                                                                          {
+                                                                            "name": "scale",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1146:3:1148:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "bimap",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1091:1:1096:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "<function 32705>",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1014:24:1024:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgb$$1",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "881:3:893:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgb",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "550:1:552:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgbConvert",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "543:1:548:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "color",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "518:1:532:2"
+                                                                          }
+                                                                        ],
+                                                                        "loc": "522:42:522:60",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "val": 16750848,
+                                                                        "op": "parseInt",
+                                                                        "label": "parseInt",
+                                                                        "inputs": [
+                                                                          {
+                                                                            "valuetype": "string",
+                                                                            "stack": [
+                                                                              {
+                                                                                "name": "scale",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1146:3:1148:4"
+                                                                              },
+                                                                              {
+                                                                                "name": "bimap",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1091:1:1096:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "<function 32705>",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1014:24:1024:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "rgb$$1",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "881:3:893:4"
+                                                                              },
+                                                                              {
+                                                                                "name": "rgb",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "550:1:552:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "rgbConvert",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "543:1:548:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "color",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "518:1:532:2"
+                                                                              }
+                                                                            ],
+                                                                            "loc": "522:51:522:55",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "type": "property",
+                                                                            "op": "[]",
+                                                                            "label": "[1]",
+                                                                            "inputs": [
+                                                                              {
+                                                                                "valuetype": "number",
+                                                                                "stack": [
+                                                                                  {
+                                                                                    "name": "scale",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "1146:3:1148:4"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "bimap",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "1091:1:1096:2"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "<function 32705>",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "1014:24:1024:2"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "rgb$$1",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "881:3:893:4"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "rgb",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "550:1:552:2"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "rgbConvert",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "543:1:548:2"
+                                                                                  },
+                                                                                  {
+                                                                                    "name": "color",
+                                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                    "loc": "518:1:532:2"
+                                                                                  }
+                                                                                ],
+                                                                                "loc": "522:53:522:54",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "type": "literal",
+                                                                                "val": 1
+                                                                              }
+                                                                            ],
+                                                                            "val": "ff9900"
+                                                                          },
+                                                                          {
+                                                                            "valuetype": "number",
+                                                                            "stack": [
+                                                                              {
+                                                                                "name": "scale",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1146:3:1148:4"
+                                                                              },
+                                                                              {
+                                                                                "name": "bimap",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1091:1:1096:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "<function 32705>",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "1014:24:1024:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "rgb$$1",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "881:3:893:4"
+                                                                              },
+                                                                              {
+                                                                                "name": "rgb",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "550:1:552:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "rgbConvert",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "543:1:548:2"
+                                                                              },
+                                                                              {
+                                                                                "name": "color",
+                                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                                "loc": "518:1:532:2"
+                                                                              }
+                                                                            ],
+                                                                            "loc": "522:57:522:59",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "type": "literal",
+                                                                            "val": 16
+                                                                          }
+                                                                        ]
+                                                                      },
                                                                       {
                                                                         "valuetype": "number",
                                                                         "stack": [
@@ -2118,7 +2604,189 @@
                                                     "label": ">>",
                                                     "op": ">>",
                                                     "inputs": [
-                                                      16750848,
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "scale",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1146:3:1148:4"
+                                                          },
+                                                          {
+                                                            "name": "bimap",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1091:1:1096:2"
+                                                          },
+                                                          {
+                                                            "name": "<function 32705>",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1014:24:1024:2"
+                                                          },
+                                                          {
+                                                            "name": "rgb$$1",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "881:3:893:4"
+                                                          },
+                                                          {
+                                                            "name": "rgb",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "550:1:552:2"
+                                                          },
+                                                          {
+                                                            "name": "rgbConvert",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "543:1:548:2"
+                                                          },
+                                                          {
+                                                            "name": "color",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "518:1:532:2"
+                                                          }
+                                                        ],
+                                                        "loc": "522:42:522:60",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "val": 16750848,
+                                                        "op": "parseInt",
+                                                        "label": "parseInt",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "string",
+                                                            "stack": [
+                                                              {
+                                                                "name": "scale",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1146:3:1148:4"
+                                                              },
+                                                              {
+                                                                "name": "bimap",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1091:1:1096:2"
+                                                              },
+                                                              {
+                                                                "name": "<function 32705>",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1014:24:1024:2"
+                                                              },
+                                                              {
+                                                                "name": "rgb$$1",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "881:3:893:4"
+                                                              },
+                                                              {
+                                                                "name": "rgb",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "550:1:552:2"
+                                                              },
+                                                              {
+                                                                "name": "rgbConvert",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "543:1:548:2"
+                                                              },
+                                                              {
+                                                                "name": "color",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "518:1:532:2"
+                                                              }
+                                                            ],
+                                                            "loc": "522:51:522:55",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "type": "property",
+                                                            "op": "[]",
+                                                            "label": "[1]",
+                                                            "inputs": [
+                                                              {
+                                                                "valuetype": "number",
+                                                                "stack": [
+                                                                  {
+                                                                    "name": "scale",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1146:3:1148:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "bimap",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1091:1:1096:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "<function 32705>",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1014:24:1024:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgb$$1",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "881:3:893:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgb",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "550:1:552:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgbConvert",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "543:1:548:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "color",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "518:1:532:2"
+                                                                  }
+                                                                ],
+                                                                "loc": "522:53:522:54",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "type": "literal",
+                                                                "val": 1
+                                                              }
+                                                            ],
+                                                            "val": "ff9900"
+                                                          },
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "scale",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1146:3:1148:4"
+                                                              },
+                                                              {
+                                                                "name": "bimap",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1091:1:1096:2"
+                                                              },
+                                                              {
+                                                                "name": "<function 32705>",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1014:24:1024:2"
+                                                              },
+                                                              {
+                                                                "name": "rgb$$1",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "881:3:893:4"
+                                                              },
+                                                              {
+                                                                "name": "rgb",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "550:1:552:2"
+                                                              },
+                                                              {
+                                                                "name": "rgbConvert",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "543:1:548:2"
+                                                              },
+                                                              {
+                                                                "name": "color",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "518:1:532:2"
+                                                              }
+                                                            ],
+                                                            "loc": "522:57:522:59",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "type": "literal",
+                                                            "val": 16
+                                                          }
+                                                        ]
+                                                      },
                                                       {
                                                         "valuetype": "number",
                                                         "stack": [
@@ -2826,7 +3494,129 @@
                                                             "label": ">>",
                                                             "op": ">>",
                                                             "inputs": [
-                                                              10092441,
+                                                              {
+                                                                "valuetype": "number",
+                                                                "stack": [
+                                                                  {
+                                                                    "name": "scale",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1146:3:1148:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "bimap",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1091:1:1096:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "<function 32705>",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1014:24:1024:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "color",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "518:1:532:2"
+                                                                  }
+                                                                ],
+                                                                "loc": "522:42:522:60",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "val": 10092441,
+                                                                "op": "parseInt",
+                                                                "label": "parseInt",
+                                                                "inputs": [
+                                                                  {
+                                                                    "valuetype": "string",
+                                                                    "stack": [
+                                                                      {
+                                                                        "name": "scale",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1146:3:1148:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "bimap",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1091:1:1096:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "<function 32705>",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1014:24:1024:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "color",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "518:1:532:2"
+                                                                      }
+                                                                    ],
+                                                                    "loc": "522:51:522:55",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "type": "property",
+                                                                    "op": "[]",
+                                                                    "label": "[1]",
+                                                                    "inputs": [
+                                                                      {
+                                                                        "valuetype": "number",
+                                                                        "stack": [
+                                                                          {
+                                                                            "name": "scale",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1146:3:1148:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "bimap",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1091:1:1096:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "<function 32705>",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1014:24:1024:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "color",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "518:1:532:2"
+                                                                          }
+                                                                        ],
+                                                                        "loc": "522:53:522:54",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "type": "literal",
+                                                                        "val": 1
+                                                                      }
+                                                                    ],
+                                                                    "val": "99ff99"
+                                                                  },
+                                                                  {
+                                                                    "valuetype": "number",
+                                                                    "stack": [
+                                                                      {
+                                                                        "name": "scale",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1146:3:1148:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "bimap",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1091:1:1096:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "<function 32705>",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1014:24:1024:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "color",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "518:1:532:2"
+                                                                      }
+                                                                    ],
+                                                                    "loc": "522:57:522:59",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "type": "literal",
+                                                                    "val": 16
+                                                                  }
+                                                                ]
+                                                              },
                                                               {
                                                                 "valuetype": "number",
                                                                 "stack": [
@@ -3105,7 +3895,189 @@
                                                             "label": ">>",
                                                             "op": ">>",
                                                             "inputs": [
-                                                              16750848,
+                                                              {
+                                                                "valuetype": "number",
+                                                                "stack": [
+                                                                  {
+                                                                    "name": "scale",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1146:3:1148:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "bimap",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1091:1:1096:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "<function 32705>",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "1014:24:1024:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgb$$1",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "881:3:893:4"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgb",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "550:1:552:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "rgbConvert",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "543:1:548:2"
+                                                                  },
+                                                                  {
+                                                                    "name": "color",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "loc": "518:1:532:2"
+                                                                  }
+                                                                ],
+                                                                "loc": "522:42:522:60",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "val": 16750848,
+                                                                "op": "parseInt",
+                                                                "label": "parseInt",
+                                                                "inputs": [
+                                                                  {
+                                                                    "valuetype": "string",
+                                                                    "stack": [
+                                                                      {
+                                                                        "name": "scale",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1146:3:1148:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "bimap",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1091:1:1096:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "<function 32705>",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1014:24:1024:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb$$1",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "881:3:893:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "550:1:552:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgbConvert",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "543:1:548:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "color",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "518:1:532:2"
+                                                                      }
+                                                                    ],
+                                                                    "loc": "522:51:522:55",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "type": "property",
+                                                                    "op": "[]",
+                                                                    "label": "[1]",
+                                                                    "inputs": [
+                                                                      {
+                                                                        "valuetype": "number",
+                                                                        "stack": [
+                                                                          {
+                                                                            "name": "scale",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1146:3:1148:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "bimap",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1091:1:1096:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "<function 32705>",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "1014:24:1024:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgb$$1",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "881:3:893:4"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgb",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "550:1:552:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "rgbConvert",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "543:1:548:2"
+                                                                          },
+                                                                          {
+                                                                            "name": "color",
+                                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                            "loc": "518:1:532:2"
+                                                                          }
+                                                                        ],
+                                                                        "loc": "522:53:522:54",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "type": "literal",
+                                                                        "val": 1
+                                                                      }
+                                                                    ],
+                                                                    "val": "ff9900"
+                                                                  },
+                                                                  {
+                                                                    "valuetype": "number",
+                                                                    "stack": [
+                                                                      {
+                                                                        "name": "scale",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1146:3:1148:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "bimap",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1091:1:1096:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "<function 32705>",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "1014:24:1024:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb$$1",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "881:3:893:4"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgb",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "550:1:552:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "rgbConvert",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "543:1:548:2"
+                                                                      },
+                                                                      {
+                                                                        "name": "color",
+                                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                        "loc": "518:1:532:2"
+                                                                      }
+                                                                    ],
+                                                                    "loc": "522:57:522:59",
+                                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                    "type": "literal",
+                                                                    "val": 16
+                                                                  }
+                                                                ]
+                                                              },
                                                               {
                                                                 "valuetype": "number",
                                                                 "stack": [
@@ -3586,7 +4558,189 @@
                                         "label": "&",
                                         "op": "&",
                                         "inputs": [
-                                          16750848,
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "scale",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "1146:3:1148:4"
+                                              },
+                                              {
+                                                "name": "bimap",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "1091:1:1096:2"
+                                              },
+                                              {
+                                                "name": "<function 32705>",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "1014:24:1024:2"
+                                              },
+                                              {
+                                                "name": "rgb$$1",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "881:3:893:4"
+                                              },
+                                              {
+                                                "name": "rgb",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "550:1:552:2"
+                                              },
+                                              {
+                                                "name": "rgbConvert",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "543:1:548:2"
+                                              },
+                                              {
+                                                "name": "color",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "loc": "518:1:532:2"
+                                              }
+                                            ],
+                                            "loc": "522:42:522:60",
+                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                            "val": 16750848,
+                                            "op": "parseInt",
+                                            "label": "parseInt",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "string",
+                                                "stack": [
+                                                  {
+                                                    "name": "scale",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "1146:3:1148:4"
+                                                  },
+                                                  {
+                                                    "name": "bimap",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "1091:1:1096:2"
+                                                  },
+                                                  {
+                                                    "name": "<function 32705>",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "1014:24:1024:2"
+                                                  },
+                                                  {
+                                                    "name": "rgb$$1",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "881:3:893:4"
+                                                  },
+                                                  {
+                                                    "name": "rgb",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "550:1:552:2"
+                                                  },
+                                                  {
+                                                    "name": "rgbConvert",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "543:1:548:2"
+                                                  },
+                                                  {
+                                                    "name": "color",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "518:1:532:2"
+                                                  }
+                                                ],
+                                                "loc": "522:51:522:55",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "type": "property",
+                                                "op": "[]",
+                                                "label": "[1]",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "scale",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1146:3:1148:4"
+                                                      },
+                                                      {
+                                                        "name": "bimap",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1091:1:1096:2"
+                                                      },
+                                                      {
+                                                        "name": "<function 32705>",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1014:24:1024:2"
+                                                      },
+                                                      {
+                                                        "name": "rgb$$1",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "881:3:893:4"
+                                                      },
+                                                      {
+                                                        "name": "rgb",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "550:1:552:2"
+                                                      },
+                                                      {
+                                                        "name": "rgbConvert",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "543:1:548:2"
+                                                      },
+                                                      {
+                                                        "name": "color",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "518:1:532:2"
+                                                      }
+                                                    ],
+                                                    "loc": "522:53:522:54",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "type": "literal",
+                                                    "val": 1
+                                                  }
+                                                ],
+                                                "val": "ff9900"
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "scale",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "1146:3:1148:4"
+                                                  },
+                                                  {
+                                                    "name": "bimap",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "1091:1:1096:2"
+                                                  },
+                                                  {
+                                                    "name": "<function 32705>",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "1014:24:1024:2"
+                                                  },
+                                                  {
+                                                    "name": "rgb$$1",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "881:3:893:4"
+                                                  },
+                                                  {
+                                                    "name": "rgb",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "550:1:552:2"
+                                                  },
+                                                  {
+                                                    "name": "rgbConvert",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "543:1:548:2"
+                                                  },
+                                                  {
+                                                    "name": "color",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "loc": "518:1:532:2"
+                                                  }
+                                                ],
+                                                "loc": "522:57:522:59",
+                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                "type": "literal",
+                                                "val": 16
+                                              }
+                                            ]
+                                          },
                                           {
                                             "valuetype": "number",
                                             "stack": [
@@ -4207,7 +5361,129 @@
                                                 "label": "&",
                                                 "op": "&",
                                                 "inputs": [
-                                                  10092441,
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "scale",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1146:3:1148:4"
+                                                      },
+                                                      {
+                                                        "name": "bimap",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1091:1:1096:2"
+                                                      },
+                                                      {
+                                                        "name": "<function 32705>",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1014:24:1024:2"
+                                                      },
+                                                      {
+                                                        "name": "color",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "518:1:532:2"
+                                                      }
+                                                    ],
+                                                    "loc": "522:42:522:60",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "val": 10092441,
+                                                    "op": "parseInt",
+                                                    "label": "parseInt",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "string",
+                                                        "stack": [
+                                                          {
+                                                            "name": "scale",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1146:3:1148:4"
+                                                          },
+                                                          {
+                                                            "name": "bimap",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1091:1:1096:2"
+                                                          },
+                                                          {
+                                                            "name": "<function 32705>",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1014:24:1024:2"
+                                                          },
+                                                          {
+                                                            "name": "color",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "518:1:532:2"
+                                                          }
+                                                        ],
+                                                        "loc": "522:51:522:55",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "type": "property",
+                                                        "op": "[]",
+                                                        "label": "[1]",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "scale",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1146:3:1148:4"
+                                                              },
+                                                              {
+                                                                "name": "bimap",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1091:1:1096:2"
+                                                              },
+                                                              {
+                                                                "name": "<function 32705>",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1014:24:1024:2"
+                                                              },
+                                                              {
+                                                                "name": "color",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "518:1:532:2"
+                                                              }
+                                                            ],
+                                                            "loc": "522:53:522:54",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "type": "literal",
+                                                            "val": 1
+                                                          }
+                                                        ],
+                                                        "val": "99ff99"
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "scale",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1146:3:1148:4"
+                                                          },
+                                                          {
+                                                            "name": "bimap",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1091:1:1096:2"
+                                                          },
+                                                          {
+                                                            "name": "<function 32705>",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1014:24:1024:2"
+                                                          },
+                                                          {
+                                                            "name": "color",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "518:1:532:2"
+                                                          }
+                                                        ],
+                                                        "loc": "522:57:522:59",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 16
+                                                      }
+                                                    ]
+                                                  },
                                                   {
                                                     "valuetype": "number",
                                                     "stack": [
@@ -4399,7 +5675,189 @@
                                                 "label": "&",
                                                 "op": "&",
                                                 "inputs": [
-                                                  16750848,
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "scale",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1146:3:1148:4"
+                                                      },
+                                                      {
+                                                        "name": "bimap",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1091:1:1096:2"
+                                                      },
+                                                      {
+                                                        "name": "<function 32705>",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "1014:24:1024:2"
+                                                      },
+                                                      {
+                                                        "name": "rgb$$1",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "881:3:893:4"
+                                                      },
+                                                      {
+                                                        "name": "rgb",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "550:1:552:2"
+                                                      },
+                                                      {
+                                                        "name": "rgbConvert",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "543:1:548:2"
+                                                      },
+                                                      {
+                                                        "name": "color",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "loc": "518:1:532:2"
+                                                      }
+                                                    ],
+                                                    "loc": "522:42:522:60",
+                                                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                    "val": 16750848,
+                                                    "op": "parseInt",
+                                                    "label": "parseInt",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "string",
+                                                        "stack": [
+                                                          {
+                                                            "name": "scale",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1146:3:1148:4"
+                                                          },
+                                                          {
+                                                            "name": "bimap",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1091:1:1096:2"
+                                                          },
+                                                          {
+                                                            "name": "<function 32705>",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1014:24:1024:2"
+                                                          },
+                                                          {
+                                                            "name": "rgb$$1",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "881:3:893:4"
+                                                          },
+                                                          {
+                                                            "name": "rgb",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "550:1:552:2"
+                                                          },
+                                                          {
+                                                            "name": "rgbConvert",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "543:1:548:2"
+                                                          },
+                                                          {
+                                                            "name": "color",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "518:1:532:2"
+                                                          }
+                                                        ],
+                                                        "loc": "522:51:522:55",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "type": "property",
+                                                        "op": "[]",
+                                                        "label": "[1]",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "scale",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1146:3:1148:4"
+                                                              },
+                                                              {
+                                                                "name": "bimap",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1091:1:1096:2"
+                                                              },
+                                                              {
+                                                                "name": "<function 32705>",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "1014:24:1024:2"
+                                                              },
+                                                              {
+                                                                "name": "rgb$$1",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "881:3:893:4"
+                                                              },
+                                                              {
+                                                                "name": "rgb",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "550:1:552:2"
+                                                              },
+                                                              {
+                                                                "name": "rgbConvert",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "543:1:548:2"
+                                                              },
+                                                              {
+                                                                "name": "color",
+                                                                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                                "loc": "518:1:532:2"
+                                                              }
+                                                            ],
+                                                            "loc": "522:53:522:54",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "type": "literal",
+                                                            "val": 1
+                                                          }
+                                                        ],
+                                                        "val": "ff9900"
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "scale",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1146:3:1148:4"
+                                                          },
+                                                          {
+                                                            "name": "bimap",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1091:1:1096:2"
+                                                          },
+                                                          {
+                                                            "name": "<function 32705>",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "1014:24:1024:2"
+                                                          },
+                                                          {
+                                                            "name": "rgb$$1",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "881:3:893:4"
+                                                          },
+                                                          {
+                                                            "name": "rgb",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "550:1:552:2"
+                                                          },
+                                                          {
+                                                            "name": "rgbConvert",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "543:1:548:2"
+                                                          },
+                                                          {
+                                                            "name": "color",
+                                                            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                            "loc": "518:1:532:2"
+                                                          }
+                                                        ],
+                                                        "loc": "522:57:522:59",
+                                                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                                                        "type": "literal",
+                                                        "val": 16
+                                                      }
+                                                    ]
+                                                  },
                                                   {
                                                     "valuetype": "number",
                                                     "stack": [
