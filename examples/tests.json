@@ -661,5 +661,205 @@
           }
         ],
         "val": 0.6532591434475365
-      }
+      },
+    {
+        "valuetype": "number",
+        "stack": [
+          {
+            "name": "scale",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1146:3:1148:4"
+          },
+          {
+            "name": "bimap",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1091:1:1096:2"
+          },
+          {
+            "name": "deinterpolateLinear",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "loc": "1071:1:1075:2"
+          }
+        ],
+        "loc": "1072:17:1072:23",
+        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+        "type": "binary",
+        "label": "-",
+        "op": "-",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "scale",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1146:3:1148:4"
+              },
+              {
+                "name": "bimap",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1091:1:1096:2"
+              }
+            ],
+            "loc": "1092:28:1092:37",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[1]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "<function 37137>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1154:18:1156:4"
+                  },
+                  {
+                    "name": "<function 34057>",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1065:16:1067:2"
+                  }
+                ],
+                "loc": "1066:10:1066:12",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "type": "unary",
+                "op": "+",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [],
+                    "loc": "2483:35:2483:39",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "literal",
+                    "val": 1000
+                  }
+                ],
+                "val": 1000
+              },
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "scale",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1146:3:1148:4"
+                  },
+                  {
+                    "name": "bimap",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1091:1:1096:2"
+                  }
+                ],
+                "loc": "1092:35:1092:36",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "type": "literal",
+                "val": 1
+              }
+            ],
+            "val": 1000
+          },
+          {
+            "valuetype": "number",
+            "stack": [
+              {
+                "name": "scale",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1146:3:1148:4"
+              },
+              {
+                "name": "bimap",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1091:1:1096:2"
+              },
+              {
+                "name": "deinterpolateLinear",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "loc": "1071:1:1075:2"
+              }
+            ],
+            "loc": "1072:21:1072:23",
+            "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "scale",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1146:3:1148:4"
+                  },
+                  {
+                    "name": "bimap",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "loc": "1091:1:1096:2"
+                  }
+                ],
+                "loc": "1092:12:1092:21",
+                "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[0]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "<function 37137>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1154:18:1156:4"
+                      },
+                      {
+                        "name": "<function 34057>",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1065:16:1067:2"
+                      }
+                    ],
+                    "loc": "1066:10:1066:12",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "unary",
+                    "op": "+",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [],
+                        "loc": "2483:33:2483:34",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "type": "literal",
+                        "val": 0
+                      }
+                    ],
+                    "val": 0
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "scale",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1146:3:1148:4"
+                      },
+                      {
+                        "name": "bimap",
+                        "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                        "loc": "1091:1:1096:2"
+                      }
+                    ],
+                    "loc": "1092:19:1092:20",
+                    "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_scales_bundle.js",
+                    "type": "literal",
+                    "val": 0
+                  }
+                ],
+                "val": 0
+              }
+            ],
+            "val": 0
+          }
+        ],
+        "val": 1000
+    }
+
 ]
