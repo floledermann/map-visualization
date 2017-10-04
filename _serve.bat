@@ -3,6 +3,8 @@
 
 @title SERVING %~dp0%HTDOCS% on %PORT%
 
+@start "" "http://localhost:%port%/"
+
 @http-server . -p %PORT%
 @if %ERRORLEVEL% NEQ 0 (
   @echo.
