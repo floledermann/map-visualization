@@ -1,11 +1,13 @@
-@SET HTDOCS=testcases
+@setlocal
+@SET HTDOCS=.
 @SET PORT=8081
 
 @title SERVING %~dp0%HTDOCS% on %PORT%
 
 @start "" "http://localhost:%port%/"
 
-@http-server . -p %PORT%
+@http-server %HTDOCS% -p %PORT%
+
 @if %ERRORLEVEL% NEQ 0 (
   @echo.
   echo ####################################################################
