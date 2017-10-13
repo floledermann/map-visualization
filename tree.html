@@ -60,7 +60,7 @@ svg path.function.level-1:hover {
 
 </style>
 
-<svg width="1600" height="8000">
+<svg width="1600" height="100">
 </svg>
 
 <script src="//d3js.org/d3.v4.js"></script>
@@ -74,17 +74,17 @@ var svg = d3.select("svg"),
 
 var INPUT_FILE = "examples/" + ((window.location.search && window.location.search.substring(1)) || "d3_mercator.json"),
     NODE_HEIGHT = 45,
-    TREE_HEIGHT = 1300,
+    NODE_WIDTH = 70,
+    TREE_MARGIN = 100,
     MAX_DEPTH = 20,
-    INITIAL_Y_OFFSET = 1500,
     FUNCTION_MARGIN = 4;
 
 // ATTENTION width and height are swapped because we have a horizontal tree layout!
 //var tree = d3.cluster().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
-var tree = d3.tree().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
+var tree = d3.tree().nodeSize([NODE_HEIGHT,NODE_WIDTH]);
 
 function x(x0) {
-    return (1-x0) * (width - 180)
+    return (1000-x0)
 }
 /*
 var stratify = d3.stratify()
@@ -93,7 +93,9 @@ var stratify = d3.stratify()
 d3.json(INPUT_FILE, function(error, treeData) {
   if (error) throw error;
 
-  var yOffset = INITIAL_Y_OFFSET;
+  var yOffset = TREE_MARGIN;
+
+  var maxWidth = 0;
 
   g.selectAll(".tree")
     .data(treeData)
@@ -104,18 +106,32 @@ d3.json(INPUT_FILE, function(error, treeData) {
 
         var g = d3.select(this);
 
-        g.attr("transform","translate(0," + yOffset + ")");
-
         var root = d3.hierarchy(d, node => node.inputs);
         tree(root);
 
-        yOffset += TREE_HEIGHT;
+        var minY = 0, maxY = 0;
+
+        // walk through tree to find highest/lowest node
+        root.each(node => {
+          if (node.x < minY) minY = node.x;
+          if (node.x > maxY) maxY = node.x;
+        })
+
+        console.log("HEIGHT " + root.height);
+
+        yOffset -= minY;
+
+        g.attr("transform","translate(0," + yOffset + ")");
+
+        yOffset += maxY + TREE_MARGIN;
 
         drawTree(g, root, {
           nodeHeight: NODE_HEIGHT,
           functionMargin: FUNCTION_MARGIN
         });
     });
+
+    svg.attr('height', yOffset);
 });
 
 </script>
