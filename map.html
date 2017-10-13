@@ -5,97 +5,189 @@
 
 <style>
 
+html {
+    overflow-y: scroll;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-    background-color: #999999;
-    transition: background-color 1s;
+  background-color: #999999;
+  transition: background-color 1s;
 }
 
 body.flip {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 main {
-    position: relative;
-    height: 100%;
-    perspective: 1600px;
-    perspective-origin: 80% 30%;
+  position: relative;
+  height: 100%;
+  perspective: 1600px;
+  perspective-origin: 80% 30%;
 }
 
 #map {
-    position: absolute;
-    right: 0px;
-    background-color: #f9f9f9;
-    border: 1px solid #bbbbbb;
+  position: absolute;
+  right: 0px;
+  background-color: rgba(90%,90%,90%,0.5);
+  border: 1px solid #bbbbbb;
 
-    margin: 5% 5% 0 0;
+  margin: 5% 5% 0 0;
 
-    max-width: 90%;
-    max-height: 90%;
+  max-width: 90%;
+  max-height: 90%;
 
-    backface-visibility: visible;
-    transform-origin: 70% 50%;
+  backface-visibility: visible;
+  transform-origin: 70% 50%;
 
-    transition: transform 1s;
+  transition: transform 1s;
 }
 
 #map img.screenshot {
-    max-width: 100%;
-    max-height: 100%;
-    display: block; /* fix extra line space in wrapper */
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /* fix extra line space in wrapper */
+  xopacity: 0.5;
 }
 
-#map .highlight {
-    position: absolute;
-    top: 26.8%;
-    left: 20.7%;
-    width: 20px;
-    height: 20px;
-    margin: -10px 0 0 -10px;
-    border-radius: 100px;
-    border: 2px solid black;
-    background-color: rgba(255,255,255,0.7);
+#map .mark {
+  position: absolute;
+  /*top: 26.8%;
+  left: 20.7%;*/
+  width: 20px;
+  height: 20px;
+  margin: -12px 0 0 -12px;
+  border-radius: 100px;
+  border: 2px solid black;
+  background-color: rgba(255,255,255,0.7);
+  /* this does not seem to work in conjunction with opacity of parent */
+  /*transform: translate3d(0,0,-4px);*/
+  cursor: pointer;
+}
+
+#map .mark:hover {
+  border-width: 3px;
+  margin: -13px 0 0 -13px;
 }
 
 .flip #map {
-    background-color: #f0f0f0;
-    transform: translate(-40px) rotateY(120deg);
+  transform: translate(-40px) rotateY(120deg);
 }
 
 svg path {
-    stroke: #000000;
-    fill: none;
+  stroke: #000000;
+  fill: none;
+}
+
+#closebutton {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: opacity 0.5s, visibility 0s 0.5s; /* durations for flipped state */
+  cursor: pointer;
+}
+
+#closebutton::before {
+  font-weight: bold;
+  padding: 5px;
+  vertical-align: -1px;
+  content: "×";
+}
+
+.flip #closebutton {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s; /* durations for non-flipped state */
+}
+
+.code {
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+  white-space: pre;
+  font-family: monospace;
+  padding: 5px;
+  width: 600px;
+  overflow: auto;
+  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+}
+
+.flip .code {
+  visibility: visible;
 }
 
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('map').addEventListener('click', function(e) {
-        document.body.classList.toggle('flip');
-    });
-});
-
-</script>
 
 </head>
 <body>
 <main>
 
+<div id="closebutton"></div>
+
 <div id="map">
-<img class="screenshot" src="screenshots/treemap-simplified_small_0_0.png">
-<div class="highlight"></div>
-<!-- <svg class="map" width="600" height="600">
-<path d="M 100 100 L 200 200 L 250 200 L 350 300 L 400 250 L 500 300"/>
-</svg> -->
+<img id="screenshot" class="screenshot">
+</div>
+
+<div class="code">function project_mercator(lonlat) {
+  var lat = deg_rad(lonlat[1]);
+  var lon = deg_rad(lonlat[0]);
+  var x = lon / 2.0 / Math.PI + 0.5;
+  var y = Math.log((Math.sin(lat) + 1.0) /
+          Math.cos(lat)) / 2.0 / Math.PI + 0.5;
+  return [x, y];
+}
 </div>
 
 </main>
+
+<script src="//d3js.org/d3.v4.js"></script>
+
+<script>
+const DEFAULT_PROJECT = "test-projection-naive",
+  PROJECT = (window.location.search && window.location.search.substring(1)) || DEFAULT_PROJECT,
+  CAPTURE_BASE = "capture/" + PROJECT
+;
+
+d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + PROJECT + '_small_0_0.png');
+
+let body = d3.select(document.body),
+  map = d3.select('#map');
+
+d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
+
+  let marks = map.selectAll('.mark').data(data);
+
+  marks.enter()
+    .append('div')
+    .attr('class','mark')
+    .style('top', d => d.location.y + 'px')
+    .style('left', d => d.location.x + 'px')
+    .on('click', () => {
+      body.classed('flip', true);
+    })
+  ;
+
+  d3.select('#closebutton').on('click', () => { body.classed('flip', false); })
+
+});
+
+</script>
+
+
 
 
 </body>
