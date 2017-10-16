@@ -79,9 +79,6 @@ var INPUT_FILE = "examples/" + ((window.location.search && window.location.searc
     MAX_DEPTH = 20,
     FUNCTION_MARGIN = 4;
 
-// ATTENTION width and height are swapped because we have a horizontal tree layout!
-//var tree = d3.cluster().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
-var tree = d3.tree().nodeSize([NODE_HEIGHT,NODE_WIDTH]);
 
 function x(x0) {
     return (1000-x0)
@@ -106,29 +103,18 @@ d3.json(INPUT_FILE, function(error, treeData) {
 
         var g = d3.select(this);
 
-        var root = d3.hierarchy(d, node => node.inputs);
-        tree(root);
+        var root = drawTree(g, d, {
+          nodeHeight: NODE_HEIGHT,
+          nodeWidth: NODE_WIDTH,
+          functionMargin: FUNCTION_MARGIN
+        });
 
-        var minY = 0, maxY = 0;
-
-        // walk through tree to find highest/lowest node
-        root.each(node => {
-          if (node.x < minY) minY = node.x;
-          if (node.x > maxY) maxY = node.x;
-        })
-
-        console.log("HEIGHT " + root.height);
-
-        yOffset -= minY;
+        yOffset -= root.minY;
 
         g.attr("transform","translate(0," + yOffset + ")");
 
-        yOffset += maxY + TREE_MARGIN;
+        yOffset += root.maxY + TREE_MARGIN;
 
-        drawTree(g, root, {
-          nodeHeight: NODE_HEIGHT,
-          functionMargin: FUNCTION_MARGIN
-        });
     });
 
     svg.attr('height', yOffset);

@@ -244,17 +244,36 @@ function drawOutlines(svg, node, lastStack, options) {
     }
 }
 
-function drawTree(svg, root, options) {
+function drawTree(svg, data, options) {
 
     options = Object.assign({}, options, {
       nodeHeight: 45,
+      nodeWidth: 70,
       functionMargin: 4
     });
+
+    // ATTENTION width and height are swapped because we have a horizontal tree layout!
+    //var tree = d3.cluster().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
+    var tree = d3.tree().nodeSize([options.nodeHeight, options.nodeWidth]);
+
+    var root = d3.hierarchy(data, node => node.inputs);
+    tree(root);
+
+    root.minY = 0;
+    root.maxY = 0;
+
+    // walk through tree to find highest/lowest node
+    root.each(node => {
+      if (node.x < root.minY) root.minY = node.x;
+      if (node.x > root.maxY) root.maxY = node.x;
+    })
+
+    //console.log("HEIGHT " + root.height);
 
     drawOutlines(svg, root, options);
 
     // draw links
-    
+
     var link = svg.selectAll(".link")
       .data(root.descendants().slice(1))
     .enter().append("path")
@@ -298,4 +317,7 @@ function drawTree(svg, root, options) {
       .attr("text-anchor", "middle")
       .attr("font-size", 12)
       .text(d => (d.height == 0) ? "" : (d.data.label || d.data.op || ""));
+
+
+    return root;
 }
