@@ -47,6 +47,7 @@ main {
   transform-style: preserve-3d;
 
   transition: transform 0.7s, opacity 0.7s;
+
 }
 
 #map img.screenshot {
@@ -72,8 +73,8 @@ main {
   border: 2px solid black;
   background-color: rgba(255,255,255,0.7);
   opacity: 0.7;
-  /* this does not seem to work in conjunction with opacity of parent */
-  /* transform: translate3d(0,0,40px); */
+  /* this does not work if opacity is set on parent ! */
+  transform: translate3d(0,0,1px);
   cursor: pointer;
 }
 
@@ -83,13 +84,8 @@ main {
 }
 
 .flip #map {
-  transform: translate(230px) rotateY(75deg);
+  transform: translate(230px) rotateY(72deg);
   xopacity: 0.5;
-}
-
-svg path {
-  stroke: #000000;
-  fill: none;
 }
 
 #closebutton {
@@ -133,7 +129,7 @@ svg path {
   border: none;
   background-color: transparent;
   transform-origin: 100% 0;
-  transform: rotateY(-75deg);
+  transform: rotateY(-72deg);
 }
 
 #map #closebutton::before {
@@ -141,7 +137,7 @@ svg path {
   content: "◀";
 }
 
-.code {
+#code {
   position: absolute;
   bottom: 0;
   visibility: hidden;
@@ -154,7 +150,11 @@ svg path {
   border: 1px solid #e0e0e0;
 }
 
-.flip .code {
+#code .highlight {
+  background-color: #99ff99;
+}
+
+.flip #code {
   visibility: visible;
 }
 
@@ -170,30 +170,36 @@ svg path {
 <div id="closebutton"></div>
 </div>
 
-<div class="code">function project_mercator(lonlat) {
-  var lat = deg_rad(lonlat[1]);
-  var lon = deg_rad(lonlat[0]);
-  var x = lon / 2.0 / Math.PI + 0.5;
-  var y = Math.log((Math.sin(lat) + 1.0) /
-          Math.cos(lat)) / 2.0 / Math.PI + 0.5;
-  return [x, y];
-}
-</div>
+<svg id="graph" width="800" height="800">
+</svg>
+
+<div id="code"></div>
 
 </main>
 
 <script src="//d3js.org/d3.v4.js"></script>
+<script src="//d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="tree.js"></script>
 
 <script>
 const DEFAULT_PROJECT = "test-projection-naive",
   PROJECT = (window.location.search && window.location.search.substring(1)) || DEFAULT_PROJECT,
   CAPTURE_BASE = "capture/" + PROJECT
+  NODE_HEIGHT = 45,
+  NODE_WIDTH = 70,
+  FUNCTION_MARGIN = 4,
+  TREE_MARGIN = 30
 ;
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + PROJECT + '_small_0_0.png');
 
 let body = d3.select(document.body),
-  map = d3.select('#map');
+  map = d3.select('#map'),
+  svg = d3.select("svg"),
+  width = +svg.attr("width"),
+  height = +svg.attr("height"),
+  g = svg.append("g").attr("transform", "translate(750,0)");
+;
 
 d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
@@ -204,14 +210,85 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
     .attr('class','mark')
     .style('top', d => d.location.y + 'px')
     .style('left', d => d.location.x + 'px')
-    .on('click', () => {
+    .on('click', (d) => {
+
       body.classed('flip', true);
+
+      g.selectAll('.tree').remove();
+
+      var yOffset = TREE_MARGIN;
+
+      g.selectAll('.tree')
+        .data(d.args)
+        .enter()
+        .append('g')
+        .attr('class', 'tree')
+        .each(function(d,i) {
+
+            var g = d3.select(this);
+
+            var root = drawTree(g, d, {
+              nodeHeight: NODE_HEIGHT,
+              nodeWidth: NODE_WIDTH,
+              functionMargin: FUNCTION_MARGIN,
+              nodeClick: showCode
+            });
+
+            yOffset -= root.minY; // minY will be negative!
+
+            g.attr("transform","translate(0," + yOffset + ")");
+
+            yOffset += root.maxY + TREE_MARGIN;
+
+        })
+      ;
     })
   ;
 
-  d3.select('#closebutton').on('click', () => { body.classed('flip', false); })
+  d3.select('#closebutton')
+    .on('click', () => {
+      body.classed('flip', false);
+      g.selectAll('*').remove();
+    })
 
 });
+
+const CONTEXT_LINES = 5;
+
+// TODO: smart, parser-based selection of code to show, showing function headers etc.
+function showCode(node) {
+  if (node.data.file) {
+    d3.text(CAPTURE_BASE + '/' + node.data.file, (error, data) => {
+
+      if (error){
+        console.error(error);
+        return;
+      }
+
+      var lines = data.split('\n');
+
+      var loc = node.data.loc;
+      if (loc.split) loc = loc.split(':');
+
+      // start at closing tag to avoid shifting string contents
+      var l = lines[loc[2]-1];
+      lines[loc[2]-1] = l.slice(0, loc[3]-1) + '</span>' + l.slice(loc[3]-1);
+      l = lines[loc[0]-1];
+      lines[loc[0]-1] = l.slice(0, loc[1]-1) + '<span class="highlight">' + l.slice(loc[1]-1);
+
+      var fromLine = Math.max(loc[0]-1 - CONTEXT_LINES, 0);
+      var toLine = Math.min(loc[2] + CONTEXT_LINES, lines.length);
+
+      lines = lines.slice(fromLine, toLine);
+
+      d3.select('#code').html(lines.join('\n'));
+    });
+  }
+  else {
+    console.error("No code location given for node: ", node.data);
+    //console.error(node.data);
+  }
+}
 
 </script>
 
