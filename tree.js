@@ -1,3 +1,21 @@
+const DEFAULT_OPTIONS = {
+  nodeHeight: 45,
+  nodeWidth: 70,
+  functionMargin: 4,
+  nodeX: node => -node.y,
+  nodeY: node => node.x
+}
+
+function locEqual(l1, l2) {
+  if (Array.isArray(l1)) l1 = l1.join(":");
+  if (Array.isArray(l2)) l2 = l2.join(":");
+  return l1 == l2;
+}
+function stackComparator(el1, el2) {
+    return (el1.file == el2.file) && locEqual(el1.loc, el2.loc);
+    //return el1.name == el2.name;
+}
+
 function hasHead(head, array, comparator) {
     return head.reduce(function(acc, el, i) {
         return acc && array.length > i && comparator(el, array[i]);
@@ -5,9 +23,7 @@ function hasHead(head, array, comparator) {
 }
 
 function hasStackHead(head, stack) {
-    return hasHead(head, stack, function(el1, el2) {
-        return (el1.file == el2.file) && (el1.loc == el2.loc);
-    });
+    return hasHead(head, stack, stackComparator);
 }
 
 function round(val, digits) {
@@ -50,14 +66,14 @@ function getEdgeNodes(node, stack, edgeNodes) {
 
 function drawOutline(svg, edgeNodes, level, options) {
 
-    options = Object.assign({}, options, {
-      nodeHeight: 45,
-      functionMargin: 4
-    });
+    options = Object.assign({}, DEFAULT_OPTIONS, options);
 
     var path = [];
     var previous, current, next, next2;
     var root = edgeNodes[0];
+
+    var x = options.nodeX,
+        y = options.nodeY;
 
     level = level || 1;
     var margin = (level-1) * options.functionMargin + 2;
@@ -78,18 +94,18 @@ function drawOutline(svg, edgeNodes, level, options) {
         // usually, down the tree is on top, back up is at bottom
         if (!previous) {
             // root node
-            path.push("M" + [x(current.node.y),current.node.x+radius])
+            path.push("M" + [x(current.node),y(current.node)+radius])
             path.push("A" + [                   // circular arc
                 radius, radius,   // radius-x, radius-y
                 0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
-                x(current.node.y), current.node.x-radius // dest x, y
+                x(current.node), y(current.node)-radius // dest x, y
             ]);
             // special case: only 1 node (=root)
             if (next.node == root.node) {
                 path.push("A" + [                   // circular arc
                     radius, radius,   // radius-x, radius-y
                     0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
-                    x(current.node.y), current.node.x+radius // dest x, y
+                    x(current.node), y(current.node)+radius // dest x, y
                 ]);
             }
         }
@@ -97,9 +113,9 @@ function drawOutline(svg, edgeNodes, level, options) {
             if (current.inside) {
                 if (previous.node.depth < current.node.depth) {
                     path.push("C" + [                                                       // bezier curve
-                        x(previous.node.y)-2*cpDistance, previous.node.x-radius,      // cp1 x, y
-                        x(current.node.y)+2*cpDistance, current.node.x-radius,        // cp2 x, y
-                        x(current.node.y), current.node.x-radius                     // dest x, y
+                        x(previous.node)-2*cpDistance, y(previous.node)-radius,      // cp1 x, y
+                        x(current.node)+2*cpDistance, y(current.node)-radius,        // cp2 x, y
+                        x(current.node), y(current.node)-radius                     // dest x, y
                     ]);
                     if (next == null || current.node.depth == next.node.depth) {
                         if (next.inside) {
@@ -108,14 +124,14 @@ function drawOutline(svg, edgeNodes, level, options) {
                                 path.push("A" + [                   // circular arc
                                     radius, radius,   // radius-x, radius-y
                                     0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
-                                    x(current.node.y), current.node.x+radius // dest x, y
+                                    x(current.node), y(current.node)+radius // dest x, y
                                 ]);
                             }
                             else {
                                 path.push("A" + [                   // circular arc
                                     radius, radius,   // radius-x, radius-y
                                     0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
-                                    x(current.node.y)-radius, current.node.x // dest x, y
+                                    x(current.node)-radius, y(current.node) // dest x, y
                                 ]);
                             }
                         }
@@ -123,7 +139,7 @@ function drawOutline(svg, edgeNodes, level, options) {
                             path.push("A" + [                   // circular arc
                                 radius, radius,   // radius-x, radius-y
                                 0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
-                                x(current.node.y), current.node.x+radius // dest x, y
+                                x(current.node), y(current.node)+radius // dest x, y
                             ]);
                         }
                     }
@@ -131,32 +147,32 @@ function drawOutline(svg, edgeNodes, level, options) {
                 else if (previous.node.depth == current.node.depth) {
                     if (next && next.node.depth > current.node.depth) {
                         path.push("C" + [                                                       // bezier curve
-                            x(previous.node.y)+cpDistance, previous.node.x+radius,        // cp1 x, y
-                            x(previous.node.y)+cpDistance+margin, (previous.node.x+current.node.x)/2-cpDistance,        // cp2 x, y
-                            x(previous.node.y)+cpDistance+margin, (previous.node.x+current.node.x)/2                     // dest x, y
+                            x(previous.node)+cpDistance, y(previous.node)+radius,        // cp1 x, y
+                            x(previous.node)+cpDistance+margin, (y(previous.node)+y(current.node))/2-cpDistance,        // cp2 x, y
+                            x(previous.node)+cpDistance+margin, (y(previous.node)+y(current.node))/2                     // dest x, y
                         ]);
                         path.push("C" + [                                                       // bezier curve
-                            x(current.node.y)+cpDistance+margin, (previous.node.x+current.node.x)/2+cpDistance,        // cp1 x, y
-                            x(current.node.y)+cpDistance, current.node.x-radius,        // cp2 x, y
-                            x(current.node.y), current.node.x-radius                     // dest x, y
+                            x(current.node)+cpDistance+margin, (y(previous.node)+y(current.node))/2+cpDistance,        // cp1 x, y
+                            x(current.node)+cpDistance, y(current.node)-radius,        // cp2 x, y
+                            x(current.node), y(current.node)-radius                     // dest x, y
                         ]);
                     }
                     else {
-                        path.push("L" + [x(current.node.y)-radius, current.node.x]);
+                        path.push("L" + [x(current.node)-radius, y(current.node)]);
                     }
                     if (next && (current.node.depth > next.node.depth || !next.inside)) {
                         path.push("A" + [                   // circular arc
                             radius, radius,   // radius-x, radius-y
                             0, 0, 0,                        // x-axis-rotation large-arc-flag sweep-flag
-                            x(current.node.y), current.node.x+radius // dest x, y
+                            x(current.node), y(current.node)+radius // dest x, y
                         ]);
                     }
                 }
                 else if (previous.node.depth > current.node.depth) {
                     path.push("C" + [                                                       // bezier curve
-                        x(previous.node.y)+2*cpDistance, previous.node.x+radius,      // cp1 x, y
-                        x(current.node.y)-2*cpDistance, current.node.x+radius,        // cp2 x, y
-                        x(current.node.y), current.node.x+radius                     // dest x, y
+                        x(previous.node)+2*cpDistance, y(previous.node)+radius,      // cp1 x, y
+                        x(current.node)-2*cpDistance, y(current.node)+radius,        // cp2 x, y
+                        x(current.node), y(current.node)+radius                     // dest x, y
                     ]);
 
                     //}
@@ -169,6 +185,13 @@ function drawOutline(svg, edgeNodes, level, options) {
     var path = svg.append("path")
         .attr("class","function level-"+level)
         .attr("d", d)
+        .attrs({
+            'fill': '#000000',
+            'fill-opacity': 0.05,
+            'stroke': '#000000',
+            'stroke-width': 0.9,
+            'stroke-dasharray': '5 5'
+        })
     ;
 
     var funcName = root.node.data.stack[level-1].name;
@@ -177,12 +200,18 @@ function drawOutline(svg, edgeNodes, level, options) {
     svg.append("text")
         .datum(root.node)
         .attr("class", "funcName")
-        .attr("transform", d => "translate(" + (x(d.y)+radius) + "," + (d.x+radius) + ")")
+        .attr("transform", d => "translate(" + (x(d)+radius) + "," + (y(d)+radius) + ")")
         .attr("dy", 2)
         .attr("x", 0)
-        .attr("text-anchor", "end")
-        .attr("font-size", 10)
-        .attr("font-weight", "bold")
+        .attrs({
+            'font-family': 'sans-serif',
+            'font-size': 10,
+            'text-anchor': 'end',
+            'font-weight': 'bold',
+            'cursor': 'default',
+            'pointer-events': 'none',
+            'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
+        })
         .text(funcName);
 
 }
@@ -203,7 +232,7 @@ function getStacks(current, context) {
     // save & skip common heads
     for (var i=0; i<current.length; i++) {
         if (i>=context.length) break;
-        if (!compare(current[i], context[i])) break;
+        if (!stackComparator(current[i], context[i])) break;
         common.push(current[i]);
     }
     for (; i<current.length; i++) {
@@ -221,10 +250,7 @@ function drawOutlines(svg, node, lastStack, options) {
         lastStack = [];
     }
 
-    options = Object.assign({}, options, {
-      nodeHeight: 45,
-      functionMargin: 4
-    });
+    options = Object.assign({}, DEFAULT_OPTIONS, options);
 
     lastStack = lastStack || [];
     var currentStack = node.data.stack || [];
@@ -246,11 +272,10 @@ function drawOutlines(svg, node, lastStack, options) {
 
 function drawTree(svg, data, options) {
 
-    options = Object.assign({}, options, {
-      nodeHeight: 45,
-      nodeWidth: 70,
-      functionMargin: 4
-    });
+    options = Object.assign({}, DEFAULT_OPTIONS, options);
+
+    var x = options.nodeX,
+        y = options.nodeY;
 
     // ATTENTION width and height are swapped because we have a horizontal tree layout!
     //var tree = d3.cluster().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
@@ -278,11 +303,18 @@ function drawTree(svg, data, options) {
       .data(root.descendants().slice(1))
     .enter().append("path")
       .attr("class", "link")
+      .attrs({
+        'fill': 'none',
+        'stroke': '#555',
+        'stroke-opacity': 0.4,
+        'stroke-width': 1.5,
+        'pointer-events': 'none'
+      })
       .attr("d", function(d) {
-        return "M" + x(d.y) + "," + d.x
-            + "C" + (x(d.y) + options.nodeHeight) + "," + d.x
-            + " " + (x(d.parent.y) - options.nodeHeight) + "," + d.parent.x
-            + " " + x(d.parent.y) + "," + d.parent.x;
+        return "M" + x(d) + "," + y(d)
+            + "C" + (x(d) + options.nodeHeight) + "," + y(d)
+            + " " + (x(d.parent) - options.nodeHeight) + "," + y(d.parent)
+            + " " + x(d.parent) + "," + y(d.parent);
       });
 
     // draw nodes
@@ -292,17 +324,35 @@ function drawTree(svg, data, options) {
     .enter().append("g")
       .attr("class", function(d) { return "node" + (d.children ? " node-internal" : " node-leaf"); })
       .attr("transform", function(d) {
-        return "translate(" + x(d.y) + "," + d.x + ")";
+        return "translate(" + x(d) + "," + y(d) + ")";
       })
+    ;
+
+    if (options.nodeClick) {
+      node.on('click', options.nodeClick);
+    }
 
     node.append("circle")
-      .attr("r", d => d.data.op ? 9 : 5);
+      .attr("r", d => d.data.op ? 9 : 5)
+      .attrs(d => d.children ? {
+        'fill': '#fff',
+        'stroke':' #555',
+        'stroke-width': 1
+      } : {
+        'fill': '#999'
+      });
 
     node.append("text")
         .attr("dy", 4)
         .attr("x", d => d.height ? 15 : -9)
-        .attr("font-size", 10)
         .attr("text-anchor", d => d.height ? "start" : "end")
+        .attrs({
+            'font-family': 'sans-serif',
+            'font-size': 10,
+            'cursor': 'default',
+            'pointer-events': 'none',
+            'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
+        })
         .text(d => {
             if (d.height == 0 && d.data.label) return d.data.label;
             var val = d.data.val;
@@ -314,8 +364,14 @@ function drawTree(svg, data, options) {
     node.append("text")
       .attr("dy", 4)
       .attr("x", 0)
-      .attr("text-anchor", "middle")
-      .attr("font-size", 12)
+      .attrs({
+          'font-family': 'sans-serif',
+          'font-size': 12,
+          'cursor': 'default',
+          'pointer-events': 'none',
+          'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
+      })
+      .attr('text-anchor', 'middle')
       .text(d => (d.height == 0) ? "" : (d.data.label || d.data.op || ""));
 
 
