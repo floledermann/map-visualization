@@ -53,6 +53,7 @@ d3.json(INPUT_FILE, function(error, treeData) {
   var yOffset = TREE_MARGIN;
 
   var maxWidth = 0;
+  var lastRoot = null;
 
   g.selectAll(".tree")
     .data(treeData)
@@ -69,14 +70,20 @@ d3.json(INPUT_FILE, function(error, treeData) {
           functionMargin: FUNCTION_MARGIN
         });
 
-        yOffset -= root.minY; // minY will be negative!
-
+        if (lastRoot) {
+          yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
+        }
+        else {
+          yOffset -= root.minY; // first tree - minY will be negative!
+        }
         g.attr("transform","translate(0," + yOffset + ")");
 
-        yOffset += root.maxY + TREE_MARGIN;
+        lastRoot = root;
 
     });
-
+    if (lastRoot) {
+      yOffset += TREE_MARGIN + lastRoot.maxY;
+    }
     svg.attr('height', yOffset);
 });
 

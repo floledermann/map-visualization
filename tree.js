@@ -3,7 +3,10 @@ const DEFAULT_OPTIONS = {
   nodeWidth: 70,
   functionMargin: 4,
   nodeX: node => -node.y,
-  nodeY: node => node.x
+  nodeY: node => node.x,
+  delay: 0,
+  delayPerLevel: 0,
+  delayFunctions: 0
 }
 
 function locEqual(l1, l2) {
@@ -78,6 +81,8 @@ function drawOutline(svg, edgeNodes, level, options) {
     level = level || 1;
     var margin = (level-1) * options.functionMargin + 2;
 
+    var maxDepth = 0;
+
     var cpDistance = options.nodeHeight / 2;
     var radius = options.nodeHeight / 2 - margin;
 
@@ -86,6 +91,8 @@ function drawOutline(svg, edgeNodes, level, options) {
         current = edgeNodes[i];
         next = edgeNodes[i+1] || null;
         next2 = edgeNodes[i+2] || null;
+
+        if (current.node.depth > maxDepth) maxDepth = current.node.depth;
 
         // drawing a single node tree is handled below in the first step, so ignore root node added twice to the outline
         if (!next && previous.node == root.node) continue;
@@ -194,10 +201,13 @@ function drawOutline(svg, edgeNodes, level, options) {
         })
     ;
 
+    var delayDuration = options.delay + options.delayFunctions + maxDepth * options.delayPerLevel;
+    delay(path, delayDuration, 1500);
+
     var funcName = root.node.data.stack[level-1].name;
     if (funcName.startsWith("<function")) funcName = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
 
-    svg.append("text")
+    var label = svg.append("text")
         .datum(root.node)
         .attr("class", "funcName")
         .attr("transform", d => "translate(" + (x(d)+radius) + "," + (y(d)+radius) + ")")
@@ -213,6 +223,8 @@ function drawOutline(svg, edgeNodes, level, options) {
             'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
         })
         .text(funcName);
+
+    delay(label, delayDuration, 1500);
 
 }
 
@@ -270,6 +282,16 @@ function drawOutlines(svg, node, lastStack, options) {
     }
 }
 
+function delay(sel, delay, duration) {
+  duration = duration || 300;
+  sel.attr('opacity', 0);
+  sel.transition()
+    .delay(delay)
+    .duration(duration)
+    .attr('opacity', 1)
+  ;
+}
+
 function drawTree(svg, data, options) {
 
     options = Object.assign({}, DEFAULT_OPTIONS, options);
@@ -317,6 +339,8 @@ function drawTree(svg, data, options) {
             + " " + x(d.parent) + "," + y(d.parent);
       });
 
+    delay(link, d => options.delay + (d.depth-1) * options.delayPerLevel);
+
     // draw nodes
 
     var node = svg.selectAll(".node")
@@ -327,6 +351,8 @@ function drawTree(svg, data, options) {
         return "translate(" + x(d) + "," + y(d) + ")";
       })
     ;
+
+    delay(node, d => options.delay + d.depth * options.delayPerLevel);
 
     if (options.nodeClick) {
       node.on('click', options.nodeClick);
@@ -376,4 +402,21 @@ function drawTree(svg, data, options) {
 
 
     return root;
+}
+
+function compactDistance(tree1, tree2) {
+  var maxX = [];
+
+  tree1.each(node => {
+    if (maxX[node.depth] === undefined || maxX[node.depth] < node.x) maxX[node.depth] = node.x;
+  });
+
+  var maxDist = 0;
+
+  tree2.each(node => {
+    var dist = maxX[node.depth] - node.x;
+    if (dist > maxDist) maxDist = dist;
+  })
+
+  return maxDist;
 }

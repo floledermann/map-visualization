@@ -188,7 +188,7 @@ const DEFAULT_PROJECT = "test-projection-naive",
   NODE_HEIGHT = 45,
   NODE_WIDTH = 70,
   FUNCTION_MARGIN = 4,
-  TREE_MARGIN = 30
+  TREE_MARGIN = 150
 ;
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + PROJECT + '_small_0_0.png');
@@ -216,7 +216,8 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
       g.selectAll('.tree').remove();
 
-      var yOffset = TREE_MARGIN;
+      var yOffset = TREE_MARGIN / 2;
+      var lastRoot = null;
 
       g.selectAll('.tree')
         .data(d.args)
@@ -231,16 +232,28 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
               nodeHeight: NODE_HEIGHT,
               nodeWidth: NODE_WIDTH,
               functionMargin: FUNCTION_MARGIN,
-              nodeClick: showCode
+              nodeClick: showCode,
+              delay: 1000,
+              delayPerLevel: 50,
+              delayFunctions: 700
             });
 
-            yOffset -= root.minY; // minY will be negative!
-
+            if (lastRoot) {
+              yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
+            }
+            else {
+              yOffset -= root.minY; // first tree - minY will be negative!
+            }
             g.attr("transform","translate(0," + yOffset + ")");
 
-            yOffset += root.maxY + TREE_MARGIN;
+            lastRoot = root;
 
-        })
+        });
+
+        if (lastRoot) {
+          yOffset += TREE_MARGIN / 2 + lastRoot.maxY;
+        }
+        //svg.attr('height', yOffset);
       ;
     })
   ;
@@ -250,7 +263,10 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       body.classed('flip', false);
       g.selectAll('*').remove();
     })
+  ;
 
+  // DEBUG trigger click on load
+  map.select('.mark').dispatch('click');
 });
 
 const CONTEXT_LINES = 5;
