@@ -59,7 +59,7 @@ main {
 }
 
 .flip #map img.screenshot {
-  xopacity: 0.5;
+  opacity: 0.5;
 }
 
 #map .mark {
@@ -158,6 +158,11 @@ main {
   visibility: visible;
 }
 
+
+#graph {
+  width: 100%;
+  height: 100%;
+}
 </style>
 
 </head>
@@ -210,7 +215,9 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
     .attr('class','mark')
     .style('top', d => d.location.y + 'px')
     .style('left', d => d.location.x + 'px')
-    .on('click', (d) => {
+    .on('click', function(d){
+
+      var flipAnim = !body.classed('flip');
 
       body.classed('flip', true);
 
@@ -218,6 +225,8 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
       var yOffset = TREE_MARGIN / 2;
       var lastRoot = null;
+
+      var markEl = this;
 
       g.selectAll('.tree')
         .data(d.args)
@@ -228,15 +237,25 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
             var g = d3.select(this);
 
-            var root = drawTree(g, d, {
+            var treeOptions = {
               nodeHeight: NODE_HEIGHT,
               nodeWidth: NODE_WIDTH,
               functionMargin: FUNCTION_MARGIN,
               nodeClick: showCode,
-              delay: 1000,
+              delay: 300,
               delayPerLevel: 50,
-              delayFunctions: 700
-            });
+              delayFunctions: 0
+            };
+
+            if (!flipAnim) {
+              Object.assign(treeOptions, {
+                delay: 0,
+                delayPerLevel: 0,
+                delayFunctions: 0
+              })
+            }
+
+            var root = drawTree(g, d, treeOptions);
 
             if (lastRoot) {
               yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
@@ -253,6 +272,26 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
         if (lastRoot) {
           yOffset += TREE_MARGIN / 2 + lastRoot.maxY;
         }
+
+        function showArgs() {
+          var bounds = markEl.getBoundingClientRect();
+          var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
+
+          svg.append('circle')
+            .attr('r', 10)
+            .attr('cx', center[0])
+            .attr('cy', center[1])
+          ;
+
+        }
+
+        if (flipAnim) {
+          window.setTimeout(showArgs, 800);
+        }
+        else {
+          showArgs();
+        }
+
         //svg.attr('height', yOffset);
       ;
     })
