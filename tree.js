@@ -202,7 +202,9 @@ function drawOutline(svg, edgeNodes, level, options) {
     ;
 
     var delayDuration = options.delay + options.delayFunctions + maxDepth * options.delayPerLevel;
-    delay(path, delayDuration, 1500);
+    if (options.delayPerLevel) {
+      delay(path, delayDuration, 1500);
+    }
 
     var funcName = root.node.data.stack[level-1].name;
     if (funcName.startsWith("<function")) funcName = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
@@ -224,8 +226,9 @@ function drawOutline(svg, edgeNodes, level, options) {
         })
         .text(funcName);
 
-    delay(label, delayDuration, 1500);
-
+    if (options.delayPerLevel) {
+      delay(label, delayDuration, 1500);
+    }
 }
 
 function getStacks(current, context) {
@@ -339,7 +342,9 @@ function drawTree(svg, data, options) {
             + " " + x(d.parent) + "," + y(d.parent);
       });
 
-    delay(link, d => options.delay + (d.depth-1) * options.delayPerLevel);
+    if (options.delayPerLevel) {
+      delay(link, d => options.delay + (d.depth-1) * options.delayPerLevel);
+    }
 
     // draw nodes
 
@@ -352,7 +357,9 @@ function drawTree(svg, data, options) {
       })
     ;
 
-    delay(node, d => options.delay + d.depth * options.delayPerLevel);
+    if (options.delayPerLevel) {
+      delay(node, d => options.delay + d.depth * options.delayPerLevel);
+    }
 
     if (options.nodeClick) {
       node.on('click', options.nodeClick);
