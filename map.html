@@ -85,7 +85,6 @@ main {
 
 .flip #map {
   transform: translate(230px) rotateY(72deg);
-  xopacity: 0.5;
 }
 
 #closebutton {
@@ -215,7 +214,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
     .attr('class','mark')
     .style('top', d => d.location.y + 'px')
     .style('left', d => d.location.x + 'px')
-    .on('click', function(d){
+    .on('click', function(mark){
 
       var flipAnim = !body.classed('flip');
 
@@ -228,8 +227,10 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
       var markEl = this;
 
+      var trees = [];
+
       g.selectAll('.tree')
-        .data(d.args)
+        .data(mark.args)
         .enter()
         .append('g')
         .attr('class', 'tree')
@@ -267,6 +268,10 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
             lastRoot = root;
 
+            root.yOffset = yOffset;
+
+            trees.push(root);
+
         });
 
         if (lastRoot) {
@@ -274,15 +279,66 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
         }
 
         function showArgs() {
+
           var bounds = markEl.getBoundingClientRect();
           var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
 
+/*
           svg.append('circle')
             .attr('r', 10)
             .attr('cx', center[0])
             .attr('cy', center[1])
           ;
+*/
+          const ARGS_GAP = 4;
 
+          const argsOffset = -(trees.length-1) * ARGS_GAP / 2;
+
+          var links = svg.selectAll('.argLink')
+            .data(trees);
+
+          links.enter()
+            .append('path')
+            .attr('class','argLink')
+            .attrs({
+              'fill': 'none',
+              'stroke': '#555',
+              'stroke-opacity': 0.4,
+              'stroke-width': 1.5,
+              'pointer-events': 'none'
+            })
+          .merge(links)
+            .attr('d', (root, i) => {
+
+              var cpDistance = (center[0] - root.x - 750) / 3;
+
+              return "M" + center[0]+750 + "," + (center[1] + argsOffset + i * ARGS_GAP)
+                  + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
+                  + " " + (root.x + 100 + cpDistance + 750) + "," + (-root.y + root.yOffset)
+                  + " " + (root.x + 100 + 750) + "," + (-root.y + root.yOffset);
+            });
+
+          var labels = svg.selectAll('.argLabel')
+            .data(trees);
+
+          labels.enter()
+            .append('text')
+            .attr('class', 'argLabel')
+            .attrs({
+              'font-family': 'sans-serif',
+              'font-size': 12,
+              'font-weight': 'bold',
+              'cursor': 'default',
+              'pointer-events': 'none',
+              'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff',
+              'text-anchor': 'middle',
+              'dy': 4
+            })
+          .merge(labels)
+            .attr('x', root => root.x + 90 + 750)
+            .attr('y', root => root.yOffset - root.y)
+            .text((d,i) => mark.argNames[i])
+          ;
         }
 
         if (flipAnim) {
