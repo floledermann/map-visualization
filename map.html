@@ -205,6 +205,12 @@ let body = d3.select(document.body),
   g = svg.append("g").attr("transform", "translate(750,0)");
 ;
 
+function clear() {
+  svg.selectAll('.argLink').remove();
+  svg.selectAll('.argLabel').remove();
+  d3.select('#code').html('');
+}
+
 d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
   let marks = map.selectAll('.mark').data(data);
@@ -221,6 +227,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       body.classed('flip', true);
 
       g.selectAll('.tree').remove();
+      clear();
 
       var yOffset = TREE_MARGIN / 2;
       var lastRoot = null;
@@ -243,7 +250,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
               nodeWidth: NODE_WIDTH,
               functionMargin: FUNCTION_MARGIN,
               nodeClick: showCode,
-              delay: 300,
+              delay: 1000,
               delayPerLevel: 50,
               delayFunctions: 0
             };
@@ -357,6 +364,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
     .on('click', () => {
       body.classed('flip', false);
       g.selectAll('*').remove();
+      clear();
     })
   ;
 
