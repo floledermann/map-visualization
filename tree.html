@@ -34,7 +34,7 @@ svg path.function.level-1:hover {
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height"),
-    g = svg.append("g").attr("transform", "translate(1000,0)");
+    g = svg.append("g").attr("transform", "translate(1600,0) scale(0.7)");
 
 var INPUT_FILE = "examples/" + ((window.location.search && window.location.search.substring(1)) || "d3_mercator.json"),
     NODE_HEIGHT = 45,
