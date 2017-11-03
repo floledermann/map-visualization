@@ -174,7 +174,7 @@ main {
 <div id="closebutton"></div>
 </div>
 
-<svg id="graph" width="800" height="800">
+<svg id="graph" width="1200" height="1200">
 </svg>
 
 <div id="code"></div>
@@ -192,7 +192,9 @@ const DEFAULT_PROJECT = "test-projection-naive",
   NODE_HEIGHT = 45,
   NODE_WIDTH = 70,
   FUNCTION_MARGIN = 4,
-  TREE_MARGIN = 150
+  TREE_MARGIN = 150,
+  // TODO: calculate this from window width, also adjust scale
+  GRAPH_X_POS = 1000
 ;
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + 'small_full.png');
@@ -202,7 +204,7 @@ let body = d3.select(document.body),
   svg = d3.select("svg"),
   width = +svg.attr("width"),
   height = +svg.attr("height"),
-  g = svg.append("g").attr("transform", "translate(750,0)");
+  g = svg.append("g").attr("transform", "translate(" + GRAPH_X_POS + ",0)");
 ;
 
 function clear() {
@@ -317,12 +319,12 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
           .merge(links)
             .attr('d', (root, i) => {
 
-              var cpDistance = (center[0] - root.x - 750) / 3;
+              var cpDistance = (center[0] - root.x - GRAPH_X_POS) / 3;
 
-              return "M" + center[0]+750 + "," + (center[1] + argsOffset + i * ARGS_GAP)
+              return "M" + center[0]+GRAPH_X_POS + "," + (center[1] + argsOffset + i * ARGS_GAP)
                   + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
-                  + " " + (root.x + 100 + cpDistance + 750) + "," + (-root.y + root.yOffset)
-                  + " " + (root.x + 100 + 750) + "," + (-root.y + root.yOffset);
+                  + " " + (root.x + 100 + cpDistance + GRAPH_X_POS) + "," + (-root.y + root.yOffset)
+                  + " " + (root.x + 100 + GRAPH_X_POS) + "," + (-root.y + root.yOffset);
             });
 
           var labels = svg.selectAll('.argLabel')
@@ -342,7 +344,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
               'dy': 4
             })
           .merge(labels)
-            .attr('x', root => root.x + 90 + 750)
+            .attr('x', root => root.x + 90 + GRAPH_X_POS)
             .attr('y', root => root.yOffset - root.y)
             .text((d,i) => mark.argNames[i])
           ;
