@@ -1,0 +1,2803 @@
+[
+  {
+    "location": {
+      "type": "point",
+      "x": 288.32444444444445,
+      "y": 186.55265826632404
+    },
+    "func": "moveTo",
+    "argNames": ["x","y"],
+    "args": [
+      {
+        "valuetype": "number",
+        "stack": [],
+        "loc": [
+          22,
+          23,
+          22,
+          37
+        ],
+        "file": "5d9215db7d127126671739faafc9a893.js",
+        "type": "binary",
+        "label": "×",
+        "op": "*",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              22,
+              23,
+              22,
+              29
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[0]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "canvas_coords",
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "loc": [
+                      43,
+                      1,
+                      45,
+                      2
+                    ]
+                  }
+                ],
+                "loc": [
+                  44,
+                  13,
+                  44,
+                  18
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[0]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "project_mercator",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          32,
+                          1,
+                          39,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      35,
+                      11,
+                      35,
+                      36
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "binary",
+                    "label": "+",
+                    "op": "+",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "project_mercator",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              32,
+                              1,
+                              39,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          35,
+                          11,
+                          35,
+                          30
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "binary",
+                        "label": "/",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "loc": [
+                              35,
+                              11,
+                              35,
+                              20
+                            ],
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "type": "binary",
+                            "label": "/",
+                            "op": "/",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  },
+                                  {
+                                    "name": "deg_rad",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      27,
+                                      1,
+                                      29,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "loc": [
+                                  28,
+                                  10,
+                                  28,
+                                  31
+                                ],
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "type": "binary",
+                                "label": "×",
+                                "op": "*",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "loc": [
+                                      34,
+                                      21,
+                                      34,
+                                      30
+                                    ],
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "type": "property",
+                                    "op": "[]",
+                                    "label": "[0]",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [],
+                                        "loc": [
+                                          9,
+                                          20,
+                                          9,
+                                          24
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "literal",
+                                        "val": 16.4,
+                                        "conditions": []
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "loc": [
+                                          34,
+                                          28,
+                                          34,
+                                          29
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "literal",
+                                        "val": 0,
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "val": 16.4,
+                                    "conditions": []
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      },
+                                      {
+                                        "name": "deg_rad",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          27,
+                                          1,
+                                          29,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "loc": [
+                                      28,
+                                      17,
+                                      28,
+                                      30
+                                    ],
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "type": "binary",
+                                    "label": "/",
+                                    "op": "/",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          },
+                                          {
+                                            "name": "deg_rad",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              27,
+                                              1,
+                                              29,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "type": "math",
+                                        "val": 3.141592653589793,
+                                        "conditions": []
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          },
+                                          {
+                                            "name": "deg_rad",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              27,
+                                              1,
+                                              29,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "loc": [
+                                          28,
+                                          25,
+                                          28,
+                                          30
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "literal",
+                                        "val": 180,
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "val": 0.017453292519943295,
+                                    "conditions": []
+                                  }
+                                ],
+                                "val": 0.28623399732707,
+                                "conditions": []
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "loc": [
+                                  35,
+                                  17,
+                                  35,
+                                  20
+                                ],
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "type": "literal",
+                                "val": 2,
+                                "conditions": []
+                              }
+                            ],
+                            "val": 0.143116998663535,
+                            "conditions": []
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "type": "math",
+                            "val": 3.141592653589793,
+                            "conditions": []
+                          }
+                        ],
+                        "val": 0.04555555555555555,
+                        "conditions": []
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "project_mercator",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              32,
+                              1,
+                              39,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          35,
+                          33,
+                          35,
+                          36
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "literal",
+                        "val": 0.5,
+                        "conditions": []
+                      }
+                    ],
+                    "val": 0.5455555555555556,
+                    "conditions": []
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "canvas_coords",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          43,
+                          1,
+                          45,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      44,
+                      16,
+                      44,
+                      17
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "literal",
+                    "val": 0,
+                    "conditions": []
+                  }
+                ],
+                "val": 0.5455555555555556,
+                "conditions": []
+              },
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": [
+                  22,
+                  27,
+                  22,
+                  28
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "literal",
+                "val": 0,
+                "conditions": []
+              }
+            ],
+            "val": 0.5455555555555556,
+            "conditions": []
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              3,
+              13,
+              3,
+              42
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              "512"
+            ],
+            "val": 512,
+            "conditions": []
+          }
+        ],
+        "val": 279.32444444444445,
+        "conditions": []
+      },
+      {
+        "valuetype": "number",
+        "stack": [],
+        "loc": [
+          22,
+          39,
+          22,
+          54
+        ],
+        "file": "5d9215db7d127126671739faafc9a893.js",
+        "type": "binary",
+        "label": "×",
+        "op": "*",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              22,
+              39,
+              22,
+              45
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[1]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "canvas_coords",
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "loc": [
+                      43,
+                      1,
+                      45,
+                      2
+                    ]
+                  }
+                ],
+                "loc": [
+                  44,
+                  20,
+                  44,
+                  27
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "binary",
+                "label": "-",
+                "op": "-",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "canvas_coords",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          43,
+                          1,
+                          45,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      44,
+                      20,
+                      44,
+                      21
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "literal",
+                    "val": 1,
+                    "conditions": []
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "canvas_coords",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          43,
+                          1,
+                          45,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      44,
+                      22,
+                      44,
+                      27
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "property",
+                    "op": "[]",
+                    "label": "[1]",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "project_mercator",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              32,
+                              1,
+                              39,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          36,
+                          11,
+                          37,
+                          47
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "binary",
+                        "label": "+",
+                        "op": "+",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "loc": [
+                              36,
+                              11,
+                              37,
+                              41
+                            ],
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "type": "binary",
+                            "label": "/",
+                            "op": "/",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "loc": [
+                                  36,
+                                  11,
+                                  37,
+                                  31
+                                ],
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "type": "binary",
+                                "label": "/",
+                                "op": "/",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "type": "math",
+                                    "op": "log",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "loc": [
+                                          36,
+                                          20,
+                                          37,
+                                          24
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "binary",
+                                        "label": "/",
+                                        "op": "/",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "project_mercator",
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "loc": [
+                                                  32,
+                                                  1,
+                                                  39,
+                                                  2
+                                                ]
+                                              }
+                                            ],
+                                            "loc": [
+                                              36,
+                                              21,
+                                              36,
+                                              40
+                                            ],
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "type": "binary",
+                                            "label": "+",
+                                            "op": "+",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "project_mercator",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      32,
+                                                      1,
+                                                      39,
+                                                      2
+                                                    ]
+                                                  }
+                                                ],
+                                                "type": "math",
+                                                "op": "sin",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "project_mercator",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          32,
+                                                          1,
+                                                          39,
+                                                          2
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "deg_rad",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          27,
+                                                          1,
+                                                          29,
+                                                          2
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "loc": [
+                                                      28,
+                                                      10,
+                                                      28,
+                                                      31
+                                                    ],
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "type": "binary",
+                                                    "label": "×",
+                                                    "op": "*",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          33,
+                                                          21,
+                                                          33,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "property",
+                                                        "op": "[]",
+                                                        "label": "[1]",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [],
+                                                            "loc": [
+                                                              9,
+                                                              26,
+                                                              9,
+                                                              30
+                                                            ],
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "type": "literal",
+                                                            "val": 48.2,
+                                                            "conditions": []
+                                                          },
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "project_mercator",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  32,
+                                                                  1,
+                                                                  39,
+                                                                  2
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "loc": [
+                                                              33,
+                                                              28,
+                                                              33,
+                                                              29
+                                                            ],
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "type": "literal",
+                                                            "val": 1,
+                                                            "conditions": []
+                                                          }
+                                                        ],
+                                                        "val": 48.2,
+                                                        "conditions": []
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "deg_rad",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              27,
+                                                              1,
+                                                              29,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          28,
+                                                          17,
+                                                          28,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "binary",
+                                                        "label": "/",
+                                                        "op": "/",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "project_mercator",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  32,
+                                                                  1,
+                                                                  39,
+                                                                  2
+                                                                ]
+                                                              },
+                                                              {
+                                                                "name": "deg_rad",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  27,
+                                                                  1,
+                                                                  29,
+                                                                  2
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "type": "math",
+                                                            "val": 3.141592653589793,
+                                                            "conditions": []
+                                                          },
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "project_mercator",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  32,
+                                                                  1,
+                                                                  39,
+                                                                  2
+                                                                ]
+                                                              },
+                                                              {
+                                                                "name": "deg_rad",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  27,
+                                                                  1,
+                                                                  29,
+                                                                  2
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "loc": [
+                                                              28,
+                                                              25,
+                                                              28,
+                                                              30
+                                                            ],
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "type": "literal",
+                                                            "val": 180,
+                                                            "conditions": []
+                                                          }
+                                                        ],
+                                                        "val": 0.017453292519943295,
+                                                        "conditions": []
+                                                      }
+                                                    ],
+                                                    "val": 0.8412486994612669,
+                                                    "conditions": []
+                                                  }
+                                                ],
+                                                "val": 0.7454759996828623,
+                                                "conditions": []
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "project_mercator",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      32,
+                                                      1,
+                                                      39,
+                                                      2
+                                                    ]
+                                                  }
+                                                ],
+                                                "loc": [
+                                                  36,
+                                                  37,
+                                                  36,
+                                                  40
+                                                ],
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "type": "literal",
+                                                "val": 1,
+                                                "conditions": []
+                                              }
+                                            ],
+                                            "val": 1.7454759996828622,
+                                            "conditions": []
+                                          },
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "project_mercator",
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "loc": [
+                                                  32,
+                                                  1,
+                                                  39,
+                                                  2
+                                                ]
+                                              }
+                                            ],
+                                            "type": "math",
+                                            "op": "cos",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "project_mercator",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      32,
+                                                      1,
+                                                      39,
+                                                      2
+                                                    ]
+                                                  },
+                                                  {
+                                                    "name": "deg_rad",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      27,
+                                                      1,
+                                                      29,
+                                                      2
+                                                    ]
+                                                  }
+                                                ],
+                                                "loc": [
+                                                  28,
+                                                  10,
+                                                  28,
+                                                  31
+                                                ],
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "type": "binary",
+                                                "label": "×",
+                                                "op": "*",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "project_mercator",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          32,
+                                                          1,
+                                                          39,
+                                                          2
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "loc": [
+                                                      33,
+                                                      21,
+                                                      33,
+                                                      30
+                                                    ],
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "type": "property",
+                                                    "op": "[]",
+                                                    "label": "[1]",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "loc": [
+                                                          9,
+                                                          26,
+                                                          9,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "literal",
+                                                        "val": 48.2,
+                                                        "conditions": []
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          33,
+                                                          28,
+                                                          33,
+                                                          29
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "literal",
+                                                        "val": 1,
+                                                        "conditions": []
+                                                      }
+                                                    ],
+                                                    "val": 48.2,
+                                                    "conditions": []
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "project_mercator",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          32,
+                                                          1,
+                                                          39,
+                                                          2
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "deg_rad",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          27,
+                                                          1,
+                                                          29,
+                                                          2
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "loc": [
+                                                      28,
+                                                      17,
+                                                      28,
+                                                      30
+                                                    ],
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "type": "binary",
+                                                    "label": "/",
+                                                    "op": "/",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "deg_rad",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              27,
+                                                              1,
+                                                              29,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "type": "math",
+                                                        "val": 3.141592653589793,
+                                                        "conditions": []
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "deg_rad",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              27,
+                                                              1,
+                                                              29,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          28,
+                                                          25,
+                                                          28,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "literal",
+                                                        "val": 180,
+                                                        "conditions": []
+                                                      }
+                                                    ],
+                                                    "val": 0.017453292519943295,
+                                                    "conditions": []
+                                                  }
+                                                ],
+                                                "val": 0.8412486994612669,
+                                                "conditions": []
+                                              }
+                                            ],
+                                            "val": 0.6665324702494524,
+                                            "conditions": []
+                                          }
+                                        ],
+                                        "val": 2.6187411380417984,
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "val": 0.9626937206412669,
+                                    "conditions": []
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "loc": [
+                                      37,
+                                      28,
+                                      37,
+                                      31
+                                    ],
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "type": "literal",
+                                    "val": 2,
+                                    "conditions": []
+                                  }
+                                ],
+                                "val": 0.48134686032063345,
+                                "conditions": []
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "type": "math",
+                                "val": 3.141592653589793,
+                                "conditions": []
+                              }
+                            ],
+                            "val": 0.15321746432358582,
+                            "conditions": []
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "loc": [
+                              37,
+                              44,
+                              37,
+                              47
+                            ],
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "type": "literal",
+                            "val": 0.5,
+                            "conditions": []
+                          }
+                        ],
+                        "val": 0.6532174643235859,
+                        "conditions": []
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "canvas_coords",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              43,
+                              1,
+                              45,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          44,
+                          25,
+                          44,
+                          26
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "literal",
+                        "val": 1,
+                        "conditions": []
+                      }
+                    ],
+                    "val": 0.6532174643235859,
+                    "conditions": []
+                  }
+                ],
+                "val": 0.34678253567641415,
+                "conditions": []
+              },
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": [
+                  22,
+                  43,
+                  22,
+                  44
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "literal",
+                "val": 1,
+                "conditions": []
+              }
+            ],
+            "val": 0.34678253567641415,
+            "conditions": []
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              4,
+              14,
+              4,
+              44
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              "512"
+            ],
+            "val": 512,
+            "conditions": []
+          }
+        ],
+        "val": 177.55265826632404,
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "location": {
+      "type": "point",
+      "x": 159.75555555555553,
+      "y": 201.52618317756685
+    },
+    "func": "lineTo",
+    "argNames": ["x","y"],
+    "args": [
+      {
+        "valuetype": "number",
+        "stack": [],
+        "loc": [
+          23,
+          23,
+          23,
+          37
+        ],
+        "file": "5d9215db7d127126671739faafc9a893.js",
+        "type": "binary",
+        "label": "×",
+        "op": "*",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              23,
+              23,
+              23,
+              29
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[0]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "canvas_coords",
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "loc": [
+                      43,
+                      1,
+                      45,
+                      2
+                    ]
+                  }
+                ],
+                "loc": [
+                  44,
+                  13,
+                  44,
+                  18
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "property",
+                "op": "[]",
+                "label": "[0]",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "project_mercator",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          32,
+                          1,
+                          39,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      35,
+                      11,
+                      35,
+                      36
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "binary",
+                    "label": "+",
+                    "op": "+",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "project_mercator",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              32,
+                              1,
+                              39,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          35,
+                          11,
+                          35,
+                          30
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "binary",
+                        "label": "/",
+                        "op": "/",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "loc": [
+                              35,
+                              11,
+                              35,
+                              20
+                            ],
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "type": "binary",
+                            "label": "/",
+                            "op": "/",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  },
+                                  {
+                                    "name": "deg_rad",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      27,
+                                      1,
+                                      29,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "loc": [
+                                  28,
+                                  10,
+                                  28,
+                                  31
+                                ],
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "type": "binary",
+                                "label": "×",
+                                "op": "*",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "loc": [
+                                      34,
+                                      21,
+                                      34,
+                                      30
+                                    ],
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "type": "property",
+                                    "op": "[]",
+                                    "label": "[0]",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [],
+                                        "loc": [
+                                          9,
+                                          33,
+                                          9,
+                                          36
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "unary",
+                                        "op": "-",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [],
+                                            "loc": [
+                                              9,
+                                              34,
+                                              9,
+                                              36
+                                            ],
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "type": "literal",
+                                            "val": 74,
+                                            "conditions": []
+                                          }
+                                        ],
+                                        "val": -74,
+                                        "conditions": []
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "loc": [
+                                          34,
+                                          28,
+                                          34,
+                                          29
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "literal",
+                                        "val": 0,
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "val": -74,
+                                    "conditions": []
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      },
+                                      {
+                                        "name": "deg_rad",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          27,
+                                          1,
+                                          29,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "loc": [
+                                      28,
+                                      17,
+                                      28,
+                                      30
+                                    ],
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "type": "binary",
+                                    "label": "/",
+                                    "op": "/",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          },
+                                          {
+                                            "name": "deg_rad",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              27,
+                                              1,
+                                              29,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "type": "math",
+                                        "val": 3.141592653589793,
+                                        "conditions": []
+                                      },
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          },
+                                          {
+                                            "name": "deg_rad",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              27,
+                                              1,
+                                              29,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "loc": [
+                                          28,
+                                          25,
+                                          28,
+                                          30
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "literal",
+                                        "val": 180,
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "val": 0.017453292519943295,
+                                    "conditions": []
+                                  }
+                                ],
+                                "val": -1.2915436464758039,
+                                "conditions": []
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "loc": [
+                                  35,
+                                  17,
+                                  35,
+                                  20
+                                ],
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "type": "literal",
+                                "val": 2,
+                                "conditions": []
+                              }
+                            ],
+                            "val": -0.6457718232379019,
+                            "conditions": []
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "type": "math",
+                            "val": 3.141592653589793,
+                            "conditions": []
+                          }
+                        ],
+                        "val": -0.20555555555555557,
+                        "conditions": []
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "project_mercator",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              32,
+                              1,
+                              39,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          35,
+                          33,
+                          35,
+                          36
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "literal",
+                        "val": 0.5,
+                        "conditions": []
+                      }
+                    ],
+                    "val": 0.2944444444444444,
+                    "conditions": []
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "canvas_coords",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          43,
+                          1,
+                          45,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      44,
+                      16,
+                      44,
+                      17
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "literal",
+                    "val": 0,
+                    "conditions": []
+                  }
+                ],
+                "val": 0.2944444444444444,
+                "conditions": []
+              },
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": [
+                  23,
+                  27,
+                  23,
+                  28
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "literal",
+                "val": 0,
+                "conditions": []
+              }
+            ],
+            "val": 0.2944444444444444,
+            "conditions": []
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              3,
+              13,
+              3,
+              42
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              "512"
+            ],
+            "val": 512,
+            "conditions": []
+          }
+        ],
+        "val": 150.75555555555553,
+        "conditions": []
+      },
+      {
+        "valuetype": "number",
+        "stack": [],
+        "loc": [
+          23,
+          39,
+          23,
+          54
+        ],
+        "file": "5d9215db7d127126671739faafc9a893.js",
+        "type": "binary",
+        "label": "×",
+        "op": "*",
+        "inputs": [
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              23,
+              39,
+              23,
+              45
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "property",
+            "op": "[]",
+            "label": "[1]",
+            "inputs": [
+              {
+                "valuetype": "number",
+                "stack": [
+                  {
+                    "name": "canvas_coords",
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "loc": [
+                      43,
+                      1,
+                      45,
+                      2
+                    ]
+                  }
+                ],
+                "loc": [
+                  44,
+                  20,
+                  44,
+                  27
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "binary",
+                "label": "-",
+                "op": "-",
+                "inputs": [
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "canvas_coords",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          43,
+                          1,
+                          45,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      44,
+                      20,
+                      44,
+                      21
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "literal",
+                    "val": 1,
+                    "conditions": []
+                  },
+                  {
+                    "valuetype": "number",
+                    "stack": [
+                      {
+                        "name": "canvas_coords",
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "loc": [
+                          43,
+                          1,
+                          45,
+                          2
+                        ]
+                      }
+                    ],
+                    "loc": [
+                      44,
+                      22,
+                      44,
+                      27
+                    ],
+                    "file": "5d9215db7d127126671739faafc9a893.js",
+                    "type": "property",
+                    "op": "[]",
+                    "label": "[1]",
+                    "inputs": [
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "project_mercator",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              32,
+                              1,
+                              39,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          36,
+                          11,
+                          37,
+                          47
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "binary",
+                        "label": "+",
+                        "op": "+",
+                        "inputs": [
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "loc": [
+                              36,
+                              11,
+                              37,
+                              41
+                            ],
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "type": "binary",
+                            "label": "/",
+                            "op": "/",
+                            "inputs": [
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "loc": [
+                                  36,
+                                  11,
+                                  37,
+                                  31
+                                ],
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "type": "binary",
+                                "label": "/",
+                                "op": "/",
+                                "inputs": [
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "type": "math",
+                                    "op": "log",
+                                    "inputs": [
+                                      {
+                                        "valuetype": "number",
+                                        "stack": [
+                                          {
+                                            "name": "project_mercator",
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "loc": [
+                                              32,
+                                              1,
+                                              39,
+                                              2
+                                            ]
+                                          }
+                                        ],
+                                        "loc": [
+                                          36,
+                                          20,
+                                          37,
+                                          24
+                                        ],
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "type": "binary",
+                                        "label": "/",
+                                        "op": "/",
+                                        "inputs": [
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "project_mercator",
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "loc": [
+                                                  32,
+                                                  1,
+                                                  39,
+                                                  2
+                                                ]
+                                              }
+                                            ],
+                                            "loc": [
+                                              36,
+                                              21,
+                                              36,
+                                              40
+                                            ],
+                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                            "type": "binary",
+                                            "label": "+",
+                                            "op": "+",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "project_mercator",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      32,
+                                                      1,
+                                                      39,
+                                                      2
+                                                    ]
+                                                  }
+                                                ],
+                                                "type": "math",
+                                                "op": "sin",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "project_mercator",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          32,
+                                                          1,
+                                                          39,
+                                                          2
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "deg_rad",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          27,
+                                                          1,
+                                                          29,
+                                                          2
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "loc": [
+                                                      28,
+                                                      10,
+                                                      28,
+                                                      31
+                                                    ],
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "type": "binary",
+                                                    "label": "×",
+                                                    "op": "*",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          33,
+                                                          21,
+                                                          33,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "property",
+                                                        "op": "[]",
+                                                        "label": "[1]",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [],
+                                                            "loc": [
+                                                              9,
+                                                              38,
+                                                              9,
+                                                              42
+                                                            ],
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "type": "literal",
+                                                            "val": 40.7,
+                                                            "conditions": []
+                                                          },
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "project_mercator",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  32,
+                                                                  1,
+                                                                  39,
+                                                                  2
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "loc": [
+                                                              33,
+                                                              28,
+                                                              33,
+                                                              29
+                                                            ],
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "type": "literal",
+                                                            "val": 1,
+                                                            "conditions": []
+                                                          }
+                                                        ],
+                                                        "val": 40.7,
+                                                        "conditions": []
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "deg_rad",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              27,
+                                                              1,
+                                                              29,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          28,
+                                                          17,
+                                                          28,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "binary",
+                                                        "label": "/",
+                                                        "op": "/",
+                                                        "inputs": [
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "project_mercator",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  32,
+                                                                  1,
+                                                                  39,
+                                                                  2
+                                                                ]
+                                                              },
+                                                              {
+                                                                "name": "deg_rad",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  27,
+                                                                  1,
+                                                                  29,
+                                                                  2
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "type": "math",
+                                                            "val": 3.141592653589793,
+                                                            "conditions": []
+                                                          },
+                                                          {
+                                                            "valuetype": "number",
+                                                            "stack": [
+                                                              {
+                                                                "name": "project_mercator",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  32,
+                                                                  1,
+                                                                  39,
+                                                                  2
+                                                                ]
+                                                              },
+                                                              {
+                                                                "name": "deg_rad",
+                                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                                "loc": [
+                                                                  27,
+                                                                  1,
+                                                                  29,
+                                                                  2
+                                                                ]
+                                                              }
+                                                            ],
+                                                            "loc": [
+                                                              28,
+                                                              25,
+                                                              28,
+                                                              30
+                                                            ],
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "type": "literal",
+                                                            "val": 180,
+                                                            "conditions": []
+                                                          }
+                                                        ],
+                                                        "val": 0.017453292519943295,
+                                                        "conditions": []
+                                                      }
+                                                    ],
+                                                    "val": 0.7103490055616922,
+                                                    "conditions": []
+                                                  }
+                                                ],
+                                                "val": 0.6520984038303923,
+                                                "conditions": []
+                                              },
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "project_mercator",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      32,
+                                                      1,
+                                                      39,
+                                                      2
+                                                    ]
+                                                  }
+                                                ],
+                                                "loc": [
+                                                  36,
+                                                  37,
+                                                  36,
+                                                  40
+                                                ],
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "type": "literal",
+                                                "val": 1,
+                                                "conditions": []
+                                              }
+                                            ],
+                                            "val": 1.6520984038303923,
+                                            "conditions": []
+                                          },
+                                          {
+                                            "valuetype": "number",
+                                            "stack": [
+                                              {
+                                                "name": "project_mercator",
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "loc": [
+                                                  32,
+                                                  1,
+                                                  39,
+                                                  2
+                                                ]
+                                              }
+                                            ],
+                                            "type": "math",
+                                            "op": "cos",
+                                            "inputs": [
+                                              {
+                                                "valuetype": "number",
+                                                "stack": [
+                                                  {
+                                                    "name": "project_mercator",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      32,
+                                                      1,
+                                                      39,
+                                                      2
+                                                    ]
+                                                  },
+                                                  {
+                                                    "name": "deg_rad",
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "loc": [
+                                                      27,
+                                                      1,
+                                                      29,
+                                                      2
+                                                    ]
+                                                  }
+                                                ],
+                                                "loc": [
+                                                  28,
+                                                  10,
+                                                  28,
+                                                  31
+                                                ],
+                                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                                "type": "binary",
+                                                "label": "×",
+                                                "op": "*",
+                                                "inputs": [
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "project_mercator",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          32,
+                                                          1,
+                                                          39,
+                                                          2
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "loc": [
+                                                      33,
+                                                      21,
+                                                      33,
+                                                      30
+                                                    ],
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "type": "property",
+                                                    "op": "[]",
+                                                    "label": "[1]",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [],
+                                                        "loc": [
+                                                          9,
+                                                          38,
+                                                          9,
+                                                          42
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "literal",
+                                                        "val": 40.7,
+                                                        "conditions": []
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          33,
+                                                          28,
+                                                          33,
+                                                          29
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "literal",
+                                                        "val": 1,
+                                                        "conditions": []
+                                                      }
+                                                    ],
+                                                    "val": 40.7,
+                                                    "conditions": []
+                                                  },
+                                                  {
+                                                    "valuetype": "number",
+                                                    "stack": [
+                                                      {
+                                                        "name": "project_mercator",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          32,
+                                                          1,
+                                                          39,
+                                                          2
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "deg_rad",
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "loc": [
+                                                          27,
+                                                          1,
+                                                          29,
+                                                          2
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "loc": [
+                                                      28,
+                                                      17,
+                                                      28,
+                                                      30
+                                                    ],
+                                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                                    "type": "binary",
+                                                    "label": "/",
+                                                    "op": "/",
+                                                    "inputs": [
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "deg_rad",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              27,
+                                                              1,
+                                                              29,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "type": "math",
+                                                        "val": 3.141592653589793,
+                                                        "conditions": []
+                                                      },
+                                                      {
+                                                        "valuetype": "number",
+                                                        "stack": [
+                                                          {
+                                                            "name": "project_mercator",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              32,
+                                                              1,
+                                                              39,
+                                                              2
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "deg_rad",
+                                                            "file": "5d9215db7d127126671739faafc9a893.js",
+                                                            "loc": [
+                                                              27,
+                                                              1,
+                                                              29,
+                                                              2
+                                                            ]
+                                                          }
+                                                        ],
+                                                        "loc": [
+                                                          28,
+                                                          25,
+                                                          28,
+                                                          30
+                                                        ],
+                                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                                        "type": "literal",
+                                                        "val": 180,
+                                                        "conditions": []
+                                                      }
+                                                    ],
+                                                    "val": 0.017453292519943295,
+                                                    "conditions": []
+                                                  }
+                                                ],
+                                                "val": 0.7103490055616922,
+                                                "conditions": []
+                                              }
+                                            ],
+                                            "val": 0.7581343361976521,
+                                            "conditions": []
+                                          }
+                                        ],
+                                        "val": 2.1791631442474015,
+                                        "conditions": []
+                                      }
+                                    ],
+                                    "val": 0.7789409243150791,
+                                    "conditions": []
+                                  },
+                                  {
+                                    "valuetype": "number",
+                                    "stack": [
+                                      {
+                                        "name": "project_mercator",
+                                        "file": "5d9215db7d127126671739faafc9a893.js",
+                                        "loc": [
+                                          32,
+                                          1,
+                                          39,
+                                          2
+                                        ]
+                                      }
+                                    ],
+                                    "loc": [
+                                      37,
+                                      28,
+                                      37,
+                                      31
+                                    ],
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "type": "literal",
+                                    "val": 2,
+                                    "conditions": []
+                                  }
+                                ],
+                                "val": 0.38947046215753955,
+                                "conditions": []
+                              },
+                              {
+                                "valuetype": "number",
+                                "stack": [
+                                  {
+                                    "name": "project_mercator",
+                                    "file": "5d9215db7d127126671739faafc9a893.js",
+                                    "loc": [
+                                      32,
+                                      1,
+                                      39,
+                                      2
+                                    ]
+                                  }
+                                ],
+                                "type": "math",
+                                "val": 3.141592653589793,
+                                "conditions": []
+                              }
+                            ],
+                            "val": 0.12397229848131477,
+                            "conditions": []
+                          },
+                          {
+                            "valuetype": "number",
+                            "stack": [
+                              {
+                                "name": "project_mercator",
+                                "file": "5d9215db7d127126671739faafc9a893.js",
+                                "loc": [
+                                  32,
+                                  1,
+                                  39,
+                                  2
+                                ]
+                              }
+                            ],
+                            "loc": [
+                              37,
+                              44,
+                              37,
+                              47
+                            ],
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "type": "literal",
+                            "val": 0.5,
+                            "conditions": []
+                          }
+                        ],
+                        "val": 0.6239722984813147,
+                        "conditions": []
+                      },
+                      {
+                        "valuetype": "number",
+                        "stack": [
+                          {
+                            "name": "canvas_coords",
+                            "file": "5d9215db7d127126671739faafc9a893.js",
+                            "loc": [
+                              43,
+                              1,
+                              45,
+                              2
+                            ]
+                          }
+                        ],
+                        "loc": [
+                          44,
+                          25,
+                          44,
+                          26
+                        ],
+                        "file": "5d9215db7d127126671739faafc9a893.js",
+                        "type": "literal",
+                        "val": 1,
+                        "conditions": []
+                      }
+                    ],
+                    "val": 0.6239722984813147,
+                    "conditions": []
+                  }
+                ],
+                "val": 0.37602770151868525,
+                "conditions": []
+              },
+              {
+                "valuetype": "number",
+                "stack": [],
+                "loc": [
+                  23,
+                  43,
+                  23,
+                  44
+                ],
+                "file": "5d9215db7d127126671739faafc9a893.js",
+                "type": "literal",
+                "val": 1,
+                "conditions": []
+              }
+            ],
+            "val": 0.37602770151868525,
+            "conditions": []
+          },
+          {
+            "valuetype": "number",
+            "stack": [],
+            "loc": [
+              4,
+              14,
+              4,
+              44
+            ],
+            "file": "5d9215db7d127126671739faafc9a893.js",
+            "type": "unary",
+            "op": "+",
+            "inputs": [
+              "512"
+            ],
+            "val": 512,
+            "conditions": []
+          }
+        ],
+        "val": 192.52618317756685,
+        "conditions": []
+      }
+    ]
+  }
+]
