@@ -195,7 +195,7 @@ const DEFAULT_PROJECT = "test-projection-naive",
   TREE_MARGIN = 150
 ;
 
-d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + PROJECT + '_small_0_0.png');
+d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + 'small_full.png');
 
 let body = d3.select(document.body),
   map = d3.select('#map'),
@@ -369,7 +369,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
   ;
 
   // DEBUG trigger click on load
-  map.select('.mark').dispatch('click');
+  //map.select('.mark').dispatch('click');
 });
 
 const CONTEXT_LINES = 5;
