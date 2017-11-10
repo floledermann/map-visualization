@@ -6,7 +6,8 @@ const DEFAULT_OPTIONS = {
   nodeY: node => node.x,
   delay: 0,
   delayPerLevel: 0,
-  delayFunctions: 0
+  delayFunctions: 0,
+  drawOutlines: true
 }
 
 function locEqual(l1, l2) {
@@ -320,7 +321,9 @@ function drawTree(svg, data, options) {
 
     //console.log("HEIGHT " + root.height);
 
-    drawOutlines(svg, root, options);
+    if (options.drawOutlines) {
+      drawOutlines(svg, root, options);
+    }
 
     // draw links
 
