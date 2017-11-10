@@ -227,7 +227,7 @@ function clear() {
 
 d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
-  let marks = map.select('#marks').selectAll('.mark').data(data);
+  let marks = map.select('#marks').selectAll('.mark').data(data.marks);
 
   marks.enter()
     .append('circle')
@@ -239,8 +239,8 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       'stroke':'#000000',
       'stroke-width': 2
     })
-    .attr('cy', d => d.location.y)
-    .attr('cx', d => d.location.x)
+    .attr('cy', d => d.geometry.y)
+    .attr('cx', d => d.geometry.x)
     .on('click', function(mark){
 
       var flipAnim = !body.classed('flip');
@@ -257,8 +257,10 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
       var trees = [];
 
+      var channels = Object.keys(mark.channels).map(key => ({name: key, value: mark.channels[key]}));
+
       g.selectAll('.tree')
-        .data(mark.args)
+        .data(channels)
         .enter()
         .append('g')
         .attr('class', 'tree')
@@ -273,7 +275,8 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
               nodeClick: showCode,
               delay: 1000,
               delayPerLevel: 50,
-              delayFunctions: 0
+              delayFunctions: 0,
+              drawOutlines: false
             };
 
             if (!flipAnim) {
@@ -284,7 +287,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
               })
             }
 
-            var root = drawTree(g, d, treeOptions);
+            var root = drawTree(g, d.value, treeOptions);
 
             if (lastRoot) {
               yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
@@ -365,7 +368,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
           .merge(labels)
             .attr('x', root => root.x + 90 + GRAPH_X_POS)
             .attr('y', root => root.yOffset - root.y)
-            .text((d,i) => mark.argNames[i])
+            //.text((d,i) => mark.argNames[i])
           ;
         }
 
