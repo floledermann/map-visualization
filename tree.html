@@ -2,6 +2,14 @@
 <meta charset="utf-8">
 <style>
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .snippet {
     font-family: monospace;
     white-space: pre;
@@ -20,10 +28,14 @@ svg path.function.level-1:hover {
     fill-opacity: 0.1;
 }
 
+svg {
+  width: 100%;
+  height: 100%;
+}
 
 </style>
 
-<svg width="1600" height="100">
+<svg width="100%" height="100%" xviewBox="0 0 1000 1000">
 </svg>
 
 <script src="//d3js.org/d3.v4.js"></script>
@@ -32,17 +44,20 @@ svg path.function.level-1:hover {
 <script>
 
 var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-    g = svg.append("g").attr("transform", "translate(1600,0) scale(0.7)");
+  wrapper = svg.append("g"),
+    width = 1000, //+svg.attr("width"),
+    height = 1000, //+svg.attr("height"),
+    g = wrapper.append("g").attr("transform", "translate(1600,0) scale(0.7)");
 
 var INPUT_FILE = "examples/" + ((window.location.search && window.location.search.substring(1)) || "d3_mercator.json"),
-    NODE_HEIGHT = 45,
+    NODE_HEIGHT = 145,
     NODE_WIDTH = 70,
     TREE_MARGIN = 100,
     FUNCTION_MARGIN = 4;
 
-
+svg.call(d3.zoom().on("zoom", function() {
+  wrapper.attr("transform", d3.event.transform);
+}))
 /*
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
@@ -80,11 +95,14 @@ d3.json(INPUT_FILE, function(error, treeData) {
 
         lastRoot = root;
 
-    });
-    if (lastRoot) {
-      yOffset += TREE_MARGIN + lastRoot.maxY;
-    }
-    svg.attr('height', yOffset);
+    })
+  ;
+  if (lastRoot) {
+    yOffset += TREE_MARGIN + lastRoot.maxY;
+  }
+  g.selectAll(".node").on("click", function(d){
+    console.log(d.data);
+  })
 });
 
 </script>
