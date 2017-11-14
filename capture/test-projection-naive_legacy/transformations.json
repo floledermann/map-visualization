@@ -1,13 +1,16 @@
-[
-  {
-    "location": {
-      "type": "point",
+{
+  "messages": [],
+  "marks": [
+    {
+    "type": "point",
+    "geometry": {
       "x": 288.32444444444445,
       "y": 186.55265826632404
     },
     "func": "moveTo",
     "argNames": ["x","y"],
-    "args": [
+    "channels": {
+      "x":
       {
         "valuetype": "number",
         "stack": [],
@@ -494,7 +497,7 @@
         "val": 279.32444444444445,
         "conditions": []
       },
-      {
+      "y": {
         "valuetype": "number",
         "stack": [],
         "loc": [
@@ -1389,18 +1392,18 @@
         "val": 177.55265826632404,
         "conditions": []
       }
-    ]
+    }
   },
   {
-    "location": {
-      "type": "point",
+    "type": "point",
+    "geometry": {
       "x": 159.75555555555553,
       "y": 201.52618317756685
     },
     "func": "lineTo",
     "argNames": ["x","y"],
-    "args": [
-      {
+    "channels": {
+      "x": {
         "valuetype": "number",
         "stack": [],
         "loc": [
@@ -1903,7 +1906,7 @@
         "val": 150.75555555555553,
         "conditions": []
       },
-      {
+      "y": {
         "valuetype": "number",
         "stack": [],
         "loc": [
@@ -2798,6 +2801,7 @@
         "val": 192.52618317756685,
         "conditions": []
       }
-    ]
+    }
   }
 ]
+}
