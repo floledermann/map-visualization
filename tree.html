@@ -38,8 +38,8 @@ svg {
 <svg width="100%" height="100%" xviewBox="0 0 1000 1000">
 </svg>
 
-<script src="//d3js.org/d3.v4.js"></script>
-<script src="//d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="lib/d3.v4.js"></script>
+<script src="lib/d3-selection-multi.v1.min.js"></script>
 <script src="tree.js"></script>
 <script>
 
@@ -50,7 +50,7 @@ var svg = d3.select("svg"),
     g = wrapper.append("g").attr("transform", "translate(1600,0) scale(0.7)");
 
 var INPUT_FILE = "examples/" + ((window.location.search && window.location.search.substring(1)) || "d3_mercator.json"),
-    NODE_HEIGHT = 145,
+    NODE_HEIGHT = 45, //145,
     NODE_WIDTH = NODE_HEIGHT * 1.5,
     TREE_MARGIN = 100,
     FUNCTION_MARGIN = 4;
@@ -82,7 +82,8 @@ d3.json(INPUT_FILE, function(error, treeData) {
         var root = drawTree(g, d, {
           nodeHeight: NODE_HEIGHT,
           nodeWidth: NODE_WIDTH,
-          functionMargin: FUNCTION_MARGIN
+          functionMargin: FUNCTION_MARGIN,
+          //drawOutlines: false
         });
 
         if (lastRoot) {
