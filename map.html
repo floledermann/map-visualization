@@ -149,6 +149,7 @@ main {
 
 #code .highlight {
   background-color: #99ff99;
+  cursor: pointer;
 }
 
 .flip #code {
@@ -171,6 +172,31 @@ main {
   fill-opacity: 0.4;
   stroke-width: 2.5;
 }
+
+#github {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 620px;
+    width: 350px;
+    background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-family: sans-serif;
+}
+
+#github img {
+    float: left;
+    margin: 3px;
+}
+
+#github .git-author {
+    font-weight: bold;
+}
+
+#github a {
+    text-decoration: none;
+    color: inherit;
+}
 </style>
 
 </head>
@@ -189,10 +215,16 @@ main {
 
 <div id="code"></div>
 
+<div id="github">
+<img src="lib/github_avatar.jpg">
+<div><span class="git-author">floledermann</span> <a target="_blank" href="https://github.com/floledermann/example_simple_projection/commit/a3b85bc6c2883aa93514bd90cd112e9e72a0aa0c">2017-02-19</a></div>
+<div class="git-commit">Naive implementation of web mercator projection according to Wikipedia</div>
+</div>
+
 </main>
 
-<script src="//d3js.org/d3.v4.js"></script>
-<script src="//d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="lib/d3.v4.js"></script>
+<script src="lib/d3-selection-multi.v1.min.js"></script>
 <script src="tree.js"></script>
 
 <script>
@@ -203,8 +235,7 @@ const DEFAULT_PROJECT = "test-projection-naive",
   NODE_WIDTH = 70,
   FUNCTION_MARGIN = 4,
   TREE_MARGIN = 150,
-  // TODO: calculate this from window width, also adjust scale
-  GRAPH_X_POS = 1000
+  GRAPH_X_POS = window.innerWidth - 400 //1000
 ;
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + 'small_cropped.png');
@@ -221,6 +252,7 @@ function clear() {
   svg.selectAll('.argLink').remove();
   svg.selectAll('.argLabel').remove();
   d3.select('#code').html('');
+    document.getElementById('github').style.display = 'none';
 }
 
 // mapping from mark types to SVG element types
@@ -271,7 +303,8 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       'fill':'#ffffff',
       'fill-opacity': 0.2,
       'stroke':'#000000',
-      'stroke-width': 2
+      'stroke-width': 2,
+      'cursor': 'pointer'
     })
     .on('click', function(mark){
 
@@ -433,6 +466,7 @@ const CONTEXT_LINES = 5;
 
 // TODO: smart, parser-based selection of code to show, showing function headers etc.
 function showCode(node) {
+    document.getElementById('github').style.display = 'none';
   if (node.data.file) {
     d3.text(CAPTURE_BASE + '/' + node.data.file, (error, data) => {
 
@@ -458,6 +492,10 @@ function showCode(node) {
       lines = lines.slice(fromLine, toLine);
 
       d3.select('#code').html(lines.join('\n'));
+      
+      d3.select('#code .highlight').on('click', function() {
+        document.getElementById('github').style.display = 'block';
+      });
     });
   }
   else {
