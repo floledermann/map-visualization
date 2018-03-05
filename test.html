@@ -6,7 +6,7 @@
 <style>
 
 html {
-    overflow-y: scroll;
+    overflow: hidden;
     font-family: sans-serif;
 }
 
@@ -29,20 +29,21 @@ body.flip {
 
 body {
   perspective: 3000px;
-  perspective-origin: 500px 500px;
+  perspective-origin: 50vw 50vh;
   
-  transform-origin: 0 0;
+  xtransform-origin: 0 0;
+  transform-origin: 50vw 50vh;
   transform-style: preserve-3d;
-  transform: scale(0.5) translate(500px,200px) ;
+  transform: scale(0.5);
 
 }
 
 main {
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   
-  transform-origin: 500px 500px;
+  transform-origin: 50vw 50vh;
   transform-style: preserve-3d;
   transform: translate3d(0,0,0) scale(1) rotateX(0deg) rotateY(-90deg);
 
@@ -59,10 +60,11 @@ section {
   top: 0;
   left: 0;
   
-  width: 1000px;
-  height: 1000px;
+  /* use viewport-relative units to scale sections */
+  width: 100vw;
+  height: 100vh;
   
-  transform-origin: 500px 500px;
+  transform-origin: 50vw 50vh;
   transform-style: preserve-3d;
   backface-visibility: visible;
   
@@ -74,6 +76,7 @@ section {
   opacity: 0;
   
   cursor: pointer;
+  overflow: hidden;
   
 }
 section:hover {
@@ -85,11 +88,20 @@ section:hover {
 }
 
 section h2 {
+    position: absolute;
+    top: 0px;
+    left: 10px;
     margin: 0;
     padding: 0;
-  font-size: 60px;
+  font-size: 100px;
   font-weight: bold;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.25);
+}
+
+section#parameters h2,
+section#author h2 {
+    top: auto;
+    bottom: 10px;
 }
 
 section#map {
@@ -98,16 +110,13 @@ section#map {
   
   z-index: 1;
   
+  overflow: visible;
+  
   background-color: transparent;
 
     opacity: 1;
     
-  xmargin: 5% 5% 0 0;
-
-  xmax-width: 90%;
-  xmax-height: 90%;
-
-    transform: translate(calc(100vw),0) rotateY(90deg);
+    transform: translate(55vw,0) rotateY(90deg);
 
 }
 
@@ -118,7 +127,7 @@ section#map {
 section#graph {
     border: none;
     background-color: transparent;
-  transform: translate3d(0,0,150px) rotateY(0deg);
+  transform: translate3d(0,0,10vw) rotateY(0deg);
 }
 
 /*
@@ -137,31 +146,33 @@ section#code {
 */
 
 section#code {
-/*
-    width: 1100px;
-    height: 1100px;
-  transform: translate(-100px,0px) translate3d(0,0,-600px);
-  */
-  width: 150vw;
-  transform: translate(0px,0px) translate3d(0,0,-600px);
+  transform: translate(0px,0px) translate3d(0,0,-60vw);
 }
 
 section#data {
-  transform: translate(-540px,0) rotateY(90deg);
+  transform: translate(-55vw,0) rotateY(90deg);
 }
 
+section#interaction,
+section#parameters,
+section#author {
+    height: 100vw;
+    top: calc((100vw - 100vh) / -2);
+    transform-origin: 50vw 50vw;
+}
+
+
 section#interaction {
-  transform: translate(0,-540px) rotateX(-90deg);
+  transform: translate(0,calc(-50vh - 5vw)) rotateX(-90deg);
 }
 
 section#parameters {
-  transform: translate(0,540px) rotateX(90deg);
+  transform: translate(0,calc(50vh + 5vw)) rotateX(90deg);
 }
 
 section#author {
-    width: 1200px;
-    transform-origin: 500px 500px;
-  transform: translate(-200px,700px) rotateX(90deg);
+    width: 120vw;
+  transform: translate(-20vw,calc(50vh + 15vw)) rotateX(90deg);
 }
 
 /* ------------------------------------------------------------------- MAP */
@@ -326,7 +337,7 @@ svg#dfg {
 </section>
 
 <section id="graph">
-<svg id="dfg" width="1000" height="1000">
+<svg id="dfg" width="1000" height="1000" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
 <circle cx="500" cy="500" r="498" fill="transparent" stroke="#000000"/>
 </svg>
 </section>
@@ -380,8 +391,8 @@ var scale = 0.5;
 
 d3.select('body').on('mousewheel', function() {
     // one 'click' of mouse wheel will give a deltaY of 100
-    scale += -d3.event.deltaY / 5000;
-    this.style.transform = 'scale(' + scale + ') translate(500px,200px)';
+    scale *= (d3.event.deltaY > 0) ? 1/1.1 : 1.1; //  -d3.event.deltaY / 2000;
+    this.style.transform = 'scale(' + scale + ')'; // translate(500px,200px)';
 });
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + 'small_cropped.png');
