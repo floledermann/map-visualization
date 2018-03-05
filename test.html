@@ -27,14 +27,30 @@ body.flip {
 
 /* ------------------------------------------------------------------- MAIN SECTIONS LAYOUT */
 
+body {
+  perspective: 3000px;
+  perspective-origin: 500px 500px;
+  
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  transform: scale(0.5) translate(500px,200px) ;
+
+}
+
 main {
   position: relative;
   height: 100%;
   width: 100%;
   
-  perspective: 3000px;
-  perspective-origin: 500px 500px;
-  transform: scale(0.6);
+  transform-origin: 500px 500px;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,0) scale(1) rotateX(0deg) rotateY(-90deg);
+
+  transition: transform 0.7s;
+}
+
+.flip main {
+  transform: translate3d(0,0,0) scale(1) rotateX(0deg) rotateY(0deg);
 }
 
 section {
@@ -52,7 +68,20 @@ section {
   
   border: 4px dashed #666666;
   background-color: rgba(0,0,0,0.02);
+
+  transition: opacity 0.7s 0s;
   
+  opacity: 0;
+  
+  cursor: pointer;
+  
+}
+section:hover {
+  background-color: rgba(0,0,0,0.06);
+}
+
+.flip section {
+    opacity: 1;
 }
 
 section h2 {
@@ -71,18 +100,19 @@ section#map {
   
   background-color: transparent;
 
+    opacity: 1;
+    
   xmargin: 5% 5% 0 0;
 
   xmax-width: 90%;
   xmax-height: 90%;
 
-
-  transition: transform 0.7s, opacity 0.7s;
+    transform: translate(calc(100vw),0) rotateY(90deg);
 
 }
 
 .flip section#map {
-  transform: translate(540px,0) rotateY(90deg);
+  xtransform: translate(540px,0) rotateY(90deg);
 }
 
 section#graph {
@@ -112,6 +142,7 @@ section#code {
     height: 1100px;
   transform: translate(-100px,0px) translate3d(0,0,-600px);
   */
+  width: 150vw;
   transform: translate(0px,0px) translate3d(0,0,-600px);
 }
 
@@ -221,9 +252,14 @@ section#author {
   left: 0;
 }
 
+#map #marks .mark {
+  stroke-opacity: 0.5;
+}
+
 #map #marks .mark:hover {
   fill-opacity: 0.4;
-  stroke-width: 2.5;
+  stroke-opacity: 0.6;
+  stroke-width: 5;
 }
 
 /* ------------------------------------------------------------------- CODE */
@@ -279,7 +315,7 @@ svg#dfg {
 </style>
 
 </head>
-<body class="flip">
+<body class="xflip">
 <main>
 
 
@@ -339,6 +375,14 @@ const DEFAULT_PROJECT = "test-projection-naive",
   TREE_MARGIN = 150,
   GRAPH_X_POS = window.innerWidth - 400 //1000
 ;
+
+var scale = 0.5;
+
+d3.select('body').on('mousewheel', function() {
+    // one 'click' of mouse wheel will give a deltaY of 100
+    scale += -d3.event.deltaY / 5000;
+    this.style.transform = 'scale(' + scale + ') translate(500px,200px)';
+});
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + 'small_cropped.png');
 
@@ -405,7 +449,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       'fill':'#ffffff',
       'fill-opacity': 0.2,
       'stroke':'#000000',
-      'stroke-width': 2,
+      'stroke-width': 4,
       'cursor': 'pointer'
     })
     .on('click', function(mark){
