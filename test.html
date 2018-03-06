@@ -30,11 +30,11 @@ body.flip {
 body {
   perspective: 3000px;
   perspective-origin: 50vw 50vh;
-  
+
   xtransform-origin: 0 0;
   transform-origin: 50vw 50vh;
   transform-style: preserve-3d;
-  transform: scale(0.5);
+  transform: scale(0.6);
 
 }
 
@@ -42,7 +42,7 @@ main {
   position: relative;
   height: 100vh;
   width: 100vw;
-  
+
   transform-origin: 50vw 50vh;
   transform-style: preserve-3d;
   transform: translate3d(0,0,0) scale(1) rotateX(0deg) rotateY(-90deg);
@@ -56,35 +56,43 @@ main {
 
 section {
   position: absolute;
-  
+  visibility: hidden;
+
   top: 0;
   left: 0;
-  
+
   /* use viewport-relative units to scale sections */
   width: 100vw;
   height: 100vh;
-  
-  transform-origin: 50vw 50vh;
+
+  transform-origin: 50% 50%;
   transform-style: preserve-3d;
   backface-visibility: visible;
-  
+
   border: 4px dashed #666666;
   background-color: rgba(0,0,0,0.02);
 
-  transition: opacity 0.7s 0s;
-  
+  /* delay display:none when flip is removed */
+  transition: opacity 0.7s 0s, visibility 0s 0.7s;
+
   opacity: 0;
-  
+
   cursor: pointer;
   overflow: hidden;
-  
+
 }
 section:hover {
   background-color: rgba(0,0,0,0.06);
 }
 
 .flip section {
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s 0s;
+}
+
+.flip section.empty {
+  opacity: 0.1;
 }
 
 section h2 {
@@ -95,6 +103,7 @@ section h2 {
     padding: 0;
   font-size: 100px;
   font-weight: bold;
+  text-transform: uppercase;
   color: rgba(0,0,0,0.25);
 }
 
@@ -106,16 +115,18 @@ section#author h2 {
 
 section#map {
   position: absolute;
+  visibility: visible;
+
   right: 0px;
-  
+
   z-index: 1;
-  
+
   overflow: visible;
-  
+
   background-color: transparent;
 
     opacity: 1;
-    
+
     transform: translate(55vw,0) rotateY(90deg);
 
 }
@@ -155,10 +166,10 @@ section#data {
 
 section#interaction,
 section#parameters,
-section#author {
+section#author,
+section#goals {
     height: 100vw;
     top: calc((100vw - 100vh) / -2);
-    transform-origin: 50vw 50vw;
 }
 
 
@@ -170,9 +181,28 @@ section#parameters {
   transform: translate(0,calc(50vh + 5vw)) rotateX(90deg);
 }
 
+/* ------------------------------------------------------------------- OUTER SECTIONS */
+
+
 section#author {
-    width: 120vw;
-  transform: translate(-20vw,calc(50vh + 15vw)) rotateX(90deg);
+    width: 115vw;
+  transform: translate(-15vw,calc(50vh + 20vw)) rotateX(90deg);
+}
+
+section#infrastructure {
+    height: calc(100vh + 15vw);
+  transform: translate(calc(-50vw - 20vw), 0) rotateY(90deg);
+}
+
+
+section#perception {
+    height: calc(100vh + 15vw);
+  transform: translate(calc(50vw + 20vw), -15vw) rotateY(-90deg);
+}
+
+section#goals {
+    width: 115vw;
+  transform: translate(0,calc(-50vh - 20vw)) rotateX(-90deg);
 }
 
 /* ------------------------------------------------------------------- MAP */
@@ -326,7 +356,7 @@ svg#dfg {
 </style>
 
 </head>
-<body class="xflip">
+<body class="flip">
 <main>
 
 
@@ -343,24 +373,22 @@ svg#dfg {
 </section>
 
 <section id="data">
-<h2>DATA</h2>
+<h2>Data</h2>
 </section>
 
 <section id="parameters">
-<h2>PARAMETERS</h2>
+<h2>Parameters</h2>
 </section>
 
-<section id="interaction">
-<h2>INTERACTION</h2>
+<section id="interaction" class="empty">
+<h2>Interaction</h2>
 </section>
 
-<section id="code">
-<h2>CODE</h2>
-
-<div id="code"></div>
+<section id="code" class="empty">
+<h2>Code</h2>
 </section>
 
-<section id="author">
+<section id="author"  class="empty">
 <h2>AUTHORSHIP</h2>
 <div id="github">
 <img src="lib/github_avatar.jpg">
@@ -369,6 +397,19 @@ svg#dfg {
 </div>
 
 </section>
+
+<section id="infrastructure" class="empty">
+<h2>Infrastructure</h2>
+</section>
+
+<section id="perception" class="empty">
+<h2>Perception</h2>
+</section>
+
+<section id="goals" class="empty">
+<h2>Goals</h2>
+</section>
+
 
 </main>
 
@@ -387,11 +428,12 @@ const DEFAULT_PROJECT = "test-projection-naive",
   GRAPH_X_POS = window.innerWidth - 400 //1000
 ;
 
-var scale = 0.5;
+var scale = 0.6;
 
 d3.select('body').on('mousewheel', function() {
     // one 'click' of mouse wheel will give a deltaY of 100
     scale *= (d3.event.deltaY > 0) ? 1/1.1 : 1.1; //  -d3.event.deltaY / 2000;
+    console.log("Scale: " + scale);
     this.style.transform = 'scale(' + scale + ')'; // translate(500px,200px)';
 });
 
@@ -649,7 +691,7 @@ function showCode(node) {
       lines = lines.slice(fromLine, toLine);
 
       d3.select('#code').html(lines.join('\n'));
-      
+
       d3.select('#code .highlight').on('click', function() {
         document.getElementById('github').style.display = 'block';
       });
