@@ -45,6 +45,8 @@ function getEdgeNodes(node, stack, edgeNodes) {
 
         node.children.forEach(function(n) {
             if (!n.data.stack) return; // hack
+			// break outline for guard nodes
+			if (n.parent.data.type == "guard" && (n.parent.children.indexOf(n) > 1)) return;
             if (hasStackHead(stack, n.data.stack)) {
                 if (lastOutNode) {
                     edgeNodes.push({node: lastOutNode, inside: false});
@@ -270,6 +272,11 @@ function drawOutlines(svg, node, lastStack, options) {
 
     lastStack = lastStack || [];
     var currentStack = node.data.stack || [];
+	
+	// break stack for "guard" type nodes
+	if (node.parent && node.parent.data.type == "guard" && (node.parent.children.indexOf(node) > 1)) {
+		lastStack = [];
+	}
 
     var newStack = getStacks(currentStack, lastStack);
 
@@ -339,6 +346,13 @@ function drawTree(svg, data, options) {
         'pointer-events': 'none'
       })
       .attr("d", function(d) {
+		if (d.data.type == "dummy") return "";
+		// This draws an "orthogonal" connection for guards
+		
+		if (d.parent.data.type == "guard" && (d.parent.children.indexOf(d) > 1)) return "M" + x(d) + "," + y(d)
+            + "C" + (x(d) + options.nodeHeight) + "," + y(d)
+            + " " + (x(d.parent)) + "," + (y(d.parent) + options.nodeHeight)
+            + " " + x(d.parent) + "," + y(d.parent);
         return "M" + x(d) + "," + y(d)
             + "C" + (x(d) + options.nodeHeight) + "," + y(d)
             + " " + (x(d.parent) - options.nodeHeight) + "," + y(d.parent)
@@ -352,7 +366,7 @@ function drawTree(svg, data, options) {
     // draw nodes
 
     var node = svg.selectAll(".node")
-      .data(root.descendants())
+      .data(root.descendants().filter(d => d.data.type != "dummy"))
     .enter().append("g")
       .attr("class", function(d) { return "node" + (d.children ? " node-internal" : " node-leaf"); })
       .attr("transform", function(d) {
