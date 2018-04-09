@@ -6,8 +6,8 @@
 <style>
 
 html {
-    overflow: hidden;
-    font-family: sans-serif;
+  overflow: hidden;
+  font-family: sans-serif;
 }
 
 html, body {
@@ -96,11 +96,11 @@ section:hover {
 }
 
 section h2 {
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    margin: 0;
-    padding: 0;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
   font-size: 100px;
   font-weight: bold;
   text-transform: uppercase;
@@ -109,8 +109,8 @@ section h2 {
 
 section#parameters h2,
 section#author h2 {
-    top: auto;
-    bottom: 10px;
+  top: auto;
+  bottom: 10px;
 }
 
 section#map {
@@ -125,9 +125,9 @@ section#map {
 
   background-color: transparent;
 
-    opacity: 1;
+  opacity: 1;
 
-    transform: translate(55vw,0) rotateY(90deg);
+  transform: translate(55vw,0) rotateY(90deg);
 
 }
 
@@ -136,23 +136,23 @@ section#map {
 }
 
 section#graph {
-    border: none;
-    background-color: transparent;
+  border: none;
+  background-color: transparent;
   transform: translate3d(0,0,10vw) rotateY(0deg);
 }
 
 /*
 section#code {
-  position: absolute;
-  bottom: 0;
-  visibility: hidden;
-  white-space: pre;
-  font-family: monospace;
-  padding: 5px;
-  width: 600px;
-  overflow: auto;
-  background-color: #f6f6f6;
-  border: 1px solid #e0e0e0;
+position: absolute;
+bottom: 0;
+visibility: hidden;
+white-space: pre;
+font-family: monospace;
+padding: 5px;
+width: 600px;
+overflow: auto;
+background-color: #f6f6f6;
+border: 1px solid #e0e0e0;
 }
 */
 
@@ -168,8 +168,8 @@ section#interaction,
 section#parameters,
 section#author,
 section#goals {
-    height: 100vw;
-    top: calc((100vw - 100vh) / -2);
+  height: 100vw;
+  top: calc((100vw - 100vh) / -2);
 }
 
 
@@ -185,23 +185,23 @@ section#parameters {
 
 
 section#author {
-    width: 115vw;
+  width: 115vw;
   transform: translate(-15vw,calc(50vh + 20vw)) rotateX(90deg);
 }
 
 section#infrastructure {
-    height: calc(100vh + 15vw);
+  height: calc(100vh + 15vw);
   transform: translate(calc(-50vw - 20vw), 0) rotateY(90deg);
 }
 
 
 section#perception {
-    height: calc(100vh + 15vw);
+  height: calc(100vh + 15vw);
   transform: translate(calc(50vw + 20vw), -15vw) rotateY(-90deg);
 }
 
 section#goals {
-    width: 115vw;
+  width: 115vw;
   transform: translate(0,calc(-50vh - 20vw)) rotateX(-90deg);
 }
 
@@ -317,9 +317,9 @@ section#goals {
 /* ------------------------------------------------------------------- GRAPH */
 
 section#graph svg {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 svg#dfg {
@@ -330,28 +330,28 @@ svg#dfg {
 /* ------------------------------------------------------------------- SOCIAL */
 
 #github {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 620px;
-    width: 350px;
-    background-color: #ffffff;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 620px;
+  width: 350px;
+  background-color: #ffffff;
   border: 1px solid #e0e0e0;
   font-family: sans-serif;
 }
 
 #github img {
-    float: left;
-    margin: 3px;
+  float: left;
+  margin: 3px;
 }
 
 #github .git-author {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #github a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 </style>
 
@@ -359,55 +359,53 @@ svg#dfg {
 <body class="flip">
 <main>
 
-
 <section id="map">
-<img id="screenshot" class="screenshot">
-<svg id="marks" width="800" height="600"></svg>
-<div id="closebutton"></div>
+  <img id="screenshot" class="screenshot">
+  <svg id="marks" width="800" height="600"></svg>
+  <div id="closebutton"></div>
 </section>
 
 <section id="graph">
-<svg id="dfg" width="1000" height="1000" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
-<circle cx="500" cy="500" r="498" fill="transparent" stroke="#000000"/>
-</svg>
+  <svg id="dfg" width="1000" height="1000" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
+    <circle cx="500" cy="500" r="498" fill="transparent" stroke="#000000"/>
+  </svg>
 </section>
 
 <section id="data">
-<h2>Data</h2>
+  <h2>Data</h2>
 </section>
 
 <section id="parameters">
-<h2>Parameters</h2>
+  <h2>Parameters</h2>
 </section>
 
 <section id="interaction" class="empty">
-<h2>Interaction</h2>
+  <h2>Interaction</h2>
 </section>
 
 <section id="code" class="empty">
-<h2>Code</h2>
+  <h2>Code</h2>
 </section>
 
 <section id="author"  class="empty">
-<h2>AUTHORSHIP</h2>
-<div id="github">
-<img src="lib/github_avatar.jpg">
-<div><span class="git-author">floledermann</span> <a target="_blank" href="https://github.com/floledermann/example_simple_projection/commit/a3b85bc6c2883aa93514bd90cd112e9e72a0aa0c">2017-02-19</a></div>
-<div class="git-commit">Naive implementation of web mercator projection according to Wikipedia</div>
-</div>
-
+  <h2>AUTHORSHIP</h2>
+  <div id="github">
+    <img src="lib/github_avatar.jpg">
+    <div><span class="git-author">floledermann</span> <a target="_blank" href="https://github.com/floledermann/example_simple_projection/commit/a3b85bc6c2883aa93514bd90cd112e9e72a0aa0c">2017-02-19</a></div>
+    <div class="git-commit">Naive implementation of web mercator projection according to Wikipedia</div>
+  </div>
 </section>
 
 <section id="infrastructure" class="empty">
-<h2>Infrastructure</h2>
+  <h2>Infrastructure</h2>
 </section>
 
 <section id="perception" class="empty">
-<h2>Perception</h2>
+  <h2>Perception</h2>
 </section>
 
 <section id="goals" class="empty">
-<h2>Goals</h2>
+  <h2>Goals</h2>
 </section>
 
 
@@ -419,39 +417,39 @@ svg#dfg {
 
 <script>
 const DEFAULT_PROJECT = "test-projection-naive",
-  PROJECT = (window.location.search && window.location.search.substring(1)) || DEFAULT_PROJECT,
-  CAPTURE_BASE = "capture/" + PROJECT
-  NODE_HEIGHT = 45,
-  NODE_WIDTH = 70,
-  FUNCTION_MARGIN = 4,
-  TREE_MARGIN = 150,
-  GRAPH_X_POS = window.innerWidth - 400 //1000
+PROJECT = (window.location.search && window.location.search.substring(1)) || DEFAULT_PROJECT,
+CAPTURE_BASE = "capture/" + PROJECT
+NODE_HEIGHT = 45,
+NODE_WIDTH = 70,
+FUNCTION_MARGIN = 4,
+TREE_MARGIN = 150,
+GRAPH_X_POS = window.innerWidth - 400 //1000
 ;
 
 var scale = 0.6;
 
 d3.select('body').on('mousewheel', function() {
-    // one 'click' of mouse wheel will give a deltaY of 100
-    scale *= (d3.event.deltaY > 0) ? 1/1.1 : 1.1; //  -d3.event.deltaY / 2000;
-    console.log("Scale: " + scale);
-    this.style.transform = 'scale(' + scale + ')'; // translate(500px,200px)';
+  // one 'click' of mouse wheel will give a deltaY of 100
+  scale *= (d3.event.deltaY > 0) ? 1/1.1 : 1.1; //  -d3.event.deltaY / 2000;
+  console.log("Scale: " + scale);
+  this.style.transform = 'scale(' + scale + ')'; // translate(500px,200px)';
 });
 
 d3.select('#screenshot').attr('src', CAPTURE_BASE + '/screenshots/' + 'small_cropped.png');
 
 let body = d3.select(document.body),
-  map = d3.select('#map'),
-  svg = d3.select("#dfg"),
-  width = +svg.attr("width"),
-  height = +svg.attr("height"),
-  g = svg.append("g").attr("transform", "translate(" + GRAPH_X_POS + ",0)");
+map = d3.select('#map'),
+svg = d3.select("#dfg"),
+width = +svg.attr("width"),
+height = +svg.attr("height"),
+g = svg.append("g").attr("transform", "translate(" + GRAPH_X_POS + ",0)");
 ;
 
 function clear() {
   svg.selectAll('.argLink').remove();
   svg.selectAll('.argLabel').remove();
   d3.select('#code').html('');
-    document.getElementById('github').style.display = 'none';
+  document.getElementById('github').style.display = 'none';
 }
 
 // mapping from mark types to SVG element types
@@ -471,190 +469,190 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
   let marks = map.select('#marks').selectAll('.mark').data(data.marks);
 
   marks.enter()
-    .append(mark => document.createElementNS("http://www.w3.org/2000/svg", mark_elements[mark.type]))
-    .attr('class','mark')
-    .attrs(mark => {
-      var geom = mark.geometry;
-      switch (mark.type) {
-        case 'rect':
-          return {
-            x: geom.x - MARK_MARGIN,
-            y: geom.y - MARK_MARGIN,
-            width: geom.width + 2 * MARK_MARGIN,
-            height: geom.height + 2 * MARK_MARGIN,
-            // corner radius
-            rx: MARK_MARGIN,
-            ry: MARK_MARGIN
-          }
-        case 'point':
-        case 'circle':
-          return {
-            cx: geom.x,
-            cy: geom.y,
-            r: geom.r || MARK_MARGIN
-          }
-        default:
-          return mark.geometry;
+  .append(mark => document.createElementNS("http://www.w3.org/2000/svg", mark_elements[mark.type]))
+  .attr('class','mark')
+  .attrs(mark => {
+    var geom = mark.geometry;
+    switch (mark.type) {
+      case 'rect':
+      return {
+        x: geom.x - MARK_MARGIN,
+        y: geom.y - MARK_MARGIN,
+        width: geom.width + 2 * MARK_MARGIN,
+        height: geom.height + 2 * MARK_MARGIN,
+        // corner radius
+        rx: MARK_MARGIN,
+        ry: MARK_MARGIN
+      }
+      case 'point':
+      case 'circle':
+      return {
+        cx: geom.x,
+        cy: geom.y,
+        r: geom.r || MARK_MARGIN
+      }
+      default:
+      return mark.geometry;
+    }
+
+  })
+  .attrs({
+    'fill':'#ffffff',
+    'fill-opacity': 0.2,
+    'stroke':'#000000',
+    'stroke-width': 4,
+    'cursor': 'pointer'
+  })
+  .on('click', function(mark){
+
+    var flipAnim = !body.classed('flip');
+
+    body.classed('flip', true);
+
+    g.selectAll('.tree').remove();
+    clear();
+
+    var yOffset = TREE_MARGIN / 2;
+    var lastRoot = null;
+
+    var markEl = this;
+
+    var trees = [];
+
+    var channelNames = Object.keys(mark.channels);
+    var channels = channelNames.map(key => ({name: key, value: mark.channels[key]}));
+
+    g.selectAll('.tree')
+    .data(channels)
+    .enter()
+    .append('g')
+    .attr('class', 'tree')
+    .each(function(d,i) {
+
+      var g = d3.select(this);
+
+      var treeOptions = {
+        nodeHeight: NODE_HEIGHT,
+        nodeWidth: NODE_WIDTH,
+        functionMargin: FUNCTION_MARGIN,
+        nodeClick: showCode,
+        delay: 1000,
+        delayPerLevel: 50,
+        delayFunctions: 0,
+        //drawOutlines: false
+      };
+
+      if (!flipAnim) {
+        Object.assign(treeOptions, {
+          delay: 0,
+          delayPerLevel: 0,
+          delayFunctions: 0
+        })
       }
 
-    })
-    .attrs({
-      'fill':'#ffffff',
-      'fill-opacity': 0.2,
-      'stroke':'#000000',
-      'stroke-width': 4,
-      'cursor': 'pointer'
-    })
-    .on('click', function(mark){
+      var root = drawTree(g, d.value, treeOptions);
 
-      var flipAnim = !body.classed('flip');
+      if (lastRoot) {
+        yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
+      }
+      else {
+        yOffset -= root.minY; // first tree - minY will be negative!
+      }
+      g.attr("transform","translate(0," + yOffset + ")");
 
-      body.classed('flip', true);
+      lastRoot = root;
 
-      g.selectAll('.tree').remove();
-      clear();
+      root.yOffset = yOffset;
 
-      var yOffset = TREE_MARGIN / 2;
-      var lastRoot = null;
+      trees.push(root);
 
-      var markEl = this;
+    });
 
-      var trees = [];
+    if (lastRoot) {
+      yOffset += TREE_MARGIN / 2 + lastRoot.maxY;
+    }
 
-      var channelNames = Object.keys(mark.channels);
-      var channels = channelNames.map(key => ({name: key, value: mark.channels[key]}));
+    function showArgs() {
 
-      g.selectAll('.tree')
-        .data(channels)
-        .enter()
-        .append('g')
-        .attr('class', 'tree')
-        .each(function(d,i) {
+      var bounds = markEl.getBoundingClientRect();
+      var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
 
-            var g = d3.select(this);
-
-            var treeOptions = {
-              nodeHeight: NODE_HEIGHT,
-              nodeWidth: NODE_WIDTH,
-              functionMargin: FUNCTION_MARGIN,
-              nodeClick: showCode,
-              delay: 1000,
-              delayPerLevel: 50,
-              delayFunctions: 0,
-              //drawOutlines: false
-            };
-
-            if (!flipAnim) {
-              Object.assign(treeOptions, {
-                delay: 0,
-                delayPerLevel: 0,
-                delayFunctions: 0
-              })
-            }
-
-            var root = drawTree(g, d.value, treeOptions);
-
-            if (lastRoot) {
-              yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
-            }
-            else {
-              yOffset -= root.minY; // first tree - minY will be negative!
-            }
-            g.attr("transform","translate(0," + yOffset + ")");
-
-            lastRoot = root;
-
-            root.yOffset = yOffset;
-
-            trees.push(root);
-
-        });
-
-        if (lastRoot) {
-          yOffset += TREE_MARGIN / 2 + lastRoot.maxY;
-        }
-
-        function showArgs() {
-
-          var bounds = markEl.getBoundingClientRect();
-          var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
-
-/*
-          svg.append('circle')
-            .attr('r', 10)
-            .attr('cx', center[0])
-            .attr('cy', center[1])
-          ;
-*/
-          const ARGS_GAP = 4;
-
-          const argsOffset = -(trees.length-1) * ARGS_GAP / 2;
-
-          var links = svg.selectAll('.argLink')
-            .data(trees);
-
-          links.enter()
-            .append('path')
-            .attr('class','argLink')
-            .attrs({
-              'fill': 'none',
-              'stroke': '#555',
-              'stroke-opacity': 0.4,
-              'stroke-width': 1.5,
-              'pointer-events': 'none'
-            })
-          .merge(links)
-            .attr('d', (root, i) => {
-
-              var cpDistance = (center[0] - root.x - GRAPH_X_POS) / 3;
-
-              return "M" + center[0]+GRAPH_X_POS + "," + (center[1] + argsOffset + i * ARGS_GAP)
-                  + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
-                  + " " + (root.x + 100 + cpDistance + GRAPH_X_POS) + "," + (-root.y + root.yOffset)
-                  + " " + (root.x + 100 + GRAPH_X_POS) + "," + (-root.y + root.yOffset);
-            });
-
-          var labels = svg.selectAll('.argLabel')
-            .data(trees);
-
-          labels.enter()
-            .append('text')
-            .attr('class', 'argLabel')
-            .attrs({
-              'font-family': 'sans-serif',
-              'font-size': 12,
-              'font-weight': 'bold',
-              'cursor': 'default',
-              'pointer-events': 'none',
-              'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff',
-              'text-anchor': 'middle',
-              'dy': 4
-            })
-          .merge(labels)
-            .attr('x', root => root.x + 90 + GRAPH_X_POS)
-            .attr('y', root => root.yOffset - root.y)
-            .text((d,i) => channels[i].name)
-          ;
-        }
-
-        if (flipAnim) {
-          window.setTimeout(showArgs, 800);
-        }
-        else {
-          showArgs();
-        }
-
-        //svg.attr('height', yOffset);
+      /*
+      svg.append('circle')
+      .attr('r', 10)
+      .attr('cx', center[0])
+      .attr('cy', center[1])
       ;
-    })
+      */
+      const ARGS_GAP = 4;
+
+      const argsOffset = -(trees.length-1) * ARGS_GAP / 2;
+
+      var links = svg.selectAll('.argLink')
+      .data(trees);
+
+      links.enter()
+      .append('path')
+      .attr('class','argLink')
+      .attrs({
+        'fill': 'none',
+        'stroke': '#555',
+        'stroke-opacity': 0.4,
+        'stroke-width': 1.5,
+        'pointer-events': 'none'
+      })
+      .merge(links)
+      .attr('d', (root, i) => {
+
+        var cpDistance = (center[0] - root.x - GRAPH_X_POS) / 3;
+
+        return "M" + center[0]+GRAPH_X_POS + "," + (center[1] + argsOffset + i * ARGS_GAP)
+        + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
+        + " " + (root.x + 100 + cpDistance + GRAPH_X_POS) + "," + (-root.y + root.yOffset)
+        + " " + (root.x + 100 + GRAPH_X_POS) + "," + (-root.y + root.yOffset);
+      });
+
+      var labels = svg.selectAll('.argLabel')
+      .data(trees);
+
+      labels.enter()
+      .append('text')
+      .attr('class', 'argLabel')
+      .attrs({
+        'font-family': 'sans-serif',
+        'font-size': 12,
+        'font-weight': 'bold',
+        'cursor': 'default',
+        'pointer-events': 'none',
+        'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff',
+        'text-anchor': 'middle',
+        'dy': 4
+      })
+      .merge(labels)
+      .attr('x', root => root.x + 90 + GRAPH_X_POS)
+      .attr('y', root => root.yOffset - root.y)
+      .text((d,i) => channels[i].name)
+      ;
+    }
+
+    if (flipAnim) {
+      window.setTimeout(showArgs, 800);
+    }
+    else {
+      showArgs();
+    }
+
+    //svg.attr('height', yOffset);
+    ;
+  })
   ;
 
   d3.select('#closebutton')
-    .on('click', () => {
-      body.classed('flip', false);
-      g.selectAll('*').remove();
-      clear();
-    })
+  .on('click', () => {
+    body.classed('flip', false);
+    g.selectAll('*').remove();
+    clear();
+  })
   ;
 
   // DEBUG trigger click on load
@@ -665,7 +663,7 @@ const CONTEXT_LINES = 5;
 
 // TODO: smart, parser-based selection of code to show, showing function headers etc.
 function showCode(node) {
-    document.getElementById('github').style.display = 'none';
+  document.getElementById('github').style.display = 'none';
   if (node.data.file) {
     d3.text(CAPTURE_BASE + '/' + node.data.file, (error, data) => {
 
