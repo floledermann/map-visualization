@@ -5,10 +5,10 @@
       {
         "name": "projection",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-        "loc": "1679:3:1682:4"
+        "loc": "1342:3:1345:4"
       }
     ],
-    "loc": "1681:13:1681:30",
+    "loc": "1344:13:1344:30",
     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
     "type": "binary",
     "label": "+",
@@ -20,10 +20,10 @@
           {
             "name": "projection",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1679:3:1682:4"
+            "loc": "1342:3:1345:4"
           }
         ],
-        "loc": "1681:13:1681:25",
+        "loc": "1344:13:1344:25",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
         "type": "binary",
         "label": "×",
@@ -35,10 +35,10 @@
               {
                 "name": "projection",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1679:3:1682:4"
+                "loc": "1342:3:1345:4"
               }
             ],
-            "loc": "1681:13:1681:21",
+            "loc": "1344:13:1344:21",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "property",
             "op": "[]",
@@ -50,15 +50,15 @@
                   {
                     "name": "projection",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1679:3:1682:4"
+                    "loc": "1342:3:1345:4"
                   },
                   {
                     "name": "compose",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "208:3:210:4"
+                    "loc": "188:3:190:4"
                   }
                 ],
-                "loc": "209:27:209:31",
+                "loc": "189:27:189:31",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "property",
                 "op": "[]",
@@ -70,10 +70,10 @@
                       {
                         "name": "projection",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1679:3:1682:4"
+                        "loc": "1342:3:1345:4"
                       }
                     ],
-                    "loc": "1680:27:1680:45",
+                    "loc": "1343:27:1343:45",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "binary",
                     "label": "×",
@@ -85,10 +85,10 @@
                           {
                             "name": "projection",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1679:3:1682:4"
+                            "loc": "1342:3:1345:4"
                           }
                         ],
-                        "loc": "1680:27:1680:35",
+                        "loc": "1343:27:1343:35",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "property",
                         "op": "[]",
@@ -97,10 +97,11 @@
                           {
                             "valuetype": "number",
                             "stack": [],
-                            "loc": "1849:16:1849:21",
+                            "loc": "1534:16:1534:21",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 16.37
+                            "val": 16.37,
+                            "conditions": []
                           },
                           {
                             "valuetype": "number",
@@ -108,16 +109,18 @@
                               {
                                 "name": "projection",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1679:3:1682:4"
+                                "loc": "1342:3:1345:4"
                               }
                             ],
-                            "loc": "1680:33:1680:34",
+                            "loc": "1343:33:1343:34",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 0
+                            "val": 0,
+                            "conditions": []
                           }
                         ],
-                        "val": 16.37
+                        "val": 16.37,
+                        "conditions": []
                       },
                       {
                         "valuetype": "number",
@@ -132,7 +135,8 @@
                             "valuetype": "number",
                             "stack": [],
                             "type": "math",
-                            "val": 3.141592653589793
+                            "val": 3.141592653589793,
+                            "conditions": []
                           },
                           {
                             "valuetype": "number",
@@ -140,13 +144,16 @@
                             "loc": "52:20:52:23",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 180
+                            "val": 180,
+                            "conditions": []
                           }
                         ],
-                        "val": 0.017453292519943295
+                        "val": 0.017453292519943295,
+                        "conditions": []
                       }
                     ],
-                    "val": 0.2857103985514718
+                    "val": 0.2857103985514718,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
@@ -154,21 +161,23 @@
                       {
                         "name": "projection",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1679:3:1682:4"
+                        "loc": "1342:3:1345:4"
                       },
                       {
                         "name": "compose",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "208:3:210:4"
+                        "loc": "188:3:190:4"
                       }
                     ],
-                    "loc": "209:29:209:30",
+                    "loc": "189:29:189:30",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 0
+                    "val": 0,
+                    "conditions": []
                   }
                 ],
-                "val": 0.2857103985514718
+                "val": 0.2857103985514718,
+                "conditions": []
               },
               {
                 "valuetype": "number",
@@ -176,32 +185,34 @@
                   {
                     "name": "projection",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1679:3:1682:4"
+                    "loc": "1342:3:1345:4"
                   }
                 ],
-                "loc": "1681:19:1681:20",
+                "loc": "1344:19:1344:20",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "literal",
-                "val": 0
+                "val": 0,
+                "conditions": []
               }
             ],
-            "val": 0.2857103985514718
+            "val": 0.2857103985514718,
+            "conditions": []
           },
           {
             "valuetype": "number",
             "stack": [
               {
-                "name": "<function 57801>",
+                "name": "<function 48385>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1815:13:1817:4"
+                "loc": "1478:13:1480:4"
               },
               {
-                "name": "<function 53753>",
+                "name": "<function 44337>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1705:22:1707:4"
+                "loc": "1368:22:1370:4"
               }
             ],
-            "loc": "1706:36:1706:38",
+            "loc": "1369:36:1369:38",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "unary",
             "op": "+",
@@ -209,7 +220,7 @@
               {
                 "valuetype": "number",
                 "stack": [],
-                "loc": "1845:32:1845:50",
+                "loc": "1530:32:1530:50",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "binary",
                 "label": "/",
@@ -218,7 +229,7 @@
                   {
                     "valuetype": "number",
                     "stack": [],
-                    "loc": "1845:32:1845:40",
+                    "loc": "1530:32:1530:40",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "binary",
                     "label": "/",
@@ -227,57 +238,64 @@
                       {
                         "valuetype": "number",
                         "stack": [],
-                        "loc": "1845:32:1845:36",
+                        "loc": "1530:32:1530:36",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "literal",
-                        "val": 1000
+                        "val": 1000,
+                        "conditions": []
                       },
                       {
                         "valuetype": "number",
                         "stack": [],
-                        "loc": "1845:39:1845:40",
+                        "loc": "1530:39:1530:40",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "literal",
-                        "val": 2
+                        "val": 2,
+                        "conditions": []
                       }
                     ],
-                    "val": 500
+                    "val": 500,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
                     "stack": [],
                     "type": "math",
-                    "val": 3.141592653589793
+                    "val": 3.141592653589793,
+                    "conditions": []
                   }
                 ],
-                "val": 159.15494309189535
+                "val": 159.15494309189535,
+                "conditions": []
               }
             ],
-            "val": 159.15494309189535
+            "val": 159.15494309189535,
+            "conditions": []
           }
         ],
-        "val": 45.47222222222223
+        "val": 45.47222222222223,
+        "conditions": []
       },
       {
         "valuetype": "number",
         "stack": [
           {
-            "name": "<function 57953>",
+            "name": "<function 48537>",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1819:17:1821:4"
+            "loc": "1482:17:1484:4"
           },
           {
-            "name": "<function 53961>",
+            "name": "<function 44545>",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1709:26:1711:4"
+            "loc": "1372:26:1374:4"
           },
           {
             "name": "recenter",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1733:3:1739:4"
+            "loc": "1396:3:1402:4"
           }
         ],
-        "loc": "1736:10:1736:27",
+        "loc": "1399:10:1399:27",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
         "type": "binary",
         "label": "-",
@@ -287,17 +305,17 @@
             "valuetype": "number",
             "stack": [
               {
-                "name": "<function 57953>",
+                "name": "<function 48537>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1819:17:1821:4"
+                "loc": "1482:17:1484:4"
               },
               {
-                "name": "<function 53961>",
+                "name": "<function 44545>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1709:26:1711:4"
+                "loc": "1372:26:1374:4"
               }
             ],
-            "loc": "1710:36:1710:41",
+            "loc": "1373:36:1373:41",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "unary",
             "op": "+",
@@ -306,17 +324,17 @@
                 "valuetype": "number",
                 "stack": [
                   {
-                    "name": "<function 57953>",
+                    "name": "<function 48537>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1819:17:1821:4"
+                    "loc": "1482:17:1484:4"
                   },
                   {
-                    "name": "<function 53961>",
+                    "name": "<function 44545>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1709:26:1711:4"
+                    "loc": "1372:26:1374:4"
                   }
                 ],
-                "loc": "1710:37:1710:41",
+                "loc": "1373:37:1373:41",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "property",
                 "op": "[]",
@@ -325,56 +343,60 @@
                   {
                     "valuetype": "number",
                     "stack": [],
-                    "loc": "1845:63:1845:66",
+                    "loc": "1530:63:1530:66",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 500
+                    "val": 500,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
                     "stack": [
                       {
-                        "name": "<function 57953>",
+                        "name": "<function 48537>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1819:17:1821:4"
+                        "loc": "1482:17:1484:4"
                       },
                       {
-                        "name": "<function 53961>",
+                        "name": "<function 44545>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1709:26:1711:4"
+                        "loc": "1372:26:1374:4"
                       }
                     ],
-                    "loc": "1710:39:1710:40",
+                    "loc": "1373:39:1373:40",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 0
+                    "val": 0,
+                    "conditions": []
                   }
                 ],
-                "val": 500
+                "val": 500,
+                "conditions": []
               }
             ],
-            "val": 500
+            "val": 500,
+            "conditions": []
           },
           {
             "valuetype": "number",
             "stack": [
               {
-                "name": "<function 57953>",
+                "name": "<function 48537>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1819:17:1821:4"
+                "loc": "1482:17:1484:4"
               },
               {
-                "name": "<function 53961>",
+                "name": "<function 44545>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1709:26:1711:4"
+                "loc": "1372:26:1374:4"
               },
               {
                 "name": "recenter",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1733:3:1739:4"
+                "loc": "1396:3:1402:4"
               }
             ],
-            "loc": "1736:14:1736:27",
+            "loc": "1399:14:1399:27",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "binary",
             "label": "×",
@@ -384,22 +406,22 @@
                 "valuetype": "number",
                 "stack": [
                   {
-                    "name": "<function 57953>",
+                    "name": "<function 48537>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1819:17:1821:4"
+                    "loc": "1482:17:1484:4"
                   },
                   {
-                    "name": "<function 53961>",
+                    "name": "<function 44545>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1709:26:1711:4"
+                    "loc": "1372:26:1374:4"
                   },
                   {
                     "name": "recenter",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1733:3:1739:4"
+                    "loc": "1396:3:1402:4"
                   }
                 ],
-                "loc": "1736:14:1736:23",
+                "loc": "1399:14:1399:23",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "property",
                 "op": "[]",
@@ -409,73 +431,76 @@
                     "valuetype": "number",
                     "stack": [
                       {
-                        "name": "<function 57465>",
+                        "name": "<function 48049>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1802:19:1805:2"
+                        "loc": "1465:19:1468:2"
                       },
                       {
                         "name": "mercatorProjection",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1807:1:1841:2"
+                        "loc": "1470:1:1504:2"
                       },
                       {
                         "name": "projection",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1663:1:1665:2"
+                        "loc": "1326:1:1328:2"
                       },
                       {
                         "name": "projectionMutator",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1667:1:1751:2"
+                        "loc": "1330:1:1414:2"
                       }
                     ],
-                    "loc": "1671:24:1671:25",
+                    "loc": "1334:24:1334:25",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 0
+                    "val": 0,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
                     "stack": [
                       {
-                        "name": "<function 57953>",
+                        "name": "<function 48537>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1819:17:1821:4"
+                        "loc": "1482:17:1484:4"
                       },
                       {
-                        "name": "<function 53961>",
+                        "name": "<function 44545>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1709:26:1711:4"
+                        "loc": "1372:26:1374:4"
                       },
                       {
                         "name": "recenter",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1733:3:1739:4"
+                        "loc": "1396:3:1402:4"
                       }
                     ],
-                    "loc": "1736:21:1736:22",
+                    "loc": "1399:21:1399:22",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 0
+                    "val": 0,
+                    "conditions": []
                   }
                 ],
-                "val": 0
+                "val": 0,
+                "conditions": []
               },
               {
                 "valuetype": "number",
                 "stack": [
                   {
-                    "name": "<function 57801>",
+                    "name": "<function 48385>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1815:13:1817:4"
+                    "loc": "1478:13:1480:4"
                   },
                   {
-                    "name": "<function 53753>",
+                    "name": "<function 44337>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1705:22:1707:4"
+                    "loc": "1368:22:1370:4"
                   }
                 ],
-                "loc": "1706:36:1706:38",
+                "loc": "1369:36:1369:38",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "unary",
                 "op": "+",
@@ -483,7 +508,7 @@
                   {
                     "valuetype": "number",
                     "stack": [],
-                    "loc": "1845:32:1845:50",
+                    "loc": "1530:32:1530:50",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "binary",
                     "label": "/",
@@ -492,7 +517,7 @@
                       {
                         "valuetype": "number",
                         "stack": [],
-                        "loc": "1845:32:1845:40",
+                        "loc": "1530:32:1530:40",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "binary",
                         "label": "/",
@@ -501,42 +526,51 @@
                           {
                             "valuetype": "number",
                             "stack": [],
-                            "loc": "1845:32:1845:36",
+                            "loc": "1530:32:1530:36",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 1000
+                            "val": 1000,
+                            "conditions": []
                           },
                           {
                             "valuetype": "number",
                             "stack": [],
-                            "loc": "1845:39:1845:40",
+                            "loc": "1530:39:1530:40",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 2
+                            "val": 2,
+                            "conditions": []
                           }
                         ],
-                        "val": 500
+                        "val": 500,
+                        "conditions": []
                       },
                       {
                         "valuetype": "number",
                         "stack": [],
                         "type": "math",
-                        "val": 3.141592653589793
+                        "val": 3.141592653589793,
+                        "conditions": []
                       }
                     ],
-                    "val": 159.15494309189535
+                    "val": 159.15494309189535,
+                    "conditions": []
                   }
                 ],
-                "val": 159.15494309189535
+                "val": 159.15494309189535,
+                "conditions": []
               }
             ],
-            "val": 0
+            "val": 0,
+            "conditions": []
           }
         ],
-        "val": 500
+        "val": 500,
+        "conditions": []
       }
     ],
-    "val": 545.4722222222222
+    "val": 545.4722222222222,
+    "conditions": []
   },
   {
     "valuetype": "number",
@@ -544,10 +578,10 @@
       {
         "name": "projection",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-        "loc": "1679:3:1682:4"
+        "loc": "1342:3:1345:4"
       }
     ],
-    "loc": "1681:32:1681:49",
+    "loc": "1344:32:1344:49",
     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
     "type": "binary",
     "label": "-",
@@ -557,22 +591,22 @@
         "valuetype": "number",
         "stack": [
           {
-            "name": "<function 57953>",
+            "name": "<function 48537>",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1819:17:1821:4"
+            "loc": "1482:17:1484:4"
           },
           {
-            "name": "<function 53961>",
+            "name": "<function 44545>",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1709:26:1711:4"
+            "loc": "1372:26:1374:4"
           },
           {
             "name": "recenter",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1733:3:1739:4"
+            "loc": "1396:3:1402:4"
           }
         ],
-        "loc": "1737:10:1737:27",
+        "loc": "1400:10:1400:27",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
         "type": "binary",
         "label": "+",
@@ -582,17 +616,17 @@
             "valuetype": "number",
             "stack": [
               {
-                "name": "<function 57953>",
+                "name": "<function 48537>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1819:17:1821:4"
+                "loc": "1482:17:1484:4"
               },
               {
-                "name": "<function 53961>",
+                "name": "<function 44545>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1709:26:1711:4"
+                "loc": "1372:26:1374:4"
               }
             ],
-            "loc": "1710:47:1710:52",
+            "loc": "1373:47:1373:52",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "unary",
             "op": "+",
@@ -601,17 +635,17 @@
                 "valuetype": "number",
                 "stack": [
                   {
-                    "name": "<function 57953>",
+                    "name": "<function 48537>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1819:17:1821:4"
+                    "loc": "1482:17:1484:4"
                   },
                   {
-                    "name": "<function 53961>",
+                    "name": "<function 44545>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1709:26:1711:4"
+                    "loc": "1372:26:1374:4"
                   }
                 ],
-                "loc": "1710:48:1710:52",
+                "loc": "1373:48:1373:52",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "property",
                 "op": "[]",
@@ -620,56 +654,60 @@
                   {
                     "valuetype": "number",
                     "stack": [],
-                    "loc": "1845:67:1845:70",
+                    "loc": "1530:67:1530:70",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 500
+                    "val": 500,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
                     "stack": [
                       {
-                        "name": "<function 57953>",
+                        "name": "<function 48537>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1819:17:1821:4"
+                        "loc": "1482:17:1484:4"
                       },
                       {
-                        "name": "<function 53961>",
+                        "name": "<function 44545>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1709:26:1711:4"
+                        "loc": "1372:26:1374:4"
                       }
                     ],
-                    "loc": "1710:50:1710:51",
+                    "loc": "1373:50:1373:51",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 1
+                    "val": 1,
+                    "conditions": []
                   }
                 ],
-                "val": 500
+                "val": 500,
+                "conditions": []
               }
             ],
-            "val": 500
+            "val": 500,
+            "conditions": []
           },
           {
             "valuetype": "number",
             "stack": [
               {
-                "name": "<function 57953>",
+                "name": "<function 48537>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1819:17:1821:4"
+                "loc": "1482:17:1484:4"
               },
               {
-                "name": "<function 53961>",
+                "name": "<function 44545>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1709:26:1711:4"
+                "loc": "1372:26:1374:4"
               },
               {
                 "name": "recenter",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1733:3:1739:4"
+                "loc": "1396:3:1402:4"
               }
             ],
-            "loc": "1737:14:1737:27",
+            "loc": "1400:14:1400:27",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "binary",
             "label": "×",
@@ -679,22 +717,22 @@
                 "valuetype": "number",
                 "stack": [
                   {
-                    "name": "<function 57953>",
+                    "name": "<function 48537>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1819:17:1821:4"
+                    "loc": "1482:17:1484:4"
                   },
                   {
-                    "name": "<function 53961>",
+                    "name": "<function 44545>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1709:26:1711:4"
+                    "loc": "1372:26:1374:4"
                   },
                   {
                     "name": "recenter",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1733:3:1739:4"
+                    "loc": "1396:3:1402:4"
                   }
                 ],
-                "loc": "1737:14:1737:23",
+                "loc": "1400:14:1400:23",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "property",
                 "op": "[]",
@@ -704,24 +742,24 @@
                     "valuetype": "number",
                     "stack": [
                       {
-                        "name": "<function 57953>",
+                        "name": "<function 48537>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1819:17:1821:4"
+                        "loc": "1482:17:1484:4"
                       },
                       {
-                        "name": "<function 53961>",
+                        "name": "<function 44545>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1709:26:1711:4"
+                        "loc": "1372:26:1374:4"
                       },
                       {
                         "name": "recenter",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1733:3:1739:4"
+                        "loc": "1396:3:1402:4"
                       },
                       {
                         "name": "mercatorRaw",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1794:1:1796:2"
+                        "loc": "1457:1:1459:2"
                       }
                     ],
                     "type": "math",
@@ -731,24 +769,24 @@
                         "valuetype": "number",
                         "stack": [
                           {
-                            "name": "<function 57953>",
+                            "name": "<function 48537>",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1819:17:1821:4"
+                            "loc": "1482:17:1484:4"
                           },
                           {
-                            "name": "<function 53961>",
+                            "name": "<function 44545>",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1709:26:1711:4"
+                            "loc": "1372:26:1374:4"
                           },
                           {
                             "name": "recenter",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1733:3:1739:4"
+                            "loc": "1396:3:1402:4"
                           },
                           {
                             "name": "mercatorRaw",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1794:1:1796:2"
+                            "loc": "1457:1:1459:2"
                           }
                         ],
                         "type": "math",
@@ -758,27 +796,27 @@
                             "valuetype": "number",
                             "stack": [
                               {
-                                "name": "<function 57953>",
+                                "name": "<function 48537>",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1819:17:1821:4"
+                                "loc": "1482:17:1484:4"
                               },
                               {
-                                "name": "<function 53961>",
+                                "name": "<function 44545>",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1709:26:1711:4"
+                                "loc": "1372:26:1374:4"
                               },
                               {
                                 "name": "recenter",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1733:3:1739:4"
+                                "loc": "1396:3:1402:4"
                               },
                               {
                                 "name": "mercatorRaw",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1794:1:1796:2"
+                                "loc": "1457:1:1459:2"
                               }
                             ],
-                            "loc": "1795:27:1795:45",
+                            "loc": "1458:27:1458:45",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "binary",
                             "label": "/",
@@ -788,27 +826,27 @@
                                 "valuetype": "number",
                                 "stack": [
                                   {
-                                    "name": "<function 57953>",
+                                    "name": "<function 48537>",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1819:17:1821:4"
+                                    "loc": "1482:17:1484:4"
                                   },
                                   {
-                                    "name": "<function 53961>",
+                                    "name": "<function 44545>",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1709:26:1711:4"
+                                    "loc": "1372:26:1374:4"
                                   },
                                   {
                                     "name": "recenter",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1733:3:1739:4"
+                                    "loc": "1396:3:1402:4"
                                   },
                                   {
                                     "name": "mercatorRaw",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1794:1:1796:2"
+                                    "loc": "1457:1:1459:2"
                                   }
                                 ],
-                                "loc": "1795:28:1795:40",
+                                "loc": "1458:28:1458:40",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                 "type": "binary",
                                 "label": "+",
@@ -827,7 +865,8 @@
                                         "valuetype": "number",
                                         "stack": [],
                                         "type": "math",
-                                        "val": 3.141592653589793
+                                        "val": 3.141592653589793,
+                                        "conditions": []
                                       },
                                       {
                                         "valuetype": "number",
@@ -835,123 +874,133 @@
                                         "loc": "47:19:47:20",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                         "type": "literal",
-                                        "val": 2
+                                        "val": 2,
+                                        "conditions": []
                                       }
                                     ],
-                                    "val": 1.5707963267948966
+                                    "val": 1.5707963267948966,
+                                    "conditions": []
                                   },
                                   {
                                     "valuetype": "number",
                                     "stack": [
                                       {
-                                        "name": "<function 57465>",
+                                        "name": "<function 48049>",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "1802:19:1805:2"
+                                        "loc": "1465:19:1468:2"
                                       },
                                       {
                                         "name": "mercatorProjection",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "1807:1:1841:2"
+                                        "loc": "1470:1:1504:2"
                                       },
                                       {
                                         "name": "projection",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "1663:1:1665:2"
+                                        "loc": "1326:1:1328:2"
                                       },
                                       {
                                         "name": "projectionMutator",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "1667:1:1751:2"
+                                        "loc": "1330:1:1414:2"
                                       }
                                     ],
-                                    "loc": "1671:33:1671:34",
+                                    "loc": "1334:33:1334:34",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                     "type": "literal",
-                                    "val": 0
+                                    "val": 0,
+                                    "conditions": []
                                   }
                                 ],
-                                "val": 1.5707963267948966
+                                "val": 1.5707963267948966,
+                                "conditions": []
                               },
                               {
                                 "valuetype": "number",
                                 "stack": [
                                   {
-                                    "name": "<function 57953>",
+                                    "name": "<function 48537>",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1819:17:1821:4"
+                                    "loc": "1482:17:1484:4"
                                   },
                                   {
-                                    "name": "<function 53961>",
+                                    "name": "<function 44545>",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1709:26:1711:4"
+                                    "loc": "1372:26:1374:4"
                                   },
                                   {
                                     "name": "recenter",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1733:3:1739:4"
+                                    "loc": "1396:3:1402:4"
                                   },
                                   {
                                     "name": "mercatorRaw",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1794:1:1796:2"
+                                    "loc": "1457:1:1459:2"
                                   }
                                 ],
-                                "loc": "1795:44:1795:45",
+                                "loc": "1458:44:1458:45",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                 "type": "literal",
-                                "val": 2
+                                "val": 2,
+                                "conditions": []
                               }
                             ],
-                            "val": 0.7853981633974483
+                            "val": 0.7853981633974483,
+                            "conditions": []
                           }
                         ],
-                        "val": 0.9999999999999999
+                        "val": 0.9999999999999999,
+                        "conditions": []
                       }
                     ],
-                    "val": -1.1102230246251565e-16
+                    "val": -1.1102230246251565e-16,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
                     "stack": [
                       {
-                        "name": "<function 57953>",
+                        "name": "<function 48537>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1819:17:1821:4"
+                        "loc": "1482:17:1484:4"
                       },
                       {
-                        "name": "<function 53961>",
+                        "name": "<function 44545>",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1709:26:1711:4"
+                        "loc": "1372:26:1374:4"
                       },
                       {
                         "name": "recenter",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1733:3:1739:4"
+                        "loc": "1396:3:1402:4"
                       }
                     ],
-                    "loc": "1737:21:1737:22",
+                    "loc": "1400:21:1400:22",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "literal",
-                    "val": 1
+                    "val": 1,
+                    "conditions": []
                   }
                 ],
-                "val": -1.1102230246251565e-16
+                "val": -1.1102230246251565e-16,
+                "conditions": []
               },
               {
                 "valuetype": "number",
                 "stack": [
                   {
-                    "name": "<function 57801>",
+                    "name": "<function 48385>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1815:13:1817:4"
+                    "loc": "1478:13:1480:4"
                   },
                   {
-                    "name": "<function 53753>",
+                    "name": "<function 44337>",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1705:22:1707:4"
+                    "loc": "1368:22:1370:4"
                   }
                 ],
-                "loc": "1706:36:1706:38",
+                "loc": "1369:36:1369:38",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "unary",
                 "op": "+",
@@ -959,7 +1008,7 @@
                   {
                     "valuetype": "number",
                     "stack": [],
-                    "loc": "1845:32:1845:50",
+                    "loc": "1530:32:1530:50",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "binary",
                     "label": "/",
@@ -968,7 +1017,7 @@
                       {
                         "valuetype": "number",
                         "stack": [],
-                        "loc": "1845:32:1845:40",
+                        "loc": "1530:32:1530:40",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "binary",
                         "label": "/",
@@ -977,39 +1026,47 @@
                           {
                             "valuetype": "number",
                             "stack": [],
-                            "loc": "1845:32:1845:36",
+                            "loc": "1530:32:1530:36",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 1000
+                            "val": 1000,
+                            "conditions": []
                           },
                           {
                             "valuetype": "number",
                             "stack": [],
-                            "loc": "1845:39:1845:40",
+                            "loc": "1530:39:1530:40",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 2
+                            "val": 2,
+                            "conditions": []
                           }
                         ],
-                        "val": 500
+                        "val": 500,
+                        "conditions": []
                       },
                       {
                         "valuetype": "number",
                         "stack": [],
                         "type": "math",
-                        "val": 3.141592653589793
+                        "val": 3.141592653589793,
+                        "conditions": []
                       }
                     ],
-                    "val": 159.15494309189535
+                    "val": 159.15494309189535,
+                    "conditions": []
                   }
                 ],
-                "val": 159.15494309189535
+                "val": 159.15494309189535,
+                "conditions": []
               }
             ],
-            "val": -1.7669748230352872e-14
+            "val": -1.7669748230352872e-14,
+            "conditions": []
           }
         ],
-        "val": 500
+        "val": 500,
+        "conditions": []
       },
       {
         "valuetype": "number",
@@ -1017,10 +1074,10 @@
           {
             "name": "projection",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-            "loc": "1679:3:1682:4"
+            "loc": "1342:3:1345:4"
           }
         ],
-        "loc": "1681:37:1681:49",
+        "loc": "1344:37:1344:49",
         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
         "type": "binary",
         "label": "×",
@@ -1032,10 +1089,10 @@
               {
                 "name": "projection",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1679:3:1682:4"
+                "loc": "1342:3:1345:4"
               }
             ],
-            "loc": "1681:37:1681:45",
+            "loc": "1344:37:1344:45",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "property",
             "op": "[]",
@@ -1047,17 +1104,17 @@
                   {
                     "name": "projection",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1679:3:1682:4"
+                    "loc": "1342:3:1345:4"
                   },
                   {
                     "name": "compose",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "208:3:210:4"
+                    "loc": "188:3:190:4"
                   },
                   {
                     "name": "mercatorRaw",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1794:1:1796:2"
+                    "loc": "1457:1:1459:2"
                   }
                 ],
                 "type": "math",
@@ -1069,17 +1126,17 @@
                       {
                         "name": "projection",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1679:3:1682:4"
+                        "loc": "1342:3:1345:4"
                       },
                       {
                         "name": "compose",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "208:3:210:4"
+                        "loc": "188:3:190:4"
                       },
                       {
                         "name": "mercatorRaw",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                        "loc": "1794:1:1796:2"
+                        "loc": "1457:1:1459:2"
                       }
                     ],
                     "type": "math",
@@ -1091,20 +1148,20 @@
                           {
                             "name": "projection",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1679:3:1682:4"
+                            "loc": "1342:3:1345:4"
                           },
                           {
                             "name": "compose",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "208:3:210:4"
+                            "loc": "188:3:190:4"
                           },
                           {
                             "name": "mercatorRaw",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                            "loc": "1794:1:1796:2"
+                            "loc": "1457:1:1459:2"
                           }
                         ],
-                        "loc": "1795:27:1795:45",
+                        "loc": "1458:27:1458:45",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "binary",
                         "label": "/",
@@ -1116,20 +1173,20 @@
                               {
                                 "name": "projection",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1679:3:1682:4"
+                                "loc": "1342:3:1345:4"
                               },
                               {
                                 "name": "compose",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "208:3:210:4"
+                                "loc": "188:3:190:4"
                               },
                               {
                                 "name": "mercatorRaw",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1794:1:1796:2"
+                                "loc": "1457:1:1459:2"
                               }
                             ],
-                            "loc": "1795:28:1795:40",
+                            "loc": "1458:28:1458:40",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "binary",
                             "label": "+",
@@ -1148,7 +1205,8 @@
                                     "valuetype": "number",
                                     "stack": [],
                                     "type": "math",
-                                    "val": 3.141592653589793
+                                    "val": 3.141592653589793,
+                                    "conditions": []
                                   },
                                   {
                                     "valuetype": "number",
@@ -1156,10 +1214,12 @@
                                     "loc": "47:19:47:20",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                     "type": "literal",
-                                    "val": 2
+                                    "val": 2,
+                                    "conditions": []
                                   }
                                 ],
-                                "val": 1.5707963267948966
+                                "val": 1.5707963267948966,
+                                "conditions": []
                               },
                               {
                                 "valuetype": "number",
@@ -1167,15 +1227,15 @@
                                   {
                                     "name": "projection",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "1679:3:1682:4"
+                                    "loc": "1342:3:1345:4"
                                   },
                                   {
                                     "name": "compose",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                    "loc": "208:3:210:4"
+                                    "loc": "188:3:190:4"
                                   }
                                 ],
-                                "loc": "209:33:209:37",
+                                "loc": "189:33:189:37",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                 "type": "property",
                                 "op": "[]",
@@ -1187,10 +1247,10 @@
                                       {
                                         "name": "projection",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "1679:3:1682:4"
+                                        "loc": "1342:3:1345:4"
                                       }
                                     ],
-                                    "loc": "1680:47:1680:65",
+                                    "loc": "1343:47:1343:65",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                     "type": "binary",
                                     "label": "×",
@@ -1202,10 +1262,10 @@
                                           {
                                             "name": "projection",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                            "loc": "1679:3:1682:4"
+                                            "loc": "1342:3:1345:4"
                                           }
                                         ],
-                                        "loc": "1680:47:1680:55",
+                                        "loc": "1343:47:1343:55",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                         "type": "property",
                                         "op": "[]",
@@ -1214,10 +1274,11 @@
                                           {
                                             "valuetype": "number",
                                             "stack": [],
-                                            "loc": "1849:23:1849:28",
+                                            "loc": "1534:23:1534:28",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                             "type": "literal",
-                                            "val": 48.21
+                                            "val": 48.21,
+                                            "conditions": []
                                           },
                                           {
                                             "valuetype": "number",
@@ -1225,16 +1286,18 @@
                                               {
                                                 "name": "projection",
                                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                                "loc": "1679:3:1682:4"
+                                                "loc": "1342:3:1345:4"
                                               }
                                             ],
-                                            "loc": "1680:53:1680:54",
+                                            "loc": "1343:53:1343:54",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                             "type": "literal",
-                                            "val": 1
+                                            "val": 1,
+                                            "conditions": []
                                           }
                                         ],
-                                        "val": 48.21
+                                        "val": 48.21,
+                                        "conditions": []
                                       },
                                       {
                                         "valuetype": "number",
@@ -1249,7 +1312,8 @@
                                             "valuetype": "number",
                                             "stack": [],
                                             "type": "math",
-                                            "val": 3.141592653589793
+                                            "val": 3.141592653589793,
+                                            "conditions": []
                                           },
                                           {
                                             "valuetype": "number",
@@ -1257,13 +1321,16 @@
                                             "loc": "52:20:52:23",
                                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                             "type": "literal",
-                                            "val": 180
+                                            "val": 180,
+                                            "conditions": []
                                           }
                                         ],
-                                        "val": 0.017453292519943295
+                                        "val": 0.017453292519943295,
+                                        "conditions": []
                                       }
                                     ],
-                                    "val": 0.8414232323864663
+                                    "val": 0.8414232323864663,
+                                    "conditions": []
                                   },
                                   {
                                     "valuetype": "number",
@@ -1271,24 +1338,27 @@
                                       {
                                         "name": "projection",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "1679:3:1682:4"
+                                        "loc": "1342:3:1345:4"
                                       },
                                       {
                                         "name": "compose",
                                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                        "loc": "208:3:210:4"
+                                        "loc": "188:3:190:4"
                                       }
                                     ],
-                                    "loc": "209:35:209:36",
+                                    "loc": "189:35:189:36",
                                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                                     "type": "literal",
-                                    "val": 1
+                                    "val": 1,
+                                    "conditions": []
                                   }
                                 ],
-                                "val": 0.8414232323864663
+                                "val": 0.8414232323864663,
+                                "conditions": []
                               }
                             ],
-                            "val": 2.412219559181363
+                            "val": 2.412219559181363,
+                            "conditions": []
                           },
                           {
                             "valuetype": "number",
@@ -1296,32 +1366,36 @@
                               {
                                 "name": "projection",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1679:3:1682:4"
+                                "loc": "1342:3:1345:4"
                               },
                               {
                                 "name": "compose",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "208:3:210:4"
+                                "loc": "188:3:190:4"
                               },
                               {
                                 "name": "mercatorRaw",
                                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                                "loc": "1794:1:1796:2"
+                                "loc": "1457:1:1459:2"
                               }
                             ],
-                            "loc": "1795:44:1795:45",
+                            "loc": "1458:44:1458:45",
                             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                             "type": "literal",
-                            "val": 2
+                            "val": 2,
+                            "conditions": []
                           }
                         ],
-                        "val": 1.2061097795906814
+                        "val": 1.2061097795906814,
+                        "conditions": []
                       }
                     ],
-                    "val": 2.6194270176454926
+                    "val": 2.6194270176454926,
+                    "conditions": []
                   }
                 ],
-                "val": 0.9629555983004899
+                "val": 0.9629555983004899,
+                "conditions": []
               },
               {
                 "valuetype": "number",
@@ -1329,32 +1403,34 @@
                   {
                     "name": "projection",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                    "loc": "1679:3:1682:4"
+                    "loc": "1342:3:1345:4"
                   }
                 ],
-                "loc": "1681:43:1681:44",
+                "loc": "1344:43:1344:44",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "literal",
-                "val": 1
+                "val": 1,
+                "conditions": []
               }
             ],
-            "val": 0.9629555983004899
+            "val": 0.9629555983004899,
+            "conditions": []
           },
           {
             "valuetype": "number",
             "stack": [
               {
-                "name": "<function 57801>",
+                "name": "<function 48385>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1815:13:1817:4"
+                "loc": "1478:13:1480:4"
               },
               {
-                "name": "<function 53753>",
+                "name": "<function 44337>",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
-                "loc": "1705:22:1707:4"
+                "loc": "1368:22:1370:4"
               }
             ],
-            "loc": "1706:36:1706:38",
+            "loc": "1369:36:1369:38",
             "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
             "type": "unary",
             "op": "+",
@@ -1362,7 +1438,7 @@
               {
                 "valuetype": "number",
                 "stack": [],
-                "loc": "1845:32:1845:50",
+                "loc": "1530:32:1530:50",
                 "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                 "type": "binary",
                 "label": "/",
@@ -1371,7 +1447,7 @@
                   {
                     "valuetype": "number",
                     "stack": [],
-                    "loc": "1845:32:1845:40",
+                    "loc": "1530:32:1530:40",
                     "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                     "type": "binary",
                     "label": "/",
@@ -1380,38 +1456,46 @@
                       {
                         "valuetype": "number",
                         "stack": [],
-                        "loc": "1845:32:1845:36",
+                        "loc": "1530:32:1530:36",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "literal",
-                        "val": 1000
+                        "val": 1000,
+                        "conditions": []
                       },
                       {
                         "valuetype": "number",
                         "stack": [],
-                        "loc": "1845:39:1845:40",
+                        "loc": "1530:39:1530:40",
                         "file": "C:\\flo\\experiments\\map-sandbox\\testcases\\bundles\\d3_mercator_bundle.js",
                         "type": "literal",
-                        "val": 2
+                        "val": 2,
+                        "conditions": []
                       }
                     ],
-                    "val": 500
+                    "val": 500,
+                    "conditions": []
                   },
                   {
                     "valuetype": "number",
                     "stack": [],
                     "type": "math",
-                    "val": 3.141592653589793
+                    "val": 3.141592653589793,
+                    "conditions": []
                   }
                 ],
-                "val": 159.15494309189535
+                "val": 159.15494309189535,
+                "conditions": []
               }
             ],
-            "val": 159.15494309189535
+            "val": 159.15494309189535,
+            "conditions": []
           }
         ],
-        "val": 153.2591434475365
+        "val": 153.2591434475365,
+        "conditions": []
       }
     ],
-    "val": 346.74085655246347
+    "val": 346.74085655246347,
+    "conditions": []
   }
 ]
