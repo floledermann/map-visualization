@@ -33,7 +33,14 @@ function hasStackHead(head, stack) {
 function round(val, digits) {
     if (typeof val == "number") {
         let base = Math.pow(10, digits);
-        val = Math.round(val*base)/base;
+        rounded = Math.round(val*base)/base;
+
+        // increase precision for very small values
+        if (rounded == 0 && val != 0) {
+          rounded = round(val, digits+2);
+        }
+
+        val = rounded;
     }
     return val;
 }
@@ -272,7 +279,7 @@ function drawOutlines(svg, node, lastStack, options) {
 
     lastStack = lastStack || [];
     var currentStack = node.data.stack || [];
-	
+
 	// break stack for "guard" type nodes
 	if (node.parent && node.parent.data.type == "guard" && (node.parent.children.indexOf(node) > 1)) {
 		lastStack = [];
@@ -348,7 +355,7 @@ function drawTree(svg, data, options) {
       .attr("d", function(d) {
 		if (d.data.type == "dummy") return "";
 		// This draws an "orthogonal" connection for guards
-		
+
 		if (d.parent.data.type == "guard" && (d.parent.children.indexOf(d) > 1)) return "M" + x(d) + "," + y(d)
             + "C" + (x(d) + options.nodeHeight) + "," + y(d)
             + " " + (x(d.parent)) + "," + (y(d.parent) + options.nodeHeight)
@@ -408,7 +415,9 @@ function drawTree(svg, data, options) {
             var val = d.data.val;
             if (d.data.valuetype == "string") return '"'+val+'"';
             if (d.height == 0 && Math.abs(val-Math.PI)<0.0000000001) return "π";
-            return round(d.data.val,4);
+            var rounded = round(d.data.val,4);
+            if (rounded != d.data.val) rounded += '…';
+            return rounded;
         });
 
     node.append("text")
