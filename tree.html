@@ -33,10 +33,29 @@ svg {
   height: 100%;
 }
 
+#code {
+  position: absolute;
+  bottom: 0;
+  white-space: pre;
+  font-family: monospace;
+  padding: 5px;
+  width: 600px;
+  overflow: auto;
+  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+}
+
+#code .highlight {
+  background-color: #99ff99;
+  cursor: pointer;
+}
+
 </style>
 
-<svg width="100%" height="100%" xviewBox="0 0 1000 1000">
+<svg width="100%" height="100%">
 </svg>
+
+<div id="code"></div>
 
 <script src="lib/d3.v4.js"></script>
 <script src="lib/d3-selection-multi.v1.min.js"></script>
@@ -64,7 +83,7 @@ var QUERY = getQueryData();
 var INPUT = QUERY.input || "d3_mercator.json",
     NODE_HEIGHT = 45, //145,
     NODE_WIDTH = NODE_HEIGHT * 1.5,
-    TREE_MARGIN = 100,
+    TREE_MARGIN = NODE_HEIGHT * 8,
     FUNCTION_MARGIN = 4;
 
 svg.call(d3.zoom().on("zoom", function() {
@@ -104,6 +123,20 @@ d3.json(INPUT, function(error, treeData) {
           nodeWidth: NODE_WIDTH,
           functionMargin: FUNCTION_MARGIN,
           //drawOutlines: false
+          nodeClick: function(d) {
+            console.log(d);
+            d = d.data;
+            if (d.file && d.loc) {
+              // replace all degenerate variants of backslash escaping by single slash ;)
+              var path = d.file.replace(/\\\\/g,'/');
+              path = path.replace(/\\/g,'/');
+              // HACK: remove capture prefix from url - this should be done by capturing script
+              path = path.replace(/^capture/,'');
+              var url = new URL(path, INPUT);
+              var loc = d.loc.split(':').map(n => +n);
+              showCode(url, loc);
+            }
+          }
         });
 
         if (lastRoot) {
@@ -121,9 +154,52 @@ d3.json(INPUT, function(error, treeData) {
   if (lastRoot) {
     yOffset += TREE_MARGIN + lastRoot.maxY;
   }
+  /*
   g.selectAll(".node").on("click", function(d){
     console.log(d.data);
   })
+  */
 });
+
+function showCode(url, location, element, buffer) {
+
+    buffer = buffer || 5;
+
+    // select/create element if not given
+    if (!element) {
+      element = d3.select('#code').node();
+      if (!element) {
+        element = d3.select('body').append('div').attr('id','code').node();
+      }
+    }
+
+    console.log("Loading: " + url);
+
+    d3.text(url, (error, data) => {
+
+      if (error){
+        console.error(error);
+        return;
+      }
+
+      var lines = data.split('\n');
+
+      if (location) {
+        // start at closing tag to avoid shifting string contents
+        var l = lines[location[2]-1];
+        lines[location[2]-1] = l.slice(0, location[3]-1) + '</span>' + l.slice(location[3]-1);
+        l = lines[location[0]-1];
+        lines[location[0]-1] = l.slice(0, location[1]-1) + '<span class="highlight">' + l.slice(location[1]-1);
+
+        var fromLine = Math.max(location[0]-1 - buffer, 0);
+        var toLine = Math.min(location[2] + buffer, lines.length);
+
+        lines = lines.slice(fromLine, toLine);
+      }
+
+      d3.select(element).html(lines.join('\n'));
+    });
+
+}
 
 </script>

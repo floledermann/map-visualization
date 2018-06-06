@@ -386,6 +386,7 @@ function drawTree(svg, data, options) {
     }
 
     if (options.nodeClick) {
+      node.style('cursor','pointer');
       node.on('click', options.nodeClick);
     }
 
@@ -406,7 +407,7 @@ function drawTree(svg, data, options) {
         .attrs({
             'font-family': 'sans-serif',
             'font-size': 10,
-            'cursor': 'default',
+            'cursor': 'inherit',
             'pointer-events': 'none',
             'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
         })
@@ -426,7 +427,7 @@ function drawTree(svg, data, options) {
       .attrs({
           'font-family': 'sans-serif',
           'font-size': 12,
-          'cursor': 'default',
+          'cursor': 'inherit',
           'pointer-events': 'none',
           'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
       })
