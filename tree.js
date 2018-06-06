@@ -45,6 +45,20 @@ function round(val, digits) {
     return val;
 }
 
+function smartRound(val) {
+  var len = Math.round(val).toString().length;
+  var numDigits = Math.max(5-len, 1);
+  var rounded = round(val, numDigits);
+  if (rounded != val) {
+    if (rounded == Math.round(val)) {
+      // .0
+      rounded = rounded + '.0'
+    }
+    rounded += '…';
+  }
+  return rounded;
+}
+
 function getEdgeNodes(node, stack, edgeNodes) {
     if (node.children) {
         let lastInNode = null,
@@ -416,8 +430,7 @@ function drawTree(svg, data, options) {
             var val = d.data.val;
             if (d.data.valuetype == "string") return '"'+val+'"';
             if (d.height == 0 && Math.abs(val-Math.PI)<0.0000000001) return "π";
-            var rounded = round(d.data.val,4);
-            if (rounded != d.data.val) rounded += '…';
+            var rounded = smartRound(d.data.val,4);
             return rounded;
         });
 
