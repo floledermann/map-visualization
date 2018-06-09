@@ -106,7 +106,8 @@ d3.json(INPUT, function(error, treeData) {
   if (treeData.marks) {
     var index = parseInt(QUERY.index) || 0;
     mark = treeData.marks[index];
-    treeData = [mark.channels.geometry[0].x, mark.channels.geometry[0].y];
+    var property = QUERY.property || 'y';
+    treeData = [mark.channels.geometry[0][property]];
   }
 
   g.selectAll(".tree")
