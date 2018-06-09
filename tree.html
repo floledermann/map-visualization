@@ -126,14 +126,19 @@ d3.json(INPUT, function(error, treeData) {
           nodeClick: function(d) {
             console.log(d);
             d = d.data;
-            if (d.file && d.loc) {
+            // support legacy format
+            var file = d.file || d.properties.file;
+            var loc = d.loc || d.properties.loc;
+
+            if (file && loc) {
               // replace all degenerate variants of backslash escaping by single slash ;)
-              var path = d.file.replace(/\\\\/g,'/');
-              path = path.replace(/\\/g,'/');
+              file = file.replace(/\\\\/g,'/');
+              file = file.replace(/\\/g,'/');
               // HACK: remove capture prefix from url - this should be done by capturing script
-              path = path.replace(/^capture/,'');
-              var url = new URL(path, INPUT);
-              var loc = d.loc.split(':').map(n => +n);
+              file = file.replace(/^capture/,'');
+              var baseURL = new URL(INPUT, window.location.origin);
+              var url = new URL(file, baseURL);
+              loc = loc.split(':').map(n => +n);
               showCode(url, loc);
             }
           },
