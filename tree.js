@@ -10,15 +10,13 @@ const DEFAULT_OPTIONS = {
   drawOutlines: true,
   getStack: node => node.data.stack,
   stackComparator: function(el1, el2) {
-      return (el1.file == el2.file) && locEqual(el1.loc, el2.loc);
-      //return el1.name == el2.name;
+      return el1.name == el2.name;
+  },
+  stackLabel: stack => {
+    var label = stack.name;
+    if (label.startsWith("<function")) label = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
+    return label;
   }
-}
-
-function locEqual(l1, l2) {
-  if (Array.isArray(l1)) l1 = l1.join(":");
-  if (Array.isArray(l2)) l2 = l2.join(":");
-  return l1 == l2;
 }
 
 function hasHead(head, array, comparator) {
@@ -227,8 +225,7 @@ function drawOutline(svg, edgeNodes, level, options) {
       delay(path, delayDuration, 1500);
     }
 
-    var funcName = options.getStack(root.node)[level-1].name;
-    if (funcName.startsWith("<function")) funcName = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
+    var label = options.stackLabel(options.getStack(root.node)[level-1]);
 
     var label = svg.append("text")
         .datum(root.node)
@@ -245,7 +242,7 @@ function drawOutline(svg, edgeNodes, level, options) {
             'pointer-events': 'none',
             'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff'
         })
-        .text(funcName);
+        .text(label);
 
     if (options.delayPerLevel) {
       delay(label, delayDuration, 1500);
