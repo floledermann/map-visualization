@@ -7,7 +7,12 @@ const DEFAULT_OPTIONS = {
   delay: 0,
   delayPerLevel: 0,
   delayFunctions: 0,
-  drawOutlines: true
+  drawOutlines: true,
+  getStack: node => node.data.stack,
+  stackComparator: function(el1, el2) {
+      return (el1.file == el2.file) && locEqual(el1.loc, el2.loc);
+      //return el1.name == el2.name;
+  }
 }
 
 function locEqual(l1, l2) {
@@ -15,19 +20,11 @@ function locEqual(l1, l2) {
   if (Array.isArray(l2)) l2 = l2.join(":");
   return l1 == l2;
 }
-function stackComparator(el1, el2) {
-    return (el1.file == el2.file) && locEqual(el1.loc, el2.loc);
-    //return el1.name == el2.name;
-}
 
 function hasHead(head, array, comparator) {
     return head.reduce(function(acc, el, i) {
         return acc && array.length > i && comparator(el, array[i]);
     }, true);
-}
-
-function hasStackHead(head, stack) {
-    return hasHead(head, stack, stackComparator);
 }
 
 function round(val, digits) {
@@ -59,23 +56,23 @@ function smartRound(val) {
   return rounded;
 }
 
-function getEdgeNodes(node, stack, edgeNodes) {
+function getEdgeNodes(node, stack, edgeNodes, options) {
     if (node.children) {
         let lastInNode = null,
             lastOutNode = null;
 
         node.children.forEach(function(n) {
-            if (!n.data.stack) return; // hack
+            if (!options.getStack(n)) return; // hack
 			// break outline for guard nodes
 			if (n.parent.data.type == "guard" && (n.parent.children.indexOf(n) > 1)) return;
-            if (hasStackHead(stack, n.data.stack)) {
+            if (hasHead(stack, options.getStack(n), options.stackComparator)) {
                 if (lastOutNode) {
                     edgeNodes.push({node: lastOutNode, inside: false});
                 }
                 if (!lastInNode) {
                     edgeNodes.push({node: n, inside: true});
                 }
-                getEdgeNodes(n, stack, edgeNodes);
+                getEdgeNodes(n, stack, edgeNodes, options);
                 lastInNode = n;
                 lastOutNode = null;
             }
@@ -230,7 +227,7 @@ function drawOutline(svg, edgeNodes, level, options) {
       delay(path, delayDuration, 1500);
     }
 
-    var funcName = root.node.data.stack[level-1].name;
+    var funcName = options.getStack(root.node)[level-1].name;
     if (funcName.startsWith("<function")) funcName = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
 
     var label = svg.append("text")
@@ -255,7 +252,7 @@ function drawOutline(svg, edgeNodes, level, options) {
     }
 }
 
-function getStacks(current, context) {
+function getStacks(current, context, options) {
     // make a copy of our stacks;
     current = current.slice(0);
     context = context.slice(0);
@@ -271,7 +268,7 @@ function getStacks(current, context) {
     // save & skip common heads
     for (var i=0; i<current.length; i++) {
         if (i>=context.length) break;
-        if (!stackComparator(current[i], context[i])) break;
+        if (!options.stackComparator(current[i], context[i])) break;
         common.push(current[i]);
     }
     for (; i<current.length; i++) {
@@ -292,25 +289,25 @@ function drawOutlines(svg, node, lastStack, options) {
     options = Object.assign({}, DEFAULT_OPTIONS, options);
 
     lastStack = lastStack || [];
-    var currentStack = node.data.stack || [];
+    var currentStack = options.getStack(node) || [];
 
 	// break stack for "guard" type nodes
 	if (node.parent && node.parent.data.type == "guard" && (node.parent.children.indexOf(node) > 1)) {
 		lastStack = [];
 	}
 
-    var newStack = getStacks(currentStack, lastStack);
+    var newStack = getStacks(currentStack, lastStack, options);
 
     newStack.forEach(function(stack) {
         var edgeNodes = [{node: node, inside: true}];
-        getEdgeNodes(node, stack, edgeNodes);
+        getEdgeNodes(node, stack, edgeNodes, options);
         edgeNodes.push({node: node, inside: true});
 
         drawOutline(svg, edgeNodes, stack.length, options);
     });
 
     if (node.children) {
-        node.children.forEach(n => drawOutlines(svg, n, node.data.stack, options));
+        node.children.forEach(n => drawOutlines(svg, n, options.getStack(node), options));
     }
 }
 
