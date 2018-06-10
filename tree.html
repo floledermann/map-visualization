@@ -167,8 +167,8 @@ d3.json(INPUT, function(error, treeData) {
         }
         else if (QUERY.outline == 'neutral') {
           Object.assign(treeOptions, {
-            getStack: node => node.data.properties.neutral ? [{}] : null,
-            stackComparator: n => false,
+            getStack: node => node.data.properties.neutralStack,
+            stackComparator: (el1, el2) => el1.id == el2.id,
             stackLabel: n => "neutral"
           });
         }
