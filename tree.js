@@ -413,6 +413,7 @@ function drawTree(svg, data, options) {
         .attr("x", d => d.height ? 15 : -9)
         .attr("text-anchor", d => d.height ? "start" : "end")
         .attrs({
+            'class':'node-value',
             'font-family': 'sans-serif',
             'font-size': 10,
             'cursor': 'inherit',
@@ -432,6 +433,7 @@ function drawTree(svg, data, options) {
       .attr("dy", 4)
       .attr("x", 0)
       .attrs({
+          'class':'node-op-label',
           'font-family': 'sans-serif',
           'font-size': 12,
           'cursor': 'inherit',
