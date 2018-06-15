@@ -206,6 +206,13 @@ d3.json(INPUT, function(error, treeData) {
             stackLabel: n => "neutral"
           });
         }
+        else if (QUERY.outline == 'cartography') {
+          Object.assign(treeOptions, {
+            getStack: node => node.data.properties.cartoStack,
+            stackComparator: (el1, el2) => el1.name == el2.name,
+            stackLabel: n => n.name
+          });
+        }
 
         var root = drawTree(g, d, treeOptions);
 
