@@ -128,6 +128,21 @@ section#map {
 
 }
 
+section#interface {
+  position: absolute;
+  visibility: visible;
+  right: 0px;
+  z-index: 1;
+  overflow: visible;
+  background-color: transparent;
+  opacity: 1;
+  width: 140vmin;
+  height: 140vmin;
+  transform: translate(35vmin,-20vmin) rotateY(90deg);
+  /* background-color: rgba(0,0,0,0.1); */
+  border: 1px solid rgba(0,0,0,0.5);
+}
+
 section#graph {
   border: none;
   background-color: transparent;
@@ -360,6 +375,9 @@ svg#dfg {
   <img id="screenshot" class="screenshot">
   <svg id="marks" width="800" height="800" viewBox="0 0 800 800"></svg>
   <div id="closebutton"></div>
+</section>
+
+<section id="interface">
 </section>
 
 <section id="graph">
