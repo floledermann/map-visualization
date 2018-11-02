@@ -4,6 +4,7 @@
     {
       "type": "path",
       "geometry": {
+        "type": "path",
         "d": "M288.32444444444445,186.55265826632404L159.75555555555553,201.52618317756685"
       },
       "createdBy": "stroke",
@@ -18,17 +19,22 @@
               "facets": [
                 {
                   "type": "pos-x",
-                  "x": 279.32444444444445
+                  "x": 279.32444444444445,
+                  "graph": "transformations/1.json",
+                  "graphOffset": 0
                 },
                 {
                   "type": "pos-y",
-                  "y": 177.55265826632404
+                  "y": 177.55265826632404,
+                  "graph": "transformations/1.json",
+                  "graphOffset": 1
                 }
               ],
-              "screenCoords": [
-                288.32444444444445,
-                186.55265826632404
-              ]
+              "geometry": {
+                "type": "point",
+                "x": 288.32444444444445,
+                "y": 186.55265826632404
+              }
             },
             {
               "type": "op",

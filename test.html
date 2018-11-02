@@ -427,6 +427,7 @@ svg#dfg {
 </select>
 </li>
 </ol>
+<a href="tree.html?input=capture/test-projection-naive/transformations/1.json" target="_blank">Viewer</a> <a href="capture/test-projection-naive/transformations/1.json" target="_blank">Data</a>
 </div>
 
 <section id="graph">
@@ -533,45 +534,72 @@ const mark_elements = {
 
 const MARK_MARGIN = 5;
 
+
+
 d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
-  let marks = map.select('#marks').selectAll('.mark').data(data.marks);
-
-  marks.enter()
-  .append(mark => document.createElementNS("http://www.w3.org/2000/svg", mark_elements[mark.type]))
-  .attr('class','mark')
-  .attrs(mark => {
-    var geom = mark.geometry;
-    switch (mark.type) {
+  function facetGeom(facet) {
+    var geom = facet.geometry;
+    if (!geom) return null;
+    
+    let el = document.createElementNS("http://www.w3.org/2000/svg", mark_elements[geom.type]);
+    let sel = d3.select(el);
+    
+    sel.datum(facet)
+       .attr('class','mark')
+    ;
+    switch (geom.type) {
       case 'rect':
-      return {
-        x: geom.x - MARK_MARGIN,
-        y: geom.y - MARK_MARGIN,
-        width: geom.width + 2 * MARK_MARGIN,
-        height: geom.height + 2 * MARK_MARGIN,
-        // corner radius
-        rx: MARK_MARGIN,
-        ry: MARK_MARGIN
-      }
+        sel.attrs({
+          x: geom.x - MARK_MARGIN,
+          y: geom.y - MARK_MARGIN,
+          width: geom.width + 2 * MARK_MARGIN,
+          height: geom.height + 2 * MARK_MARGIN,
+          // corner radius
+          rx: MARK_MARGIN,
+          ry: MARK_MARGIN
+        });
+        break;
       case 'point':
       case 'circle':
-      return {
-        cx: geom.x,
-        cy: geom.y,
-        r: geom.r || MARK_MARGIN
-      }
+        sel.attrs({
+          cx: geom.x,
+          cy: geom.y,
+          r: geom.r || MARK_MARGIN
+        });
+        break;
       default:
-      return mark.geometry;
+        sel.attrs(facet.geometry);
     }
+    sel.attrs({
+      'fill':'#ffffff',
+      'fill-opacity': 0.2,
+      'stroke':'#000000',
+      'stroke-width': 4,
+      'cursor': 'pointer'
+    });
+    return sel;
+  } 
+  
+  function addFacetsGeom(facets) {
+    facets.forEach(facet => {
+    
+      let geom = facetGeom(facet);
+      if (geom) {
+        marksWrapper.node().appendChild(geom.node());
+      }
+      
+      if (facet.facets) {
+        addFacetsGeom(facet.facets);
+      }
+    })
+  }
 
-  })
-  .attrs({
-    'fill':'#ffffff',
-    'fill-opacity': 0.2,
-    'stroke':'#000000',
-    'stroke-width': 4,
-    'cursor': 'pointer'
-  })
+  let marksWrapper = map.select('#marks');
+  
+  addFacetsGeom(data.marks);
+  
+  marksWrapper.selectAll('.mark')
   .on('click', function(mark){
 
     var flipAnim = !body.classed('flip');
@@ -580,141 +608,137 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
     g.selectAll('.tree').remove();
     clear();
-
-    var yOffset = TREE_MARGIN / 2;
-    var lastRoot = null;
-
-    var markEl = this;
-
-    var trees = [];
-
-    var facetNames = Object.keys(mark.facets);
-    var facets = facetNames.map(key => ({name: key, value: mark.facets[key]}));
-
-    g.selectAll('.tree')
-    .data(facets)
-    .enter()
-    .append('g')
-    .attr('class', 'tree')
-    .each(function(d,i) {
-
-      var g = d3.select(this);
-
-      var treeOptions = {
-        nodeHeight: NODE_HEIGHT,
-        nodeWidth: NODE_WIDTH,
-        functionMargin: FUNCTION_MARGIN,
-        nodeClick: showCode,
-        delay: 1000,
-        delayPerLevel: 50,
-        delayFunctions: 0,
-        //drawOutlines: false
-      };
-
-      if (!flipAnim) {
-        Object.assign(treeOptions, {
-          delay: 0,
-          delayPerLevel: 0,
-          delayFunctions: 0
-        })
+    
+    // search first facet that has a graph attached
+    function searchGraph(facet) {
+      if (facet.graph) return facet;
+      
+      for (child of facet.facets) {
+        let graph = searchGraph(child);
+        if (graph) return graph;
       }
-
-      var root = drawTree(g, d.value, treeOptions);
-
-      if (lastRoot) {
-        yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
-      }
-      else {
-        yOffset -= root.minY; // first tree - minY will be negative!
-      }
-      g.attr("transform","translate(0," + yOffset + ")");
-
-      lastRoot = root;
-
-      root.yOffset = yOffset;
-
-      trees.push(root);
-
-    });
-
-    if (lastRoot) {
-      yOffset += TREE_MARGIN / 2 + lastRoot.maxY;
+      
+      return null;
+      
     }
+    
+    let facet = searchGraph(mark);
+    
+    if (facet && facet.graph) {
+      d3.json(CAPTURE_BASE + '/' + facet.graph, (error, data) => {
+      
+        let graph = data[facet.graphOffset];
+      
+        var yOffset = TREE_MARGIN / 2;
 
-    function showArgs() {
+        var markEl = this;
 
-      var bounds = markEl.getBoundingClientRect();
-      var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
+        g.selectAll('.tree')
+        .data([graph])
+        .enter()
+        .append('g')
+        .attr('class', 'tree')
+        .each(function(d,i) {
 
-      /*
-      svg.append('circle')
-      .attr('r', 10)
-      .attr('cx', center[0])
-      .attr('cy', center[1])
-      ;
-      */
-      const ARGS_GAP = 4;
+          var g = d3.select(this);
 
-      const argsOffset = -(trees.length-1) * ARGS_GAP / 2;
+          var treeOptions = {
+            nodeHeight: NODE_HEIGHT,
+            nodeWidth: NODE_WIDTH,
+            functionMargin: FUNCTION_MARGIN,
+            nodeClick: showCode,
+            delay: 1000,
+            delayPerLevel: 50,
+            delayFunctions: 0,
+            //drawOutlines: false
+          };
 
-      var links = svg.selectAll('.argLink')
-      .data(trees);
+          if (!flipAnim) {
+            Object.assign(treeOptions, {
+              delay: 0,
+              delayPerLevel: 0,
+              delayFunctions: 0
+            })
+          }
 
-      links.enter()
-      .append('path')
-      .attr('class','argLink')
-      .attrs({
-        'fill': 'none',
-        'stroke': '#555',
-        'stroke-opacity': 0.4,
-        'stroke-width': 1.5,
-        'pointer-events': 'none'
-      })
-      .merge(links)
-      .attr('d', (root, i) => {
+          var root = drawTree(g, d, treeOptions);
 
-        var cpDistance = (center[0] - root.x - GRAPH_X_POS) / 3;
+          yOffset -= root.minY; // first tree - minY will be negative!
 
-        return "M" + center[0]+GRAPH_X_POS + "," + (center[1] + argsOffset + i * ARGS_GAP)
-        + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
-        + " " + (root.x + 100 + cpDistance + GRAPH_X_POS) + "," + (-root.y + root.yOffset)
-        + " " + (root.x + 100 + GRAPH_X_POS) + "," + (-root.y + root.yOffset);
+          g.attr("transform","translate(0," + yOffset + ")");
+
+          lastRoot = root;
+
+          root.yOffset = yOffset;
+
+        });
+
+        function showArgs() {
+
+          var bounds = markEl.getBoundingClientRect();
+          var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
+
+          const ARGS_GAP = 4;
+
+          const argsOffset = -(trees.length-1) * ARGS_GAP / 2;
+
+          var links = svg.selectAll('.argLink')
+          .data(trees);
+
+          links.enter()
+          .append('path')
+          .attr('class','argLink')
+          .attrs({
+            'fill': 'none',
+            'stroke': '#555',
+            'stroke-opacity': 0.4,
+            'stroke-width': 1.5,
+            'pointer-events': 'none'
+          })
+          .merge(links)
+          .attr('d', (root, i) => {
+
+            var cpDistance = (center[0] - root.x - GRAPH_X_POS) / 3;
+
+            return "M" + center[0]+GRAPH_X_POS + "," + (center[1] + argsOffset + i * ARGS_GAP)
+            + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
+            + " " + (root.x + 100 + cpDistance + GRAPH_X_POS) + "," + (-root.y + root.yOffset)
+            + " " + (root.x + 100 + GRAPH_X_POS) + "," + (-root.y + root.yOffset);
+          });
+
+          var labels = svg.selectAll('.argLabel')
+          .data(trees);
+
+          labels.enter()
+          .append('text')
+          .attr('class', 'argLabel')
+          .attrs({
+            'font-family': 'sans-serif',
+            'font-size': 12,
+            'font-weight': 'bold',
+            'cursor': 'default',
+            'pointer-events': 'none',
+            'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff',
+            'text-anchor': 'middle',
+            'dy': 4
+          })
+          .merge(labels)
+          .attr('x', root => root.x + 90 + GRAPH_X_POS)
+          .attr('y', root => root.yOffset - root.y)
+          .text((d,i) => facets[i].name)
+          ;
+        }
+
+        if (flipAnim) {
+          //window.setTimeout(showArgs, 800);
+        }
+        else {
+          //showArgs();
+        }
+        
       });
-
-      var labels = svg.selectAll('.argLabel')
-      .data(trees);
-
-      labels.enter()
-      .append('text')
-      .attr('class', 'argLabel')
-      .attrs({
-        'font-family': 'sans-serif',
-        'font-size': 12,
-        'font-weight': 'bold',
-        'cursor': 'default',
-        'pointer-events': 'none',
-        'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff',
-        'text-anchor': 'middle',
-        'dy': 4
-      })
-      .merge(labels)
-      .attr('x', root => root.x + 90 + GRAPH_X_POS)
-      .attr('y', root => root.yOffset - root.y)
-      .text((d,i) => facets[i].name)
-      ;
     }
-
-    if (flipAnim) {
-      window.setTimeout(showArgs, 800);
-    }
-    else {
-      showArgs();
-    }
-
-    //svg.attr('height', yOffset);
-    ;
-  })
-  ;
+  });
 
   d3.select('#closebutton')
   .on('click', () => {
