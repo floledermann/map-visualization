@@ -147,7 +147,13 @@ section#interface {
 section#graph {
   border: none;
   background-color: transparent;
-  transform: translate3d(0,0,10vmin) rotateY(0deg);
+  /* SVG's getScreenCTM does not support 3d transforms, so the graph container must not use them */
+  /* transform: translate3d(0,0,50vmin) rotateY(0deg); */
+  overflow: visible;
+  top: -20vmin;
+  left: -20vmin;
+  width: 140vmin;
+  height: 140vmin;
 }
 
 section#code {
@@ -351,6 +357,7 @@ section#graph svg {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: visible;
 }
 
 svg#dfg {
@@ -493,7 +500,7 @@ NODE_HEIGHT = 45,
 NODE_WIDTH = 70,
 FUNCTION_MARGIN = 4,
 TREE_MARGIN = 150,
-GRAPH_X_POS = window.innerWidth - 400 //1000
+GRAPH_X_POS = 800
 ;
 
 var scale = 0.6;
@@ -629,9 +636,9 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       
         let graph = data[facet.graphOffset];
       
-        var yOffset = TREE_MARGIN / 2;
-
         var markEl = this;
+        
+        let tree = null;
 
         g.selectAll('.tree')
         .data([graph])
@@ -663,13 +670,9 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
           var root = drawTree(g, d, treeOptions);
 
-          yOffset -= root.minY; // first tree - minY will be negative!
+          g.attr("transform","translate(0," + (500 - root.y) + ")");
 
-          g.attr("transform","translate(0," + yOffset + ")");
-
-          lastRoot = root;
-
-          root.yOffset = yOffset;
+          tree = root;
 
         });
 
@@ -677,13 +680,17 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
           var bounds = markEl.getBoundingClientRect();
           var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
-
-          const ARGS_GAP = 4;
-
-          const argsOffset = -(trees.length-1) * ARGS_GAP / 2;
+          
+          let svgPoint = svg.node().createSVGPoint();
+          svgPoint.x = center[0];
+          svgPoint.y = center[1];
+          
+          let xfPoint = svgPoint.matrixTransform(svg.node().getScreenCTM().inverse());
+          
+          //xfPoint.x = 1000;
 
           var links = svg.selectAll('.argLink')
-          .data(trees);
+          .data([tree]);
 
           links.enter()
           .append('path')
@@ -698,42 +705,21 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
           .merge(links)
           .attr('d', (root, i) => {
 
-            var cpDistance = (center[0] - root.x - GRAPH_X_POS) / 3;
+            var cpDistance = (xfPoint.x - root.x - GRAPH_X_POS) / 1.5;
 
-            return "M" + center[0]+GRAPH_X_POS + "," + (center[1] + argsOffset + i * ARGS_GAP)
-            + "C" + (center[0] - cpDistance) + "," + (center[1] + argsOffset + i * ARGS_GAP)
-            + " " + (root.x + 100 + cpDistance + GRAPH_X_POS) + "," + (-root.y + root.yOffset)
-            + " " + (root.x + 100 + GRAPH_X_POS) + "," + (-root.y + root.yOffset);
+            return "M" + xfPoint.x + "," + xfPoint.y
+            + "C" + (xfPoint.x - cpDistance) + "," + xfPoint.y
+            + " " + (root.x + cpDistance + GRAPH_X_POS) + "," + (500-root.y)
+            + " " + (root.x + GRAPH_X_POS) + "," + (500-root.y);
           });
 
-          var labels = svg.selectAll('.argLabel')
-          .data(trees);
-
-          labels.enter()
-          .append('text')
-          .attr('class', 'argLabel')
-          .attrs({
-            'font-family': 'sans-serif',
-            'font-size': 12,
-            'font-weight': 'bold',
-            'cursor': 'default',
-            'pointer-events': 'none',
-            'text-shadow': '0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff',
-            'text-anchor': 'middle',
-            'dy': 4
-          })
-          .merge(labels)
-          .attr('x', root => root.x + 90 + GRAPH_X_POS)
-          .attr('y', root => root.yOffset - root.y)
-          .text((d,i) => facets[i].name)
-          ;
         }
 
         if (flipAnim) {
-          //window.setTimeout(showArgs, 800);
+          window.setTimeout(showArgs, 800);
         }
         else {
-          //showArgs();
+          showArgs();
         }
         
       });
