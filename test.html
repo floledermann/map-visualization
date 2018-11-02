@@ -141,6 +141,7 @@ section#interface {
   transform: translate(35vmin,-20vmin) rotateY(90deg);
   /* background-color: rgba(0,0,0,0.1); */
   border: 1px solid rgba(0,0,0,0.5);
+  pointer-events: none;
 }
 
 section#graph {
@@ -202,6 +203,24 @@ section#perception {
 section#goals {
   width: 110vmin;
   transform: translate(0,-65vmin) rotateX(-90deg);
+}
+
+
+/* ------------------------------------------------------------------- INSPECTOR */
+
+.inspector {
+  z-index: 100;
+  transform: translate3d(108vmin,0,50vmin) rotateY(0deg);
+  min-width: 15em;
+  padding: 0.5em;
+  border:  1px solid #ddd;
+  position: absolute;
+}
+
+.mark-path {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* ------------------------------------------------------------------- MAP */
@@ -377,8 +396,38 @@ svg#dfg {
   <div id="closebutton"></div>
 </section>
 
+<!--
 <section id="interface">
 </section>
+-->
+
+<div class="inspector">
+<ol class="mark-path" id="mark-path">
+<li>
+<select>
+<option value="0">Mark [0] (SVG path)</option>
+<option value="1">Mark [1] (SVG path)</option>
+</select>
+</li> 
+<li>
+<select>
+<option value="d">Attribute "d" (Path geometry)</option>
+</select>
+</li>
+<li>
+<select>
+<option value="0">Operation [0] (Line to)</option>
+</select>
+</li>
+<li>
+<select>
+<option value="x">X Coordinate (123)</option>
+<option value="y">Y Coordinate (456)</option>
+<option value="op">Opcode ("l")</option>
+</select>
+</li>
+</ol>
+</div>
 
 <section id="graph">
   <svg id="dfg" width="1000" height="1000" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
@@ -539,11 +588,11 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
     var trees = [];
 
-    var channelNames = Object.keys(mark.channels);
-    var channels = channelNames.map(key => ({name: key, value: mark.channels[key]}));
+    var facetNames = Object.keys(mark.facets);
+    var facets = facetNames.map(key => ({name: key, value: mark.facets[key]}));
 
     g.selectAll('.tree')
-    .data(channels)
+    .data(facets)
     .enter()
     .append('g')
     .attr('class', 'tree')
@@ -651,7 +700,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       .merge(labels)
       .attr('x', root => root.x + 90 + GRAPH_X_POS)
       .attr('y', root => root.yOffset - root.y)
-      .text((d,i) => channels[i].name)
+      .text((d,i) => facets[i].name)
       ;
     }
 
