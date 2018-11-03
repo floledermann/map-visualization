@@ -218,15 +218,35 @@ section#goals {
   z-index: 100;
   transform: translate3d(108vmin,0,50vmin) rotateY(0deg);
   min-width: 15em;
+  height: 7em;
   padding: 0.5em;
-  border:  1px solid #ddd;
+  border: 1px solid #ddd;
   position: absolute;
+  top: 216px;
+  left: 0;
+  margin-top: -3.5em;
 }
 
 .mark-path {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.map-link {
+  position:absolute;
+  top: 3.5em;
+  right: 100%;
+  width: 26px;
+  height: 1px;
+  border-top: 1px solid #999;
+}
+
+.map-link.hidden {
+  right: calc(100% + 26px);
+  width: 26px;
+  height: 1px;
+  border-top: 1px dashed #ccc;
 }
 
 /* ------------------------------------------------------------------- MAP */
@@ -412,8 +432,12 @@ svg#dfg {
 <ol class="mark-path" id="mark-path">
 <li>
 <select>
-<option value="0">Mark [0] (SVG path)</option>
-<option value="1">Mark [1] (SVG path)</option>
+<option value="mark">All Marks</option>
+<option value="path">SVG Path</option>
+</select>
+<select>
+<option value="0">[0] (SVG path)</option>
+<option value="1">[1] (SVG path)</option>
 </select>
 </li> 
 <li>
@@ -434,7 +458,29 @@ svg#dfg {
 </select>
 </li>
 </ol>
-<a href="tree.html?input=capture/test-projection-naive/transformations/1.json" target="_blank">Viewer</a> <a href="capture/test-projection-naive/transformations/1.json" target="_blank">Data</a>
+
+<a href="tree.html?input=capture/test-projection-naive/transformations/1.json" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.6 481.6" width="12" height="12">
+<path d="M381.6,309.4c-27.7,0-52.4,13.2-68.2,33.6l-132.3-73.9c3.1-8.9,4.8-18.5,4.8-28.4c0-10-1.7-19.5-4.9-28.5l132.2-73.8
+c15.7,20.5,40.5,33.8,68.3,33.8c47.4,0,86.1-38.6,86.1-86.1S429,0,381.5,0s-86.1,38.6-86.1,86.1c0,10,1.7,19.6,4.9,28.5
+l-132.1,73.8c-15.7-20.6-40.5-33.8-68.3-33.8c-47.4,0-86.1,38.6-86.1,86.1s38.7,86.1,86.2,86.1c27.8,0,52.6-13.3,68.4-33.9
+l132.2,73.9c-3.2,9-5,18.7-5,28.7c0,47.4,38.6,86.1,86.1,86.1s86.1-38.6,86.1-86.1S429.1,309.4,381.6,309.4z M381.6,27.1
+c32.6,0,59.1,26.5,59.1,59.1s-26.5,59.1-59.1,59.1s-59.1-26.5-59.1-59.1S349.1,27.1,381.6,27.1z M100,299.8
+c-32.6,0-59.1-26.5-59.1-59.1s26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1S132.5,299.8,100,299.8z M381.6,454.5
+c-32.6,0-59.1-26.5-59.1-59.1c0-32.6,26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1C440.7,428,414.2,454.5,381.6,454.5z"/>
+</svg></a>
+<a href="capture/test-projection-naive/transformations/1.json" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.978 29.978" width="12" height="12">
+<path d="M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012
+    v-8.861H25.462z"/>
+<path d="M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723
+    c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742
+    c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193
+    C15.092,18.979,14.62,18.426,14.62,18.426z"/>
+</svg>
+</a>
+
+<div class="map-link"></div>
+<div class="map-link hidden"></div>
 </div>
 
 <section id="graph">
