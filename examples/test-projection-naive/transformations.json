@@ -43,17 +43,22 @@
               "facets": [
                 {
                   "type": "pos-x",
-                  "x": 150.75555555555553
+                  "x": 150.75555555555553,
+                  "graph": "transformations/1.json",
+                  "graphOffset": 0
                 },
                 {
                   "type": "pos-y",
-                  "y": 192.52618317756685
+                  "y": 192.52618317756685,
+                  "graph": "transformations/1.json",
+                  "graphOffset": 1
                 }
               ],
-              "screenCoords": [
-                159.75555555555553,
-                201.52618317756685
-              ]
+              "geometry": {
+                "type": "point",
+                "x": 159.75555555555553,
+                "y": 201.52618317756685
+              }
             }
           ]
         }
