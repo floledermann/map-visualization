@@ -709,8 +709,8 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
 
             return "M" + xfPoint.x + "," + xfPoint.y
             + "C" + (xfPoint.x - cpDistance) + "," + xfPoint.y
-            + " " + (root.x + cpDistance + GRAPH_X_POS) + "," + (500-root.y)
-            + " " + (root.x + GRAPH_X_POS) + "," + (500-root.y);
+            + " " + (root.x + cpDistance + GRAPH_X_POS + 10) + "," + (500-root.y)
+            + " " + (root.x + GRAPH_X_POS + 10) + "," + (500-root.y);
           });
 
         }
