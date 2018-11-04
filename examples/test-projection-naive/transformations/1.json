@@ -100,7 +100,9 @@
                             "loc": "16:34:16:39",
                             "file": "sources/simple_mercator.js",
                             "type": "literal",
-                            "val": 16.37
+                            "val": 16.37,
+                            "dataSource": "cities.json",
+                            "dataOrigin": "http://localhost/"
                           },
                           {
                             "valuetype": "number",
@@ -225,7 +227,8 @@
             "loc": "10:33:10:36",
             "file": "sources/simple_mercator.js",
             "type": "literal",
-            "val": 0.5
+            "val": 0.5,
+            "parameter": "translation"
           }
         ],
         "val": 0.5454722222222222
@@ -242,7 +245,8 @@
         "loc": "20:42:20:46",
         "file": "sources/simple_mercator.js",
         "type": "literal",
-        "val": 1000
+        "val": 1000,
+        "parameter": "scale"
       }
     ],
     "val": 545.4722222222223

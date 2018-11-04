@@ -86,6 +86,7 @@ section:hover {
 
 .flip section.empty {
   opacity: 0.1;
+  transition: opacity 0s 0s;
 }
 
 section h2 {
@@ -372,14 +373,27 @@ section#goals {
 
 /* ------------------------------------------------------------------- CODE */
 
-#code .highlight {
+.flip #code {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+.flip #code.empty {
+  opacity: 0.1;
+  
+}
+
+#code-text {
+  font-family: monospace;
+  white-space: pre;
+  font-size: 18px;
+}
+
+#code-text .highlight {
   background-color: #99ff99;
   cursor: pointer;
 }
 
-.flip #code {
-  visibility: visible;
-}
 
 /* ------------------------------------------------------------------- GRAPH */
 
@@ -508,11 +522,12 @@ c-32.6,0-59.1-26.5-59.1-59.1c0-32.6,26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1C440.
 </section>
 
 <section id="interaction" class="empty">
-  <h2>Interaction</h2>
+  <h2>Responsive +<br>Interaction</h2>
 </section>
 
 <section id="code" class="empty">
   <h2>Code</h2>
+  <div id="code-text"></div>
 </section>
 
 <section id="author"  class="bottom empty">
@@ -717,6 +732,8 @@ function showGraph(graph, markEl, options) {
   }, options);
   
   let root = null;
+  
+  hideCode();
 
   g.selectAll('.tree')
   .data([graph])
@@ -753,11 +770,48 @@ function showGraph(graph, markEl, options) {
   });
 
   if (options.delay) {
-    window.setTimeout(function(){showLinkToMap(root, markEl)}, 800);
+    window.setTimeout(function(){ showGraphLinks(root, markEl) }, 800);
   }
   else {
-    showLinkToMap(root, markEl);
+    showGraphLinks(root, markEl);
   }
+}
+
+function showGraphLinks(root, markEl) {
+  showLinkToMap(root, markEl);
+  showParameters(root);
+  showData(root);
+}
+
+function showParameters(root) {
+  function isParameter(node) {
+    return node.data.parameter;
+  }
+  
+  let parameters = [];
+  
+  root.each(node => {
+    if (isParameter(node)) {
+      parameters.push(node);
+    }
+  });
+  
+  console.log(parameters);
+}
+
+function showData(root) {
+  function isDataNode(node) {
+    return node.data.dataSource;
+  }
+
+  let dataNodes = [];
+  
+  root.each(node => {
+    if (isDataNode(node)) {
+      dataNodes.push(node);
+    }
+  });
+  
 }
 
 function showLinkToMap(root, markEl) {
@@ -833,10 +887,11 @@ function showCode(node) {
 
       lines = lines.slice(fromLine, toLine);
 
-      d3.select('#code').html(lines.join('\n'));
+      d3.select('#code-text').html(lines.join('\n'));
+      d3.select('#code').classed('empty', false);
 
-      d3.select('#code .highlight').on('click', function() {
-        document.getElementById('github').style.display = 'block';
+      d3.select('#code-text .highlight').on('click', function() {
+        showAuthoring();
       });
     });
   }
@@ -844,6 +899,15 @@ function showCode(node) {
     console.error("No code location given for node: ", node.data);
     //console.error(node.data);
   }
+}
+
+function hideCode() {
+  d3.select('#code-text').html('');
+  d3.select('#code').classed('empty', true);
+}
+
+function showAuthoring() {
+  document.getElementById('github').style.display = 'block';
 }
 
 </script>
