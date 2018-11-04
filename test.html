@@ -605,6 +605,7 @@ function clear() {
   svg.selectAll('.argLabel').remove();
   //d3.select('#code').html('');
   document.getElementById('github').style.display = 'none';
+  hideGraphLinks();
 }
 
 // mapping from mark types to SVG element types
@@ -741,6 +742,7 @@ function showGraph(graph, markEl, options) {
   let root = null;
   
   hideCode();
+  hideGraphLinks();
 
   g.selectAll('.tree')
   .data([graph])
@@ -790,6 +792,12 @@ function showGraphLinks(root, markEl) {
   showData(root);
 }
 
+function hideGraphLinks() {
+  hideLinkToMap();
+  hideParameters();
+  hideData();
+}
+
 function showParameters(root) {
   function isParameter(node) {
     return node.data.parameter;
@@ -803,7 +811,67 @@ function showParameters(root) {
     }
   });
   
-  console.log(parameters);
+  svg.selectAll("g.parameter").remove();
+  
+  var paramEls = svg.selectAll("g.parameter")
+    .data(parameters)
+  .enter()
+    .append("g")
+    .classed("parameter", true);
+  
+  paramEls
+    .append("text")
+    .text(d => d.data.parameter)
+    .attrs({
+      x: d => 800 - d.y - 100 - 10, 
+      y: 900,
+      dy: 5,
+      "text-anchor": "end"
+    });
+  
+  paramEls
+    .append("text")
+    .text(d => d.data.val)
+    .attrs({
+      x: d => 800 - d.y - 100 - 10, 
+      y: 900,
+      dy: 15,
+      "text-anchor": "end",
+      "font-size": 10
+    });
+  
+  paramEls
+    .append("circle")
+    .attrs({
+      cx: d => 800 - d.y - 100, 
+      cy: 900,
+      r: 4
+    });
+    
+  paramEls
+    .append("path")
+    .attrs({
+      d: d => {
+        let x = 800 - d.y - 100,
+            y = 900,
+            x2 = 800 - d.y,
+            y2 = d.x + 500;
+            
+        return "M" + x + "," + y
+        + "C" + x + "," + (y + y2) / 2
+        + " " + (x2 - 100) + "," + y2
+        + " " + (x2 - 4) + "," + y2;
+      },
+      fill: "none",
+      stroke: "#555",
+      "stroke-opacity": 0.4,
+      "stroke-width": 1.5
+    });
+  
+}
+
+function hideParameters() {
+  svg.selectAll("g.parameter").remove();
 }
 
 function showData(root) {
@@ -818,7 +886,57 @@ function showData(root) {
       dataNodes.push(node);
     }
   });
+
+  svg.selectAll("g.datasource").remove();
   
+  var dataEls = svg.selectAll("g.datasource")
+    .data(dataNodes)
+  .enter()
+    .append("g")
+    .classed("datasource", true);
+    
+  let X0 = 100;
+  
+  dataEls
+    .append("text")
+    .text(d => d.data.dataSource)
+    .attrs({
+      x: X0, 
+      y: d => 500 + d.x,
+      dy: -6
+    });
+  
+  dataEls
+    .append("circle")
+    .attrs({
+      cx: X0, 
+      cy: d => 500 + d.x,
+      r: 4
+    });
+    
+  dataEls
+    .append("path")
+    .attrs({
+      d: d => {
+        let x = X0,
+            y = 500 + d.x,
+            x2 = 800 - d.y,
+            y2 = 500 + d.x;
+            
+        return "M" + x + "," + y
+        + "C" + (x + x2) / 2 + "," + y
+        + " " + (x + x2) / 2 + "," + y2
+        + " " + (x2 - 4) + "," + y2;
+      },
+      fill: "none",
+      stroke: "#555",
+      "stroke-opacity": 0.4,
+      "stroke-width": 1.5
+    });  
+}
+
+function hideData() {
+  svg.selectAll("g.datasource").remove();
 }
 
 function showLinkToMap(root, markEl) {
@@ -856,6 +974,10 @@ function showLinkToMap(root, markEl) {
     + " " + (root.x + GRAPH_X_POS + 10) + "," + (500-root.y);
   });
 
+}
+
+function hideLinkToMap() {
+  svg.selectAll('.argLink').remove();
 }
 
 function nodeClick(node) {

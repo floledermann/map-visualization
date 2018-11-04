@@ -101,7 +101,7 @@
                             "file": "sources/simple_mercator.js",
                             "type": "literal",
                             "val": 16.37,
-                            "dataSource": "cities.json",
+                            "dataSource": "cities.csv",
                             "dataOrigin": "http://localhost/"
                           },
                           {
