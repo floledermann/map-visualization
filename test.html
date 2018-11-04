@@ -665,7 +665,7 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
   marksWrapper.selectAll('.mark')
   .on('click', function(mark){
 
-    var flipAnim = !body.classed('flip');
+    var delay = !body.classed('flip');
 
     body.classed('flip', true);
 
@@ -691,93 +691,9 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
       d3.json(CAPTURE_BASE + '/' + facet.graph, (error, data) => {
       
         let graph = data[facet.graphOffset];
-      
-        var markEl = this;
         
-        let tree = null;
-
-        g.selectAll('.tree')
-        .data([graph])
-        .enter()
-        .append('g')
-        .attr('class', 'tree')
-        .each(function(d,i) {
-
-          var g = d3.select(this);
-
-          var treeOptions = {
-            nodeHeight: NODE_HEIGHT,
-            nodeWidth: NODE_WIDTH,
-            functionMargin: FUNCTION_MARGIN,
-            nodeClick: showCode,
-            delay: 750,
-            delayPerLevel: 50,
-            delayFunctions: 0,
-            //drawOutlines: false
-          };
-
-          if (!flipAnim) {
-            Object.assign(treeOptions, {
-              delay: 0,
-              delayPerLevel: 0,
-              delayFunctions: 0
-            })
-          }
-
-          var root = drawTree(g, d, treeOptions);
-
-          g.attr("transform","translate(0," + (500 - root.y) + ")");
-
-          tree = root;
-
-        });
-
-        function showArgs() {
-
-          var bounds = markEl.getBoundingClientRect();
-          var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
-          
-          let svgPoint = svg.node().createSVGPoint();
-          svgPoint.x = center[0];
-          svgPoint.y = center[1];
-          
-          let xfPoint = svgPoint.matrixTransform(svg.node().getScreenCTM().inverse());
-          
-          //xfPoint.x = 1000;
-
-          var links = svg.selectAll('.argLink')
-          .data([tree]);
-
-          links.enter()
-          .append('path')
-          .attr('class','argLink')
-          .attrs({
-            'fill': 'none',
-            'stroke': '#555',
-            'stroke-opacity': 0.4,
-            'stroke-width': 1.5,
-            'pointer-events': 'none'
-          })
-          .merge(links)
-          .attr('d', (root, i) => {
-
-            var cpDistance = (xfPoint.x - root.x - GRAPH_X_POS) / 1.5;
-
-            return "M" + xfPoint.x + "," + xfPoint.y
-            + "C" + (xfPoint.x - cpDistance) + "," + xfPoint.y
-            + " " + (root.x + cpDistance + GRAPH_X_POS + 10) + "," + (500-root.y)
-            + " " + (root.x + GRAPH_X_POS + 10) + "," + (500-root.y);
-          });
-
-        }
-
-        if (flipAnim) {
-          window.setTimeout(showArgs, 800);
-        }
-        else {
-          showArgs();
-        }
-        
+        showGraph(graph, this, {delay: delay});
+       
       });
     }
   });
@@ -794,10 +710,104 @@ d3.json(CAPTURE_BASE + '/transformations.json', (error, data) => {
   //map.select('.mark').dispatch('click');
 });
 
-const CONTEXT_LINES = 5;
+function showGraph(graph, markEl, options) {
+
+  options = Object.assign({
+    delay: true
+  }, options);
+  
+  let root = null;
+
+  g.selectAll('.tree')
+  .data([graph])
+  .enter()
+  .append('g')
+  .attr('class', 'tree')
+  .each(function(d,i) {
+
+    var g = d3.select(this);
+
+    var treeOptions = {
+      nodeHeight: NODE_HEIGHT,
+      nodeWidth: NODE_WIDTH,
+      functionMargin: FUNCTION_MARGIN,
+      nodeClick: nodeClick,
+      delay: 750,
+      delayPerLevel: 50,
+      delayFunctions: 0,
+      //drawOutlines: false
+    };
+
+    if (!options.delay) {
+      Object.assign(treeOptions, {
+        delay: 0,
+        delayPerLevel: 0,
+        delayFunctions: 0
+      })
+    }
+
+    root = drawTree(g, d, treeOptions);
+
+    g.attr("transform","translate(0," + (500 - root.y) + ")");
+
+  });
+
+  if (options.delay) {
+    window.setTimeout(function(){showLinkToMap(root, markEl)}, 800);
+  }
+  else {
+    showLinkToMap(root, markEl);
+  }
+}
+
+function showLinkToMap(root, markEl) {
+
+  var bounds = markEl.getBoundingClientRect();
+  var center = [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
+  
+  let svgPoint = svg.node().createSVGPoint();
+  svgPoint.x = center[0];
+  svgPoint.y = center[1];
+  
+  let xfPoint = svgPoint.matrixTransform(svg.node().getScreenCTM().inverse());
+  
+  var links = svg.selectAll('.argLink')
+  .data([root]);
+
+  links.enter()
+  .append('path')
+  .attr('class','argLink')
+  .attrs({
+    'fill': 'none',
+    'stroke': '#555',
+    'stroke-opacity': 0.4,
+    'stroke-width': 1.5,
+    'pointer-events': 'none'
+  })
+  .merge(links)
+  .attr('d', (root, i) => {
+
+    var cpDistance = (xfPoint.x - root.x - GRAPH_X_POS) / 1.5;
+
+    return "M" + xfPoint.x + "," + xfPoint.y
+    + "C" + (xfPoint.x - cpDistance) + "," + xfPoint.y
+    + " " + (root.x + cpDistance + GRAPH_X_POS + 10) + "," + (500-root.y)
+    + " " + (root.x + GRAPH_X_POS + 10) + "," + (500-root.y);
+  });
+
+}
+
+function nodeClick(node) {
+  console.log("node click");
+  
+  showCode(node);
+}
 
 // TODO: smart, parser-based selection of code to show, showing function headers etc.
 function showCode(node) {
+
+  const CONTEXT_LINES = 5;
+
   document.getElementById('github').style.display = 'none';
   if (node.data.file) {
     d3.text(CAPTURE_BASE + '/' + node.data.file, (error, data) => {
