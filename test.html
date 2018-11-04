@@ -778,18 +778,23 @@ function showGraph(graph, markEl, options) {
 
   });
 
-  if (options.delay) {
-    window.setTimeout(function(){ showGraphLinks(root, markEl) }, 800);
-  }
-  else {
-    showGraphLinks(root, markEl);
-  }
+  showGraphLinks(root, markEl, options.delay ? 800 : 0)
+ 
 }
 
-function showGraphLinks(root, markEl) {
-  showLinkToMap(root, markEl);
-  showParameters(root);
-  showData(root);
+function showGraphLinks(root, markEl, delay) {
+  function next() {
+    showLinkToMap(root, markEl);
+    
+    function next() {
+      showParameters(root);
+      showData(root);
+    }
+    
+    window.setTimeout(next, delay || 0);
+  }
+  
+  window.setTimeout(next, delay || 0);
 }
 
 function hideGraphLinks() {
