@@ -395,7 +395,9 @@ function drawTree(svg, data, options) {
 
     if (options.nodeClick) {
       node.style('cursor','pointer');
-      node.on('click', options.nodeClick);
+      node.on('click', function(node) {
+        options.nodeClick(node, this);
+      });
     }
 
     node.append("circle")

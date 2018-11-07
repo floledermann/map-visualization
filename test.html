@@ -177,6 +177,7 @@ section#ecosystem {
 
 section#interaction {
   transform: translate(0,-55vmin) rotateX(-90deg);
+  cursor: pointer;
 }
 
 section#parameters {
@@ -189,6 +190,9 @@ section#parameters {
 section#author {
   width: 110vmin;
   transform: translate(-10vmin,calc(65vmin + calc(30vh - 30vmin))) rotateX(90deg);
+  transform-style: preserve-3d;
+  /* transform-origin: 100% 100%; */
+  overflow: visible;
 }
 
 section#ecosystem {
@@ -332,7 +336,7 @@ section#goals {
   width: 25px;
   height: 20px;
   padding: 3px 0;
-  border: none;
+  /* border: none; */
   background-color: transparent;
   transform-origin: 100% 0;
   transform: rotateY(-90deg) translate(62px);
@@ -392,6 +396,7 @@ section#goals {
 #code-text .highlight {
   background-color: #99ff99;
   cursor: pointer;
+  outline: 1px solid #333;
 }
 
 
@@ -414,6 +419,15 @@ svg#dfg path.function {
   fill: #ddd;
   fill-opacity: 0.5;
 }
+
+g.node.active circle {
+  stroke-width: 2;
+  fill: #99ff99;
+}
+
+g.datasource circle {
+}
+
 /* ------------------------------------------------------------------- SOCIAL */
 
 #github {
@@ -425,6 +439,10 @@ svg#dfg path.function {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   font-family: sans-serif;
+  transform-origin: 100% 100%;
+  transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translate(-436px, -19px);
+  transform-style: preserve-3d;
+  overflow: visible;
 }
 
 #github img {
@@ -439,6 +457,10 @@ svg#dfg path.function {
 #github a {
   text-decoration: none;
   color: inherit;
+}
+
+#github .info {
+  margin: 3px;
 }
 
 
@@ -524,11 +546,11 @@ c-32.6,0-59.1-26.5-59.1-59.1c0-32.6,26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1C440.
   </svg>
 </section>
 
-<section id="data">
+<section id="data" class="empty">
   <h2>Data</h2>
 </section>
 
-<section id="parameters" class="bottom">
+<section id="parameters" class="bottom empty">
   <h2>Parameters</h2>
 </section>
 
@@ -545,8 +567,8 @@ c-32.6,0-59.1-26.5-59.1-59.1c0-32.6,26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1C440.
   <h2>AUTHORSHIP</h2>
   <div id="github">
     <img src="lib/github_avatar.jpg">
-    <div><span class="git-author">floledermann</span> <a target="_blank" href="https://github.com/floledermann/example_simple_projection/commit/a3b85bc6c2883aa93514bd90cd112e9e72a0aa0c">2017-02-19</a></div>
-    <div class="git-commit">Naive implementation of web mercator projection according to Wikipedia</div>
+    <div class="info"><span class="git-author">floledermann</span> <a target="_blank" href="https://github.com/floledermann/example_simple_projection/commit/a3b85bc6c2883aa93514bd90cd112e9e72a0aa0c">2017-02-19</a></div>
+    <div class="git-commit">Adapt map to new layout, as discussed with Georg</div>
   </div>
 </section>
 <!--
@@ -584,6 +606,12 @@ FUNCTION_MARGIN = 4,
 TREE_MARGIN = 150,
 GRAPH_X_POS = 800
 ;
+
+
+var currentPath = null,
+    currentFacet = null,
+    currentMapEl = null,
+    currentNode = null;
 
 var scale = 0.6;
 
@@ -745,7 +773,6 @@ function showGraph(graph, markEl, options) {
   
   let root = null;
   
-  hideCode();
   hideGraphLinks();
 
   g.selectAll('.tree')
@@ -782,7 +809,9 @@ function showGraph(graph, markEl, options) {
 
   });
 
-  showGraphLinks(root, markEl, options.delay ? 800 : 0)
+  showGraphLinks(root, markEl, options.delay ? 800 : 0);
+  
+  d3.select('#interaction').on('click', showInteraction);
  
 }
 
@@ -803,11 +832,18 @@ function showGraphLinks(root, markEl, delay) {
 
 function hideGraphLinks() {
   hideLinkToMap();
+  hideCode();
   hideParameters();
   hideData();
+  hideAuthor();
+  hideInfrastructure();
+  hideInteraction();
 }
 
 function showParameters(root) {
+
+  d3.select('#parameters').classed('empty', false);
+  
   function isParameter(node) {
     return node.data.parameter;
   }
@@ -882,10 +918,14 @@ function showParameters(root) {
 }
 
 function hideParameters() {
+  d3.select('#parameters').classed('empty', true);
   svg.selectAll("g.parameter").remove();
 }
 
 function showData(root) {
+
+  d3.select('#data').classed('empty', false);
+  
   function isDataNode(node) {
     return node.data.dataSource;
   }
@@ -904,7 +944,15 @@ function showData(root) {
     .data(dataNodes)
   .enter()
     .append("g")
-    .classed("datasource", true);
+    .classed("datasource", true)
+    .attrs({
+      cursor: "pointer"
+    })
+    .on('click', function() {
+      showInfrastructure();
+    })
+  ;
+
     
   let X0 = 100;
   
@@ -933,7 +981,11 @@ function showData(root) {
       cx: X0, 
       cy: d => 500 + d.x,
       r: 5,
-      fill: "#666"
+      fill: "#666",
+      cursor: "pointer"
+    })
+    .on('click', function() {
+      showInfrastructure();
     });
     
   dataEls
@@ -959,6 +1011,7 @@ function showData(root) {
 }
 
 function hideData() {
+  d3.select('#data').classed('empty', true);
   svg.selectAll("g.datasource").remove();
 }
 
@@ -1003,10 +1056,19 @@ function hideLinkToMap() {
   svg.selectAll('.argLink').remove();
 }
 
-function nodeClick(node) {
-  console.log("node click");
+function nodeClick(node, el) {
+
+  svg.selectAll('g.node.active').classed('active', false);
+  d3.select(el).classed('active', true);
   
-  showCode(node);
+  if (currentNode != node) {
+    showCode(node);
+    currentNode = node;
+    hideAuthor();
+  }
+  else {
+    showAuthor(node);
+  }
 }
 
 // TODO: smart, parser-based selection of code to show, showing function headers etc.
@@ -1043,7 +1105,7 @@ function showCode(node) {
       d3.select('#code').classed('empty', false);
 
       d3.select('#code-text .highlight').on('click', function() {
-        showAuthoring();
+        showAuthor(node);
       });
     });
   }
@@ -1058,8 +1120,30 @@ function hideCode() {
   d3.select('#code').classed('empty', true);
 }
 
-function showAuthoring() {
+function showAuthor() {
+  d3.select('#author').classed('empty', false);
   document.getElementById('github').style.display = 'block';
+}
+
+function hideAuthor() {
+  d3.select('#author').classed('empty', true);
+  document.getElementById('github').style.display = 'none';
+}
+
+function showInfrastructure() {
+  d3.select('#infrastructure').classed('empty', false);
+}
+
+function hideInfrastructure() {
+  d3.select('#infrastructure').classed('empty', true);
+}
+
+function showInteraction() {
+  d3.select('#interaction').classed('empty', false);
+}
+
+function hideInteraction() {
+  d3.select('#interaction').classed('empty', true);
 }
 
 </script>
