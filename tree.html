@@ -65,9 +65,9 @@ svg.zoom-small {
   
 }
 
-/* Code viewer */
+/* Inspector */
 
-#code {
+#inspector {
   position: absolute;
   bottom: 0;
   white-space: pre;
@@ -77,6 +77,13 @@ svg.zoom-small {
   overflow: auto;
   background-color: #f6f6f6;
   border: 1px solid #e0e0e0;
+}
+
+#nodeProperties {
+  background-color: #eeeeee;
+}
+
+#code {
 }
 
 #code .highlight {
@@ -89,7 +96,10 @@ svg.zoom-small {
 <svg width="100%" height="100%">
 </svg>
 
+<div id="inspector">
+<div id="nodeProperties"></div>
 <div id="code"></div>
+</div>
 
 <script src="lib/d3.v4.js"></script>
 <script src="lib/d3-selection-multi.v1.min.js"></script>
@@ -115,6 +125,7 @@ function getQueryData() {
 var QUERY = getQueryData();
 
 var INPUT = QUERY.input || "d3_mercator.json",
+    BASE_URL = QUERY.baseURL || INPUT, 
     NODE_HEIGHT = 45, //145,
     NODE_WIDTH = NODE_HEIGHT * 1.5,
     TREE_MARGIN = NODE_HEIGHT * 8,
@@ -163,6 +174,8 @@ d3.json(INPUT, function(error, treeData) {
             // support legacy format
             var file = d.file || d.properties.file;
             var loc = d.loc || d.properties.loc;
+            
+            showNodeProperties(d);
 
             if (file && loc) {
               // replace all degenerate variants of backslash escaping by single slash ;)
@@ -170,7 +183,7 @@ d3.json(INPUT, function(error, treeData) {
               file = file.replace(/\\/g,'/');
               // HACK: remove capture prefix from url - this should be done by capturing script
               file = file.replace(/^capture/,'');
-              var baseURL = new URL(INPUT, window.location.origin);
+              var baseURL = new URL(BASE_URL, window.location.origin);
               var url = new URL(file, baseURL);
               loc = loc.split(':').map(n => +n);
               showCode(url, loc);
@@ -272,11 +285,24 @@ function showCode(url, location, element, buffer) {
         var toLine = Math.min(location[2] + buffer, lines.length);
 
         lines = lines.slice(fromLine, toLine);
-      }
+        
+        while (lines[0] == "") lines.shift();
+        while (lines[lines.length-1] == "") lines.pop();
+        
+        lines.unshift("// -- " + url.pathname + " line " + location[2] + "\n");
+        lines.push(   "\n// --------------------------------------------------");
 
+      }
+      
       d3.select(element).html(lines.join('\n'));
     });
 
+}
+
+function showNodeProperties(d) {
+  var out = JSON.stringify(d, (k,v) => (k == 'inputs') ? undefined : v, 2);
+  d3.select('#nodeProperties').html(out);
+  
 }
 
 </script>
