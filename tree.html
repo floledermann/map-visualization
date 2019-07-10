@@ -221,9 +221,9 @@ d3.json(INPUT, function(error, treeData) {
         }
         else if (QUERY.outline == 'cartography') {
           Object.assign(treeOptions, {
-            getStack: node => node.data.properties.cartoStack,
-            stackComparator: (el1, el2) => el1.name == el2.name,
-            stackLabel: n => n.name
+            getStack: node => node.data.properties.transformation,
+            stackComparator: (el1, el2) => el1 == el2,
+            stackLabel: n => n
           });
         }
 
