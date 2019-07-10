@@ -195,7 +195,7 @@ d3.json(INPUT, function(error, treeData) {
 
         if (QUERY.outline == 'functions') {
           Object.assign(treeOptions, {
-            getStack: (node => node.data.stack),
+            getStack: (node => node.data.stack || node.data.properties.stack),
             stackComparator: function(el1, el2) {
                 function locEqual(l1, l2) {
                   if (Array.isArray(l1)) l1 = l1.join(":");
