@@ -1,0 +1,67 @@
+[
+  {
+    "type": "binary",
+    "val": 1,
+    "valuetype": "number",
+    "properties": {
+      "valuetypes": ["outside"]
+    },
+    "op": "&outline=valuetypes",
+    "inputs": [
+      {
+        "type": "binary",
+        "val": 0.5,
+        "valuetype": "number",
+        "properties": {
+          "valuetypes": ["outside"]
+        },
+        "op": "/",
+        "inputs": [
+          {
+            "type": "literal",
+            "val": 1,
+            "valuetype": "number",
+            "properties": {
+              "valuetypes": ["outside"]
+            }
+          },
+          {
+            "type": "literal",
+            "val": 2,
+            "valuetype": "number",
+            "properties": {
+              "valuetypes": ["outside"]
+            }
+          }
+        ]
+      },
+      {
+        "type": "binary",
+        "val": 0.5,
+        "valuetype": "number",
+        "properties": {
+          "valuetypes": ["outside"]
+        },
+        "op": "/",
+        "inputs": [
+          {
+            "type": "literal",
+            "val": 1,
+            "valuetype": "number",
+            "properties": {
+              "valuetypes": ["should_be_separate"]
+            }
+          },
+          {
+            "type": "literal",
+            "val": 2,
+            "valuetype": "number",
+            "properties": {
+              "valuetypes": ["outside"]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
