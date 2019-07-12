@@ -226,6 +226,13 @@ d3.json(INPUT, function(error, treeData) {
             stackLabel: n => n
           });
         }
+        else if (QUERY.outline == 'valuetypes') {
+          Object.assign(treeOptions, {
+            getStack: node => node.data.properties.valuetypes,
+            stackComparator: (el1, el2) => el1 == el2,
+            stackLabel: n => n
+          });
+        }
 
         var root = drawTree(g, d, treeOptions);
 
