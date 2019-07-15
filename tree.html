@@ -96,7 +96,7 @@ svg.zoom-small {
 <svg width="100%" height="100%">
 </svg>
 
-<div id="inspector">
+<div id="inspector" style="display: none;">
 <div id="nodeProperties"></div>
 <div id="code"></div>
 </div>
@@ -304,12 +304,23 @@ function showCode(url, location, element, buffer) {
       d3.select(element).html(lines.join('\n'));
     });
 
+  showInspector();
 }
 
 function showNodeProperties(d) {
   var out = JSON.stringify(d, (k,v) => (k == 'inputs') ? undefined : v, 2);
   d3.select('#nodeProperties').html(out);
-  
+  showInspector();
 }
+
+function showInspector() {
+  d3.select('#inspector').style('display','block');
+}
+
+function hideInspector() {
+  d3.select('#inspector').style('display','none');
+}
+
+d3.select('#inspector').on('click', hideInspector);
 
 </script>
