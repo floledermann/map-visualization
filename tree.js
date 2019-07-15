@@ -54,6 +54,9 @@ function smartRound(val) {
   return rounded;
 }
 
+// Old implementation - this gives a nicer, more compact representation of patterns,
+// but is topologically incorrect if a node on the same level is not part of the pattern
+// (see testcase linked in index.html)
 function getEdgeNodes(node, stack, edgeNodes, options) {
     if (node.children) {
         let lastInNode = null,
@@ -83,6 +86,42 @@ function getEdgeNodes(node, stack, edgeNodes, options) {
         if (lastInNode) {
             edgeNodes.push({node: lastInNode, inside: true});
         }
+    }
+}
+
+// New version, tracinh nodes back up, resulting in stringy areas
+// topologically correct, needs adjusting of line drawing
+// maybe this can be improved to "compress" consecutive areas?
+function getEdgeNodes2(node, stack, edgeNodes, options) {
+    if (node.children) {
+        let lastInNode = null,
+            lastOutNode = null;
+
+        node.children.forEach(function(n) {
+            if (!options.getStack(n)) return; // hack
+            // break outline for guard nodes
+            if (n.parent.data.type == "guard" && (n.parent.children.indexOf(n) > 1)) return;
+            if (hasHead(stack, options.getStack(n), options.stackComparator)) {
+                if (lastOutNode) {
+                    edgeNodes.push({node: lastOutNode, inside: false});
+                    lastOutNode = null;
+                }
+                if (lastInNode != n) {
+                    edgeNodes.push({node: n, inside: true});
+                }
+                getEdgeNodes2(n, stack, edgeNodes, options);
+                lastInNode = n;
+                edgeNodes.push({node: n, inside: true});
+            }
+            else {
+                if (lastInNode) {
+                    lastOutNode = n;
+                }
+            }
+        });
+        //if (lastInNode) {
+            //edgeNodes.push({node: lastInNode, inside: true});
+        //}
     }
 }
 
@@ -297,7 +336,7 @@ function drawOutlines(svg, node, lastStack, options) {
 
     newStack.forEach(function(stack) {
         var edgeNodes = [{node: node, inside: true}];
-        getEdgeNodes(node, stack, edgeNodes, options);
+        getEdgeNodes2(node, stack, edgeNodes, options);
         edgeNodes.push({node: node, inside: true});
 
         drawOutline(svg, edgeNodes, stack.length, options);
