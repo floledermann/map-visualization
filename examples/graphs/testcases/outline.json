@@ -46,7 +46,7 @@
         "inputs": [
           {
             "type": "literal",
-            "val": 1,
+            "val": 3,
             "valuetype": "number",
             "properties": {
               "valuetypes": ["should_be_separate"]
@@ -54,7 +54,7 @@
           },
           {
             "type": "literal",
-            "val": 2,
+            "val": 4,
             "valuetype": "number",
             "properties": {
               "valuetypes": ["outside"]
