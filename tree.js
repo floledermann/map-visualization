@@ -89,7 +89,7 @@ function getEdgeNodes(node, stack, edgeNodes, options) {
     }
 }
 
-// New version, tracinh nodes back up, resulting in stringy areas
+// New version, tracing nodes back up, resulting in stringy areas
 // topologically correct, needs adjusting of line drawing
 // maybe this can be improved to "compress" consecutive areas?
 function getEdgeNodes2(node, stack, edgeNodes, options) {
