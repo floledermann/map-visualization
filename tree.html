@@ -72,7 +72,7 @@ svg.zoom-small {
   bottom: 0;
   white-space: pre;
   font-family: monospace;
-  padding: 5px;
+  padding: 0 5px 5px;
   width: 600px;
   overflow: auto;
   background-color: #f6f6f6;
@@ -86,6 +86,14 @@ svg.zoom-small {
 #code {
 }
 
+#inspector .closebutton {
+  margin: -8px 0;
+  padding: 0;
+  float: right;
+  cursor: pointer;
+  height: 4px;
+}
+
 #code .highlight {
   background-color: #99ff99;
   cursor: pointer;
@@ -97,6 +105,7 @@ svg.zoom-small {
 </svg>
 
 <div id="inspector" style="display: none;">
+<div class="closebutton">X</div>
 <div id="nodeProperties"></div>
 <div id="code"></div>
 </div>
@@ -321,6 +330,6 @@ function hideInspector() {
   d3.select('#inspector').style('display','none');
 }
 
-d3.select('#inspector').on('click', hideInspector);
+d3.select('#inspector .closebutton').on('click', hideInspector);
 
 </script>
