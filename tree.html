@@ -163,6 +163,92 @@ d3.json(INPUT, function(error, treeData) {
     var property = QUERY.property || 'y';
     treeData = [mark.channels.geometry[0][property]];
   }
+  
+  function renderNode(d, parent) {
+    var g = d3.select(parent);
+
+    var treeOptions = {
+      nodeHeight: NODE_HEIGHT,
+      nodeWidth: NODE_WIDTH,
+      functionMargin: FUNCTION_MARGIN,
+      nodeClick: function(d) {
+        console.log(d);
+        d = d.data;
+        // support legacy format
+        var file = d.file || d.properties.file;
+        var loc = d.loc || d.properties.loc;
+        
+        showNodeProperties(d);
+
+        if (file && loc) {
+          // replace all degenerate variants of backslash escaping by single slash ;)
+          file = file.replace(/\\\\/g,'/');
+          file = file.replace(/\\/g,'/');
+          // HACK: remove capture prefix from url - this should be done by capturing script
+          file = file.replace(/^capture/,'');
+          var baseURL = new URL(BASE_URL, window.location.origin);
+          var url = new URL(file, baseURL);
+          loc = loc.split(':').map(n => +n);
+          showCode(url, loc);
+        }
+      },
+      // disable stack by default
+      getStack: n => null
+    };
+
+    if (QUERY.outline == 'functions') {
+      Object.assign(treeOptions, {
+        getStack: (node => node.data.stack || node.data.properties.stack),
+        stackComparator: function(el1, el2) {
+            function locEqual(l1, l2) {
+              if (Array.isArray(l1)) l1 = l1.join(":");
+              if (Array.isArray(l2)) l2 = l2.join(":");
+              return l1 == l2;
+            }
+            return (el1.file == el2.file) && locEqual(el1.loc, el2.loc);
+            //return el1.name == el2.name;
+        },
+        stackLabel: stack => {
+          var label = stack.name;
+          if (label.startsWith("<function")) label = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
+          return label;
+        }
+      });
+    }
+    else if (QUERY.outline == 'neutral') {
+      Object.assign(treeOptions, {
+        getStack: node => node.data.properties.neutralStack,
+        stackComparator: (el1, el2) => el1.id == el2.id,
+        stackLabel: n => "neutral"
+      });
+    }
+    else if (QUERY.outline == 'cartography') {
+      Object.assign(treeOptions, {
+        getStack: node => node.data.properties.transformation,
+        stackComparator: (el1, el2) => el1 == el2,
+        stackLabel: n => n
+      });
+    }
+    else if (QUERY.outline == 'valuetypes') {
+      Object.assign(treeOptions, {
+        getStack: node => node.data.properties.valuetypes,
+        stackComparator: (el1, el2) => el1 == el2,
+        stackLabel: n => n
+      });
+    }
+
+    var root = drawTree(g, d, treeOptions);
+
+    if (lastRoot) {
+      yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
+    }
+    else {
+      yOffset -= root.minY; // first tree - minY will be negative!
+    }
+    g.attr("transform","translate(0," + yOffset + ")");
+
+    lastRoot = root;
+  }
 
   g.selectAll(".tree")
     .data(treeData)
@@ -170,91 +256,15 @@ d3.json(INPUT, function(error, treeData) {
     .append("g")
     .attr("class", "tree")
     .each(function(d,i) {
-
-        var g = d3.select(this);
-
-        var treeOptions = {
-          nodeHeight: NODE_HEIGHT,
-          nodeWidth: NODE_WIDTH,
-          functionMargin: FUNCTION_MARGIN,
-          nodeClick: function(d) {
-            console.log(d);
-            d = d.data;
-            // support legacy format
-            var file = d.file || d.properties.file;
-            var loc = d.loc || d.properties.loc;
-            
-            showNodeProperties(d);
-
-            if (file && loc) {
-              // replace all degenerate variants of backslash escaping by single slash ;)
-              file = file.replace(/\\\\/g,'/');
-              file = file.replace(/\\/g,'/');
-              // HACK: remove capture prefix from url - this should be done by capturing script
-              file = file.replace(/^capture/,'');
-              var baseURL = new URL(BASE_URL, window.location.origin);
-              var url = new URL(file, baseURL);
-              loc = loc.split(':').map(n => +n);
-              showCode(url, loc);
-            }
-          },
-          // disable stack by default
-          getStack: n => null
-        };
-
-        if (QUERY.outline == 'functions') {
-          Object.assign(treeOptions, {
-            getStack: (node => node.data.stack || node.data.properties.stack),
-            stackComparator: function(el1, el2) {
-                function locEqual(l1, l2) {
-                  if (Array.isArray(l1)) l1 = l1.join(":");
-                  if (Array.isArray(l2)) l2 = l2.join(":");
-                  return l1 == l2;
-                }
-                return (el1.file == el2.file) && locEqual(el1.loc, el2.loc);
-                //return el1.name == el2.name;
-            },
-            stackLabel: stack => {
-              var label = stack.name;
-              if (label.startsWith("<function")) label = ""; //"<" + root.node.data.stack[level-1].loc.split(":")[0] + ">";
-              return label;
-            }
-          });
-        }
-        else if (QUERY.outline == 'neutral') {
-          Object.assign(treeOptions, {
-            getStack: node => node.data.properties.neutralStack,
-            stackComparator: (el1, el2) => el1.id == el2.id,
-            stackLabel: n => "neutral"
-          });
-        }
-        else if (QUERY.outline == 'cartography') {
-          Object.assign(treeOptions, {
-            getStack: node => node.data.properties.transformation,
-            stackComparator: (el1, el2) => el1 == el2,
-            stackLabel: n => n
-          });
-        }
-        else if (QUERY.outline == 'valuetypes') {
-          Object.assign(treeOptions, {
-            getStack: node => node.data.properties.valuetypes,
-            stackComparator: (el1, el2) => el1 == el2,
-            stackLabel: n => n
-          });
-        }
-
-        var root = drawTree(g, d, treeOptions);
-
-        if (lastRoot) {
-          yOffset += TREE_MARGIN + compactDistance(lastRoot, root);
-        }
-        else {
-          yOffset -= root.minY; // first tree - minY will be negative!
-        }
-        g.attr("transform","translate(0," + yOffset + ")");
-
-        lastRoot = root;
-
+      if (Array.isArray(d)) {
+        d.forEach(d => {
+          let parent = d3.select(this).append("g").attr("class", "tree");
+          renderNode(d,parent.node());
+        });
+      }
+      else {
+        renderNode(d, this);
+      }
     })
   ;
   if (lastRoot) {
