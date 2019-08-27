@@ -59,8 +59,11 @@ svg path.function.level-1:hover {
     fill-opacity: 0.1;
 }
 
-svg line.tuple {
-  stroke: #999;
+svg path.tuple {
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 0.3;
+  shape-rendering: crispEdges;
 }
 
 /* Zoomed out style */
@@ -268,26 +271,9 @@ d3.json(INPUT, function(error, treeData) {
           renderNode(d,parent.node());
           if (!startY) startY = yOffset;
         });
-        el.append("line")
+        el.append("path")
           .attr("class","tuple")
-          .attr("x1", 100)
-          .attr("x2", 100)
-          .attr("y1", startY)
-          .attr("y2", yOffset)
-        ;
-        el.append("line")
-          .attr("class","tuple")
-          .attr("x1", 50)
-          .attr("x2", 100)
-          .attr("y1", startY)
-          .attr("y2", startY)
-        ;
-        el.append("line")
-          .attr("class","tuple")
-          .attr("x1", 50)
-          .attr("x2", 100)
-          .attr("y1", yOffset)
-          .attr("y2", yOffset)
+          .attr("d", "M70," + startY + "h30V" + yOffset + "h-30")
         ;
       }
       else {
