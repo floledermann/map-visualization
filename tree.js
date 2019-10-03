@@ -4,6 +4,7 @@ const DEFAULT_OPTIONS = {
   functionMargin: 4,
   nodeX: node => -node.y,
   nodeY: node => node.x,
+  expandDAG: true,
   delay: 0,
   delayPerLevel: 0,
   delayFunctions: 0,
@@ -357,6 +358,9 @@ function delay(sel, delay, duration) {
   ;
 }
 
+// cache for node ID across all trees
+let globalNodesCache = {};
+
 function drawTree(svg, data, options) {
 
     options = Object.assign({}, DEFAULT_OPTIONS, options);
@@ -367,12 +371,59 @@ function drawTree(svg, data, options) {
     // ATTENTION width and height are swapped because we have a horizontal tree layout!
     //var tree = d3.cluster().nodeSize([NODE_HEIGHT,1/MAX_DEPTH]);
     var tree = d3.tree().nodeSize([options.nodeHeight, options.nodeWidth]);
+    
+    if (options.expandDAG) {
+      // DAG nodes are referenced globally in the JSON file, across multiple trees
+      // resolve global references to deal only with DAG refs in this tree
+      // cache for node IDs in this tree
+      var localNodesCache = {};
+      function copyFromCache(node, parent) {
+        if (node.id) {
+          // sotre all defined nodes in global and local cache
+          globalNodesCache[node.id] = node;
+          localNodesCache[node.id] = node;
+          if (node.inputs) node.inputs.forEach(n => copyFromCache(n, node));
+        }
+        if (node.ref) {
+          if (!localNodesCache[node.ref]) {
+            // find ref node in parent an replace with real node from global cache
+            var realNode = globalNodesCache[node.ref];
+            // also resolve all descendants of node retrieved from global cache
+            copyFromCache(realNode, parent);
+            if (parent) {
+              var idx = parent.inputs.indexOf(node);
+              parent.inputs.splice(idx, 1, realNode);
+            }
+            localNodesCache[node.ref] = realNode;
+          }
+        }
+      }
+      copyFromCache(data);
+    }        
 
-    var root = d3.hierarchy(data, node => node.inputs);
+    var root = d3.hierarchy(data, node => node.inputs);    
+    
+    // lay out tree
     tree(root);
 
     root.minY = 0;
     root.maxY = 0;
+
+    // cache for node IDs in this tree
+    var localNodesCache = {};
+    
+    if (options.expandDAG) {
+      root.eachBefore(function(node) {
+        if (node.data.id) {
+          localNodesCache[node.data.id] = node;
+        }
+        if (node.data.ref) {
+          // adjust levels
+          var realNode = localNodesCache[node.data.ref];
+          realNode.y = Math.max(realNode.y, node.y);
+        }
+      });
+    }
 
     // walk through tree to find highest/lowest node
     root.each(node => {
@@ -400,17 +451,27 @@ function drawTree(svg, data, options) {
         'pointer-events': 'none'
       })
       .attr("d", function(d) {
-		if (d.data.type == "dummy") return "";
-		// This draws an "orthogonal" connection for guards
-
-		if (d.parent.data.type == "guard" && (d.parent.children.indexOf(d) > 1)) return "M" + x(d) + "," + y(d)
+        
+        if (d.data.type == "dummy") return "";
+        
+        // This draws an "orthogonal" connection for guards
+        if (d.parent.data.type == "guard" && (d.parent.children.indexOf(d) > 1)) return "M" + x(d) + "," + y(d)
             + "C" + (x(d) + options.nodeHeight) + "," + y(d)
             + " " + (x(d.parent)) + "," + (y(d.parent) + options.nodeHeight)
             + " " + x(d.parent) + "," + y(d.parent);
+        
+        let parent = d.parent;
+        
+        if (options.expandDAG) {
+          if (d.data.ref) {
+            d = localNodesCache[d.data.ref];
+          }
+        }
+        
         return "M" + x(d) + "," + y(d)
             + "C" + (x(d) + options.nodeHeight) + "," + y(d)
-            + " " + (x(d.parent) - options.nodeHeight) + "," + y(d.parent)
-            + " " + x(d.parent) + "," + y(d.parent);
+            + " " + (x(parent) - options.nodeHeight) + "," + y(parent)
+            + " " + x(parent) + "," + y(parent);
       });
 
     if (options.delayPerLevel) {
@@ -420,7 +481,7 @@ function drawTree(svg, data, options) {
     // draw nodes
 
     var node = svg.selectAll(".node")
-      .data(root.descendants().filter(d => d.data.type != "dummy"))
+      .data(root.descendants().filter(d => d.data.type != "dummy" && !d.data.ref ))
     .enter().append("g")
       .attr("class", function(d) { return "node" + (d.children ? " node-internal" : " node-leaf"); })
       .attr("transform", function(d) {
