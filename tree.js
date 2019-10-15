@@ -417,14 +417,41 @@ function drawTree(svg, data, options) {
         if (node.data.id) {
           localNodesCache[node.data.id] = node;
         }
+      });  
+      /*
+      root.eachBefore(function(node) {
         if (node.data.ref) {
           // adjust levels
           var realNode = localNodesCache[node.data.ref];
-          realNode.y = Math.max(realNode.y, node.y);
+          if (realNode.y < node.y) {
+            var diff = node.y - realNode.y;
+            function pushDown(node) {
+              node.y += diff;
+            }
+            node.each(pushDown);
+          }
         }
-      });
+      });  
+      */
+      root.eachBefore(function(node) {
+        // adjust levels
+        if (node.children) {
+          node.children.forEach(child => {
+            if (child.data.ref) {
+              child = localNodesCache[child.data.ref];
+            }
+            if (child.y <= node.y) {
+              var diff = node.y - child.y + options.nodeWidth;
+              function pushDown(node) {
+                node.y += diff;
+              }
+              child.each(pushDown);
+            }
+          });
+        }
+      });  
     }
-
+    
     // walk through tree to find highest/lowest node
     root.each(node => {
       if (node.x < root.minY) root.minY = node.x;
@@ -468,9 +495,16 @@ function drawTree(svg, data, options) {
           }
         }
         
+        var x1 = x(d),
+            x2 = x(parent),
+            dx = (x2-x1) / 2;
+        
+        // this should never happen - emit warning?
+        if (dx < 0) dx = -dx;
+        
         return "M" + x(d) + "," + y(d)
-            + "C" + (x(d) + options.nodeHeight) + "," + y(d)
-            + " " + (x(parent) - options.nodeHeight) + "," + y(parent)
+            + "C" + (x(d) + dx) + "," + y(d)
+            + " " + (x(parent) - dx) + "," + y(parent)
             + " " + x(parent) + "," + y(parent);
       });
 
