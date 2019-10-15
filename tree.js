@@ -418,21 +418,6 @@ function drawTree(svg, data, options) {
           localNodesCache[node.data.id] = node;
         }
       });  
-      /*
-      root.eachBefore(function(node) {
-        if (node.data.ref) {
-          // adjust levels
-          var realNode = localNodesCache[node.data.ref];
-          if (realNode.y < node.y) {
-            var diff = node.y - realNode.y;
-            function pushDown(node) {
-              node.y += diff;
-            }
-            node.each(pushDown);
-          }
-        }
-      });  
-      */
       root.eachBefore(function(node) {
         // adjust levels
         if (node.children) {
