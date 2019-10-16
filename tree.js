@@ -429,6 +429,8 @@ function drawTree(svg, data, options) {
               var diff = node.y - child.y + options.nodeWidth;
               function pushDown(node) {
                 node.y += diff;
+                // HACK: displace node vertically, to avoid overlapping nodes
+                node.x -= options.nodeHeight / 3;
               }
               child.each(pushDown);
             }
