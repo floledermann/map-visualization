@@ -9,6 +9,7 @@ const DEFAULT_OPTIONS = {
   delayPerLevel: 0,
   delayFunctions: 0,
   drawOutlines: true,
+  draggableNodes: true,
   getStack: node => node.data.stack,
   stackComparator: function(el1, el2) {
       return el1.name == el2.name;
@@ -453,6 +454,36 @@ function drawTree(svg, data, options) {
 
     // draw links
 
+    function linkPath(d) {
+      if (d.data.type == "dummy") return "";
+      
+      // This draws an "orthogonal" connection for guards
+      if (d.parent.data.type == "guard" && (d.parent.children.indexOf(d) > 1)) return "M" + x(d) + "," + y(d)
+          + "C" + (x(d) + options.nodeHeight) + "," + y(d)
+          + " " + (x(d.parent)) + "," + (y(d.parent) + options.nodeHeight)
+          + " " + x(d.parent) + "," + y(d.parent);
+      
+      let parent = d.parent;
+      
+      if (options.expandDAG) {
+        if (d.data.ref) {
+          d = localNodesCache[d.data.ref];
+        }
+      }
+      
+      var x1 = x(d),
+          x2 = x(parent),
+          dx = (x2-x1) / 2;
+      
+      // this should never happen - emit warning?
+      if (dx < 0) dx = -dx;
+      
+      return "M" + x(d) + "," + y(d)
+          + "C" + (x(d) + dx) + "," + y(d)
+          + " " + (x(parent) - dx) + "," + y(parent)
+          + " " + x(parent) + "," + y(parent);
+    }
+    
     var link = svg.selectAll(".link")
       .data(root.descendants().slice(1))
     .enter().append("path")
@@ -464,40 +495,51 @@ function drawTree(svg, data, options) {
         'stroke-width': 1.5,
         'pointer-events': 'none'
       })
-      .attr("d", function(d) {
-        
-        if (d.data.type == "dummy") return "";
-        
-        // This draws an "orthogonal" connection for guards
-        if (d.parent.data.type == "guard" && (d.parent.children.indexOf(d) > 1)) return "M" + x(d) + "," + y(d)
-            + "C" + (x(d) + options.nodeHeight) + "," + y(d)
-            + " " + (x(d.parent)) + "," + (y(d.parent) + options.nodeHeight)
-            + " " + x(d.parent) + "," + y(d.parent);
-        
-        let parent = d.parent;
-        
-        if (options.expandDAG) {
-          if (d.data.ref) {
-            d = localNodesCache[d.data.ref];
-          }
-        }
-        
-        var x1 = x(d),
-            x2 = x(parent),
-            dx = (x2-x1) / 2;
-        
-        // this should never happen - emit warning?
-        if (dx < 0) dx = -dx;
-        
-        return "M" + x(d) + "," + y(d)
-            + "C" + (x(d) + dx) + "," + y(d)
-            + " " + (x(parent) - dx) + "," + y(parent)
-            + " " + x(parent) + "," + y(parent);
-      });
+      .attr("d", linkPath);
 
     if (options.delayPerLevel) {
       delay(link, d => options.delay + (d.depth-1) * options.delayPerLevel);
     }
+
+
+    // vertical dragging
+    var nodeDrag = (function() {
+      
+      var start_y;  
+      
+      return d3.drag()
+        .subject(function (d) { return d; })
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended)
+      ;
+          
+      function dragstarted(d) {
+        d3.event.sourceEvent.stopPropagation();
+        d3.select(this).classed("dragging", true);
+        start_y = d.x - d3.event.y;
+        console.log(d.x);
+      }
+        
+      function dragged(d) {
+        
+        d.x = d3.event.y + start_y;
+        
+        d3.select(this) //.attr("cy", function() {d.y = d3.event.y});
+          .attr("transform", function(d) {
+            return "translate(" + x(d) + "," + y(d) + ")";
+          })
+        ;
+        
+        var links = svg.selectAll(".link").filter(d2 => d2 == d || (d.children && d.children.includes(d2)) || d2.data.ref == d.data.id);
+        
+        links.attr('d', linkPath);
+      }
+
+      function dragended(d) {
+        d3.select(this).classed("dragging", false);
+      }        
+    })();
 
     // draw nodes
 
@@ -509,6 +551,10 @@ function drawTree(svg, data, options) {
         return "translate(" + x(d) + "," + y(d) + ")";
       })
     ;
+    
+    if (options.draggableNodes) {
+      node.call(nodeDrag);
+    }
 
     if (options.delayPerLevel) {
       delay(node, d => options.delay + d.depth * options.delayPerLevel);
