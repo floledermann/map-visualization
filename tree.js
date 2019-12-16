@@ -474,14 +474,23 @@ function drawTree(svg, data, options) {
       var x1 = x(d),
           x2 = x(parent),
           dx = (x2-x1) / 2;
-      
+	
+	  var inputSpread = 10;
+	  var yOffset = 0;
+	  if (parent.children.length > 1) {
+		var parentIndex = parent.children.findIndex(el => {
+			return el === d || el.data.ref == d.data.id;
+		});
+		yOffset = inputSpread / (parent.children.length-1) * parentIndex - inputSpread/2;
+      }
+	  
       // this should never happen - emit warning?
       if (dx < 0) dx = -dx;
       
       return "M" + x(d) + "," + y(d)
           + "C" + (x(d) + dx) + "," + y(d)
-          + " " + (x(parent) - dx) + "," + y(parent)
-          + " " + x(parent) + "," + y(parent);
+          + " " + (x(parent) - dx - 8) + "," + (y(parent) + yOffset)
+          + " " + (x(parent) - 8) + "," + (y(parent) + yOffset);
     }
     
     var link = svg.selectAll(".link")
