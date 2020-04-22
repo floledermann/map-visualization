@@ -473,7 +473,8 @@ function drawTree(svg, data, options) {
       
       var x1 = x(d),
           x2 = x(parent),
-          dx = (x2-x1) / 2;
+          dx = Math.max(Math.abs((x2-x1) / 2), 20),
+          r1 = d.data.op ? 9 : 5;
 	
 	  var inputSpread = 10;
 	  var yOffset = 0;
@@ -487,10 +488,10 @@ function drawTree(svg, data, options) {
       // this should never happen - emit warning?
       if (dx < 0) dx = -dx;
       
-      return "M" + x(d) + "," + y(d)
-          + "C" + (x(d) + dx) + "," + y(d)
-          + " " + (x(parent) - dx - 8) + "," + (y(parent) + yOffset)
-          + " " + (x(parent) - 8) + "," + (y(parent) + yOffset);
+      return "M" + (x1 + r1) + "," + y(d)
+          + "C" + (x1 + dx + r1) + "," + y(d)
+          + " " + (x2 - dx - 8) + "," + (y(parent) + yOffset)
+          + " " + (x2 - 8) + "," + (y(parent) + yOffset);
     }
     
     var link = svg.selectAll(".link")
