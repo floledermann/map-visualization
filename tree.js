@@ -476,13 +476,13 @@ function drawTree(svg, data, options) {
           dx = Math.max(Math.abs((x2-x1) / 2), 20),
           r1 = d.data.op ? 9 : 5;
 	
-	  var inputSpread = 10;
-	  var yOffset = 0;
-	  if (parent.children.length > 1) {
-		var parentIndex = parent.children.findIndex(el => {
-			return el === d || el.data.ref == d.data.id;
-		});
-		yOffset = inputSpread / (parent.children.length-1) * parentIndex - inputSpread/2;
+      var inputSpread = 10;
+      var yOffset = 0;
+      if (parent.children.length > 1) {
+        var parentIndex = parent.children.findIndex(el => {
+          return el === d || el.data.ref == d.data.id;
+        });
+        yOffset = inputSpread / (parent.children.length-1) * parentIndex - inputSpread/2;
       }
 	  
       // this should never happen - emit warning?
