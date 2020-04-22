@@ -6,7 +6,7 @@
 
 @start "" "http://localhost:%port%/"
 
-@http-server %HTDOCS% -p %PORT%
+@http-server %HTDOCS% -p %PORT% --cors
 
 @if %ERRORLEVEL% NEQ 0 (
   @echo.
