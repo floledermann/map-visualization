@@ -236,12 +236,20 @@ function drawOutline(svg, edgeNodes, level, options) {
                     }
                 }
                 else if (previous.node.depth > current.node.depth) {
-                    path.push("C" + [                                                       // bezier curve
-                        x(previous.node)+2*cpDistance, y(previous.node)+radius,      // cp1 x, y
-                        x(current.node)-2*cpDistance, y(current.node)+radius,        // cp2 x, y
-                        x(current.node), y(current.node)+radius                     // dest x, y
-                    ]);
-
+                    if (next && next.node.depth >= current.node.depth) {
+                      path.push("C" + [                                                       // bezier curve
+                          x(previous.node)+2*cpDistance, y(previous.node)+radius,      // cp1 x, y
+                          x(current.node)-2*cpDistance, y(current.node)+radius,        // cp2 x, y
+                          x(current.node)-radius, y(current.node)+radius                     // dest x, y
+                      ]);
+                    }
+                    else {
+                      path.push("C" + [                                                       // bezier curve
+                          x(previous.node)+2*cpDistance, y(previous.node)+radius,      // cp1 x, y
+                          x(current.node)-2*cpDistance, y(current.node)+radius,        // cp2 x, y
+                          x(current.node), y(current.node)+radius                     // dest x, y
+                      ]);
+                    }
                     //}
                 }
             }
